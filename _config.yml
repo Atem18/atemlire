@@ -1,0 +1,12 @@
+title: Kevin Messer
+email: contact@kevin-messer.net
+description: Welcome to my personal website
+baseurl: ""
+url: ""
+twitter_username: atem18
+github_username: atem18
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+include: ["_pages"]
