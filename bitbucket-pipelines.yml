@@ -22,3 +22,7 @@ pipelines:
           - docker login --username $DOCKER_HUB_USERNAME --password $DOCKER_HUB_PASSWORD
           # push the new Docker image to the Docker registry
           - docker push $IMAGE_NAME
+          - sed -i 's/%BITBUCKET_COMMIT%/$BITBUCKET_COMMIT' kmdotnet.service
+          - scp kmdotnet.service kmdotnet@www.kevin-messer.net:/etc/systemd/system/kmdotnet.service
+          - ssh kmdotnet@www.kevin-messer.net sudo systemctl daemon-reload
+          - ssh kmdotnet@www.kevin-messer.net sudo systemctl restart kmdotnet.service

@@ -1,4 +1,3 @@
-FROM alpine
-COPY _site /var/www
-VOLUME /var/www
-CMD ["true"]
+FROM nginx:latest
+COPY _site /usr/share/nginx/html
+VOLUME /usr/share/nginx/html
