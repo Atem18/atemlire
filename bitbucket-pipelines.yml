@@ -27,4 +27,5 @@ pipelines:
           - ssh -oStrictHostKeyChecking=no kmdotnet@www.kevin-messer.net sudo mv /home/kmdotnet/kmdotnet.service /etc/systemd/system/kmdotnet.service
           - ssh -oStrictHostKeyChecking=no kmdotnet@www.kevin-messer.net sudo chown root:root /etc/systemd/system/kmdotnet.service
           - ssh -oStrictHostKeyChecking=no kmdotnet@www.kevin-messer.net sudo systemctl daemon-reload
-          - ssh -oStrictHostKeyChecking=no kmdotnet@www.kevin-messer.net sudo systemctl restart kmdotnet.service
+          - ssh -oStrictHostKeyChecking=no kmdotnet@www.kevin-messer.net sudo systemctl stop kmdotnet.service
+          - ssh -oStrictHostKeyChecking=no kmdotnet@www.kevin-messer.net sudo systemctl start kmdotnet.service
