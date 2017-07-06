@@ -23,6 +23,8 @@ pipelines:
           # push the new Docker image to the Docker registry
           - docker push $IMAGE_NAME
           - sed -i 's/%BITBUCKET_COMMIT%/$BITBUCKET_COMMIT/g' kmdotnet.service
-          - scp -oStrictHostKeyChecking=no kmdotnet.service kmdotnet@www.kevin-messer.net:/etc/systemd/system/kmdotnet.service
+          - scp -oStrictHostKeyChecking=no kmdotnet.service kmdotnet@www.kevin-messer.net:/home/kmdotnet/kmdotnet.service
+          - ssh -oStrictHostKeyChecking=no kmdotnet@www.kevin-messer.net sudo mv /home/kmdotnet/kmdotnet.service /etc/systemd/system/kmdotnet.service
+          - ssh -oStrictHostKeyChecking=no kmdotnet@www.kevin-messer.net sudo chown root:root /etc/systemd/system/kmdotnet.service
           - ssh -oStrictHostKeyChecking=no kmdotnet@www.kevin-messer.net sudo systemctl daemon-reload
           - ssh -oStrictHostKeyChecking=no kmdotnet@www.kevin-messer.net sudo systemctl restart kmdotnet.service
