@@ -9,4 +9,14 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - jekyll-admin
 include: ["_pages"]
+collections:
+  my_collection:
+    foo: bar
+defaults:
+  - scope:
+      path: ""
+      type: my_collection
+    values:
+      layout: page
