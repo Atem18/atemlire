@@ -1,6 +1,6 @@
 ---
-title: Wiki Linux
-layout: page
+title: Linux
+layout: single
 ---
 
 Welcome to my wiki's Linux section

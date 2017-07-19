@@ -1,6 +1,6 @@
 ---
 title: Contact
-layout: page
+layout: single
 permalink: "/contact/"
 ---
 
