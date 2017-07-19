@@ -9,6 +9,8 @@
 options:
   docker: true
 
+image: atem18/kmdotnet-build
+
 pipelines:
   default:
     - step:
@@ -22,10 +24,4 @@ pipelines:
           # push the new Docker image to the Docker registry
           - docker push $IMAGE_NAME
           # deploy kmdotnet to the cloud
-          - docker exec -i ansible ansible-playbook -i ansible/hosts --limit=www.kevin-messer.net ansible/kmdotnet.yml -b -u atem --extra-vars "BITBUCKET_COMMIT=$BITBUCKET_COMMIT"
-        services:
-          - ansible
-definitions:
-  services:
-    ansible:
-      image: williamyeh/ansible:centos7
+          - ansible-playbook -i ansible/hosts --limit=www.kevin-messer.net ansible/kmdotnet.yml -b -u atem --extra-vars "BITBUCKET_COMMIT=$BITBUCKET_COMMIT"
