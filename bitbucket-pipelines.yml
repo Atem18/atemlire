@@ -22,7 +22,6 @@ pipelines:
           # push the new Docker image to the Docker registry
           - docker push $IMAGE_NAME
     - step:
-        image: 
-        script: williamyeh/ansible:centos7
+        image: williamyeh/ansible:centos7
+        script:
           - ansible-playbook -i ansible/hosts --limit=www.kevin-messer.net ansible/kmdotnet.yml -b -u atem --extra-vars "BITBUCKET_COMMIT=$BITBUCKET_COMMIT"
-
