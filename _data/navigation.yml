@@ -1,0 +1,8 @@
+# main links
+main:
+  - title: "Wiki"
+    url: /wiki/index
+  - title: "About"
+    url: /about
+  - title: "Contact"
+    url: /contact
