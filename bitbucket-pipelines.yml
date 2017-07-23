@@ -24,4 +24,4 @@ pipelines:
           - docker login --username $DOCKER_HUB_USERNAME --password $DOCKER_HUB_PASSWORD
           # push the new Docker image to the Docker registry
           - docker push $IMAGE_NAME
-          - cd ansible && ansible-playbook -i hosts --limit=www.kevin-messer.net -u atem -b --extra-vars "BITBUCKET_COMMIT=$BITBUCKET_COMMIT" kmdotnet.yml
+          - cd ansible && ansible-playbook -i hosts --limit=www.kevin-messer.net -u atem -b --extra-vars "BITBUCKET_COMMIT=$BITBUCKET_COMMIT" --private-key ~/.ssh/id_rsa kmdotnet.yml
