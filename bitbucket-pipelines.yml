@@ -9,7 +9,7 @@
 options:
   docker: true
 
-image: kmdotnet-build
+image: atem18/kmdotnet-build
 
 pipelines:
   default:
