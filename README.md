@@ -10,4 +10,4 @@ docker push $IMAGE_NAME
 
 ### Deploy
 
-ansible-playbook -i hosts --limit=www.kevin-messer.net -u atem --private-key ~/.ssh/atemlenetec2.pem -b --extra-vars "BITBUCKET_COMMIT=$BITBUCKET_COMMIT" 
+ansible-playbook -i hosts --limit=www.kevin-messer.net -u atem --private-key ~/.ssh/atemlenetec2.pem -b --extra-vars "BITBUCKET_COMMIT=$BITBUCKET_COMMIT" kmdotnet.yml
