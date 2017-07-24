@@ -4,4 +4,4 @@ layout: single
 permalink: "/about/"
 ---
 
-I am a DevOps engineer.
+DevOps, Mtg player and novell writer.
