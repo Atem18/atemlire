@@ -7,7 +7,7 @@ services:
 before_install:
   - docker build -t atem18/kmdotnet:$TRAVIS_COMMIT .
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - docker push -t atem18/kmdotnet:$TRAVIS_COMMIT .
+  - docker push atem18/kmdotnet:$TRAVIS_COMMIT .
 
 script:
   - cd ansible && ansible-playbook -i hosts --limit=www.kevin-messer.net -u kmdotnet -b --extra-vars "TRAVIS_COMMIT=$TRAVIS_COMMIT" kmdotnet.yml
