@@ -2,14 +2,12 @@ sudo: required
 
 services:
   - docker
-  - ansible
 
 before_install:
-  - gem install jekyll bundler
-  - ENV=PROD bundle exec jekyll build
   - pip install ansible
 
 script:
+  - ENV=PROD bundle exec jekyll build
   - docker build -t atem18/kmdotnet:$TRAVIS_COMMIT .
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker push atem18/kmdotnet:$TRAVIS_COMMIT
