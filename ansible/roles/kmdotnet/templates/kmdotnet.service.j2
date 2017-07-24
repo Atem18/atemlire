@@ -7,8 +7,8 @@ Requires=docker.service
 Restart=always
 ExecStartPre=-/usr/bin/docker kill kmdotnet
 ExecStartPre=-/usr/bin/docker rm kmdotnet
-ExecStartPre=/usr/bin/docker pull atem18/kmdotnet:"{{ TRAVIS_COMMIT }}"
-ExecStart=/usr/bin/docker run --name kmdotnet -p 80:80 atem18/kmdotnet:"{{ TRAVIS_COMMIT }}"
+ExecStartPre=/usr/bin/docker pull atem18/kmdotnet:{{ TRAVIS_COMMIT }}
+ExecStart=/usr/bin/docker run --name kmdotnet -p 80:80 atem18/kmdotnet:{{ TRAVIS_COMMIT }}
 ExecStop=/usr/bin/docker stop kmdotnet
 
 [Install]
