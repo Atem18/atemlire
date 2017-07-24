@@ -5,6 +5,7 @@ services:
   - ansible
 
 before_install:
+  - gem install jekyll bundler
   - ENV=PROD bundle exec jekyll build
   - pip install ansible
 
