@@ -1,3 +1,0 @@
-- hosts: www.kevin-messer.net
-  roles:
-    - kmdotnet
