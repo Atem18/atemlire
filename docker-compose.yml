@@ -1,9 +1,8 @@
 version: '3'
 services:
-  kmdotnet:
-    build: .
-    container_name: kmdotnet
-    hostname: www.kevin-messer.net
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: nginx-proxy
     restart: unless-stopped
     labels:
         com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy: "true"
@@ -15,15 +14,24 @@ services:
       - ${NGINX_FILES_PATH}/vhost.d:/etc/nginx/vhost.d
       - ${NGINX_FILES_PATH}/html:/usr/share/nginx/html
       - ${NGINX_FILES_PATH}/certs:/etc/nginx/certs:ro
-    environment:
-      VIRTUAL_HOST: kevin-messer.net,www.kevin-messer.net
-      LETSENCRYPT_HOST: kevin-messer.net,www.kevin-messer.net
-      LETSENCRYPT_EMAIL: contact@kevin-messer.net
+      - /var/run/docker.sock:/tmp/docker.sock:ro
     networks:
       kmdotnet:
         aliases:
           - www.kevin-messer.net
           - kevin-messer.net
+
+  kmdotnet:
+    build: .
+    container_name: kmdotnet
+    restart: unless-stopped
+    expose:
+      - 443
+    environment:
+      VIRTUAL_HOST: kevin-messer.net,www.kevin-messer.net
+      VIRTUAL_PORT: 443
+      LETSENCRYPT_HOST: kevin-messer.net,www.kevin-messer.net
+      LETSENCRYPT_EMAIL: contact@kevin-messer.net
 
   nginx-gen:
     image: jwilder/docker-gen
