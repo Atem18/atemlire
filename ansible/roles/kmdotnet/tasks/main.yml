@@ -1,3 +1,6 @@
+- name: Ensure Nginx directory exists
+  file: path=/etc/nginx state=directory
+
 - name: Copy nginx tmpl file
   copy: src=nginx.tmpl dest=/etc/nginx/nginx.tmpl
 
