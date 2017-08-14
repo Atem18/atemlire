@@ -1,5 +1,26 @@
+- name: Copy nginx tmpl file
+  copy: src=nginx.tmpl dest=/etc/nginx/nginx.tmpl
+
 - name: Install kmdotnet systemd unit file
   template: src=kmdotnet.service.j2 dest=/etc/systemd/system/kmdotnet.service
 
 - name: Start kmdotnet
   systemd: state=restarted name=kmdotnet daemon_reload=yes
+
+  - name: Install nginx-gen systemd unit file
+  template: src=nginx-gen.service.j2 dest=/etc/systemd/system/nginx-gen.service
+
+- name: Start nginx-gen
+  systemd: state=restarted name=nginx-gen daemon_reload=yes
+
+- name: Install nginx-letsencrypt systemd unit file
+  template: src=nginx-letsencrypt.service.j2 dest=/etc/systemd/system/nginx-letsencrypt.service
+
+- name: Start nginx-letsencrypt
+  systemd: state=restarted name=nginx-letsencrypt daemon_reload=yes
+
+- name: Install nginx systemd unit file
+  template: src=nginx.service.j2 dest=/etc/systemd/system/nginx.service
+
+- name: Start nginx
+  systemd: state=restarted name=nginx daemon_reload=yes

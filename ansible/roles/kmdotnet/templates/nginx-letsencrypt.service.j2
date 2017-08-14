@@ -1,0 +1,15 @@
+[Unit]
+Description=Nginx web server letsencrypt
+After=docker.service
+Requires=docker.service
+
+[Service]
+Restart=always
+ExecStartPre=-/usr/bin/docker kill nginx-letsencrypt
+ExecStartPre=-/usr/bin/docker rm nginx-letsencrypt
+ExecStartPre=/usr/bin/docker pull jrcs/letsencrypt-nginx-proxy-companion
+ExecStart=/usr/bin/docker run --name nginx-letsencrypt -e NGINX_DOCKER_GEN_CONTAINER="nginx-gen" -e NGINX_PROXY_CONTAINER=nginx -v /etc/nginx/conf.d:/etc/nginx/conf.d -v /etc/nginx/vhost.d:/etc/nginx/vhost.d -v /usr/share/nginx/html:/usr/share/nginx/html -v /etc/nginx/certs:/etc/nginx/certs:ro -v /var/run/docker.sock:/tmp/docker.sock:ro jrcs/letsencrypt-nginx-proxy-companion:latest
+ExecStop=/usr/bin/docker stop kmdotnet
+
+[Install]
+WantedBy=multi-user.target
