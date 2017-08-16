@@ -8,7 +8,7 @@ Restart=always
 ExecStartPre=-/usr/bin/docker kill kmdotnet
 ExecStartPre=-/usr/bin/docker rm kmdotnet
 ExecStartPre=/usr/bin/docker pull atem18/kmdotnet:{{ TRAVIS_COMMIT }}
-ExecStart=/usr/bin/docker run --name kmdotnet -v /etc/nginx/conf.d:/etc/nginx/conf.d -e VIRTUAL_HOST=kevin-messer.net,www.kevin-messer.net -e VIRTUAL_PORT=443 -e LETSENCRYPT_HOST=kevin-messer.net,www.kevin-messer.net -e LETSENCRYPT_EMAIL=contact@kevin-messer.net atem18/kmdotnet:{{ TRAVIS_COMMIT }}
+ExecStart=/usr/bin/docker run --name kmdotnet -e VIRTUAL_HOST=kevin-messer.net,www.kevin-messer.net -e VIRTUAL_PORT=443 -e LETSENCRYPT_HOST=kevin-messer.net,www.kevin-messer.net -e LETSENCRYPT_EMAIL=contact@kevin-messer.net atem18/kmdotnet:{{ TRAVIS_COMMIT }}
 ExecStop=/usr/bin/docker stop kmdotnet
 
 [Install]
