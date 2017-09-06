@@ -18,5 +18,5 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: cd ansible && ansible-playbook -i hosts --limit=www.beta.kevin-messer.net -u
+  script: cd ansible && ansible-playbook -i hosts --limit=www.kevin-messer.net -u
     kmdotnet -b --extra-vars "TRAVIS_COMMIT=$TRAVIS_COMMIT" kmdotnet.yml
