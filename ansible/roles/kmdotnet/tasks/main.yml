@@ -2,7 +2,7 @@
   file: path=/etc/nginx state=directory
 
 - name: Copy nginx tmpl file
-  copy: src=nginx.tmpl dest=/etc/nginx/nginx.tmpl
+  copy: src=nginx.tmpl dest=/etc/nginx/
 
 - name: Install nginx systemd unit file
   template: src=nginx.service.j2 dest=/etc/systemd/system/nginx.service
