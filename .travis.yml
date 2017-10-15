@@ -4,7 +4,7 @@ language: ruby
 services:
 - docker
 before_install:
-- sudo apt-get install ansible
+- sudo pip install ansible
 before_script:
 - ENV=PROD bundle exec jekyll build
 script:
@@ -21,4 +21,4 @@ deploy:
   provider: script
   skip_cleanup: true
   script: cd ansible && ansible-playbook -i hosts --limit=www.kevin-messer.net -u
-    kmdotnet --extra-vars "TRAVIS_COMMIT=$TRAVIS_COMMIT" kmdotnet.yml
+    kmdotnet -b --extra-vars "TRAVIS_COMMIT=$TRAVIS_COMMIT" kmdotnet.yml
