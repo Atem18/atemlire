@@ -1,8 +1,6 @@
-sudo: required
 services:
 - docker
 before_install:
-- pip install --upgrade ndg-httpsclient
 - pip install ansible
 before_script:
 - ENV=PROD bundle exec jekyll build
