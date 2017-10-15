@@ -2,7 +2,7 @@ sudo: required
 services:
 - docker
 before_install:
-- sudo apt-get install ansible
+- pip install ansible=2.3.2.0
 before_script:
 - ENV=PROD bundle exec jekyll build
 script:
