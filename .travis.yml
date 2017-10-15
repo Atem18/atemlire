@@ -1,5 +1,6 @@
 sudo: required
-dist: precise
+dist: trusty
+language: ruby
 services:
 - docker
 before_install:
