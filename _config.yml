@@ -291,3 +291,17 @@ collections:
     author_profile: false
     share: true
     title: Wiki
+  games:
+    output: true
+    layout: single
+    permalink: /games/:path/
+    author_profile: false
+    share: true
+    title: Games
+  books:
+    output: true
+    layout: single
+    permalink: /books/:path/
+    author_profile: false
+    share: true
+    title: Books
