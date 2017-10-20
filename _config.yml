@@ -139,6 +139,13 @@ exclude:
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
+  - Dockerfile
+  - deploy_rsa.enc
+  - docker-compose.yml
+  - kmdotnet.conf
+  - nginx.conf
+  - security_headers.conf
+  - tls.conf
 keep_files:
   - .git
   - .svn
