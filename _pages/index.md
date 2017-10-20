@@ -5,7 +5,7 @@ permalink: "/"
 header:
   overlay_color: "#000"
   overlay_filter: 0.5
-  overlay_image: "/assets/images/home.jpg"
+  overlay_image: "/assets/images/home.webp"
   cta_label: About me
   cta_url: "/about"
 excerpt: You will find here all the stuff I love, personnal stuff, technical stuff
@@ -13,21 +13,21 @@ excerpt: You will find here all the stuff I love, personnal stuff, technical stu
 intro:
 - excerpt: Why not discover one thing of each domain I love ?
 feature_row:
-- image_path: "/assets/images/technology.jpg"
+- image_path: "/assets/images/technology.webp"
   alt: technology
   title: Technology
   excerpt: DevOps, Linux, Network, DBA, etc.
   url: "/wiki/index"
   btn_label: Read More
   btn_class: btn--inverse
-- image_path: "/assets/images/games.jpg"
+- image_path: "/assets/images/games.webp"
   alt: games
   title: Games
   excerpt: Magic, E-sport, Guild of Gamers, etc.
   url: "/games/index"
   btn_label: Read More
   btn_class: btn--inverse
-- image_path: "/assets/images/writing.jpg"
+- image_path: "/assets/images/writing.webp"
   alt: writing
   title: Writing
   excerpt: Shh, it's a secret...
