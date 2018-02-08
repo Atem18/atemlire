@@ -3,7 +3,7 @@ title: Index
 layout: single
 ---
 
-Welcome to my mtg section
+Welcome to my games section
 
 Sections:
 * [Mtg](/games/mtg/index)

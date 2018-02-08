@@ -2,6 +2,10 @@
 main:
   - title: "Wiki"
     url: /wiki/index
+  - title: "Games"
+    url: /games/index
+  - title: "Books"
+    url: /books/index
   - title: "About"
     url: /about
   - title: "Contact"
