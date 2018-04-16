@@ -312,3 +312,7 @@ collections:
     author_profile: false
     share: true
     title: Books
+
+footer_scripts:
+  - https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.3.0/cloudinary-core-shrinkwrap.min.js
+  - /assets/js/images.js
