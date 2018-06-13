@@ -1,6 +1,5 @@
 ---
 title: Index
-layout: single
 ---
 
 Welcome to my games section

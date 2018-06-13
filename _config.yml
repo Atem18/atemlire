@@ -151,6 +151,9 @@ exclude:
   - nginx.conf
   - security_headers.conf
   - tls.conf
+  - _ansible
+  - _site
+  - _dev
 keep_files:
   - .git
   - .svn
@@ -199,7 +202,6 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-minifier
-  - jekyll-admin
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -209,7 +211,6 @@ whitelist:
   - jekyll-feed
   - jemoji
   - jekyll-minifier
-  - jekyll-admin
 
 
 # Archives
@@ -284,35 +285,39 @@ defaults:
       comments: # true
       share: true
       related: true
-    scope:
+  - scope:
       path: ""
       type: wiki
     values:
       layout: single
-
+      author_profile: false
+      share: true
+  - scope:
+      path: ""
+      type: games
+    values:
+      layout: single
+      author_profile: false
+      share: true
+  - scope:
+      path: ""
+      type: books
+    values:
+      layout: single
+      author_profile: false
+      share: true
 collections:
   wiki:
     output: true
-    layout: single
     permalink: /wiki/:path/
-    author_profile: false
-    share: true
-    title: Wiki
   games:
     output: true
-    layout: single
     permalink: /games/:path/
-    author_profile: false
-    share: true
-    title: Games
   books:
     output: true
-    layout: single
     permalink: /books/:path/
-    author_profile: false
-    share: true
-    title: Books
 
 footer_scripts:
   - https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.3.0/cloudinary-core-shrinkwrap.min.js
   - /assets/js/images.js
+  - http://tappedout.net/tappedout.js
