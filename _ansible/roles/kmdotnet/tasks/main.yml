@@ -3,3 +3,6 @@
 
 - name: Start kmdotnet
   systemd: state=restarted name=kmdotnet daemon_reload=yes
+
+- name: Start nginx-gen
+  systemd: state=restarted name=nginx-gen
