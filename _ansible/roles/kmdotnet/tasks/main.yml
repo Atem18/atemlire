@@ -1,8 +1,11 @@
 - name: Install kmdotnet systemd unit file
   template: src=kmdotnet.service.j2 dest=/etc/systemd/system/kmdotnet.service
 
-- name: Start kmdotnet
+- name: Restart kmdotnet
   systemd: state=restarted name=kmdotnet daemon_reload=yes
 
-- name: Start nginx-gen
+- name: Restart nginx-gen
   systemd: state=restarted name=nginx-gen
+
+- name: Restart nginx
+  systemd: state=restarted name=nginx
