@@ -241,22 +241,14 @@ tag_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
-
-# HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
-
 jekyll-minifier:
-  preserve_php: true                # Default: false
+  preserve_php: false                # Default: false
   remove_spaces_inside_tags: true   # Default: true
   remove_multi_spaces: true         # Default: true
   remove_comments: true             # Default: true
   remove_intertag_spaces: true      # Default: false
   remove_quotes: false              # Default: false
-  compress_css: false                # Default: true
+  compress_css: true                # Default: true
   compress_javascript: true         # Default: true
   simple_doctype: false             # Default: false
   remove_script_attributes: false   # Default: false
@@ -316,8 +308,3 @@ collections:
   books:
     output: true
     permalink: /books/:path/
-
-footer_scripts:
-  - https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.3.0/cloudinary-core-shrinkwrap.min.js
-  - /assets/js/images.js
-  - http://tappedout.net/tappedout.js
