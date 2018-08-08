@@ -2,7 +2,7 @@
 title: Index
 ---
 
-Welcome to my wiki
+Welcome to my awesome wiki
 
 Sections:
 * [Linux](/wiki/linux/index)
