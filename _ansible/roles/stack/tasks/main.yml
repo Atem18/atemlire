@@ -1,8 +1,18 @@
 - name: Ensure Nginx directory exists
   file: path=/etc/nginx state=directory
 
-- name: Copy nginx tmpl file
-  copy: src=nginx.tmpl dest=/etc/nginx/
+- name: Download nginx tmpl file
+  get_url:
+    url: https://raw.githubusercontent.com/jwilder/nginx-proxy/master/nginx.tmpl
+    dest: /etc/nginx/nginx.tmpl
+
+- name: Ensure DH Parameters directory exists
+  file: path=/etc/nginx/dhparam state=directory
+
+- name: Generate DH Parameters
+  openssl_dhparam:
+    path: /etc/nginx/dhparam/dhparam.pem
+    size: 2048
 
 - name: Install nginx systemd unit file
   template: src=nginx.service.j2 dest=/etc/systemd/system/nginx.service
