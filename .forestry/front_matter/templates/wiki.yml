@@ -1,0 +1,11 @@
+---
+label: Wiki
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: title
+  description: The title of the page
+  config:
+    required: true
