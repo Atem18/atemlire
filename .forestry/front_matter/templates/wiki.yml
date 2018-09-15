@@ -9,5 +9,3 @@ fields:
   description: The title of the page
   config:
     required: true
-pages:
-- _wiki/devops.md
