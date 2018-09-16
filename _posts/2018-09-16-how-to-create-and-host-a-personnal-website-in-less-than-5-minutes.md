@@ -9,4 +9,8 @@ date: 2018-09-16 21:19:51 +0000
 
 # Docker
 
+[https://www.docker.com/](https://www.docker.com/ "https://www.docker.com/")
+
 # Datadog
+
+[https://www.datadoghq.com/](https://www.datadoghq.com/ "https://www.datadoghq.com/")
