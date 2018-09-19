@@ -10,7 +10,7 @@ before_script:
 - ENV=PROD bundle exec jekyll build
 script:
 - docker build -t atem18/kmdotnet:$TRAVIS_COMMIT .
-- docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 - docker push atem18/kmdotnet:$TRAVIS_COMMIT
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_d7452885b0d3_key -iv $encrypted_d7452885b0d3_iv
