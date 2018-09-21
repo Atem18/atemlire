@@ -116,44 +116,27 @@ author:
 
 # Reading Files
 include:
-  - .htaccess
   - _pages
 exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - vendor
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
-  - node_modules
-  - package.json
-  - Rakefile
-  - README
-  - tmp
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
-  - Dockerfile
-  - deploy_rsa.enc
-  - docker-compose.yml
-  - kmdotnet.conf
-  - nginx.conf
-  - security_headers.conf
-  - tls.conf
   - _ansible
   - _site
   - _dev
+  - _config.yml
+  - .env
+  - .forestry
+  - .gitignore
+  - .travis.yml
+  - deploy_rsa.enc
+  - docker-compose.yml
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - kmdotnet.conf
+  - nginx.conf
+  - README.md
+  - security_headers.conf
+  - tls.conf
+  - vendor
 keep_files:
   - .git
   - .svn
