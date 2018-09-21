@@ -136,6 +136,7 @@ exclude:
   - README.md
   - security_headers.conf
   - tls.conf
+  - vendor
 keep_files:
   - .git
   - .svn
