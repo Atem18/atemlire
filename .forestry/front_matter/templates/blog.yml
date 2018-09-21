@@ -1,0 +1,17 @@
+---
+label: Blog
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: text
+  name: subtitle
+  label: Subtitle
+  config:
+    required: true
+pages:
+- _posts/2018-09-16-how-to-create-and-host-a-personnal-website-in-less-than-5-minutes.md
