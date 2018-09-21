@@ -2,10 +2,9 @@ sudo: required
 dist: trusty
 language: ruby
 cache: bundler
+exclude: [vendor]
 services:
   - docker
-before_install:
-  - sudo pip install ansible
 before_script:
   - ENV=PROD bundle exec jekyll build
 script:
