@@ -21,7 +21,7 @@ deploy:
     skip_cleanup: true
     script: docker run --rm -v /tmp/deploy_rsa:/root/.ssh/id_rsa -v /home/travis/build/Atem18/kmdotnet/_ansible:/ansible/playbooks atem18/ansible-playbook:c9382b16c708777f0f194ae851520a94d6be480d -i www.kevin-messer.net, --extra-vars "TRAVIS_COMMIT=$TRAVIS_COMMIT" kmdotnet.yml
     on:
-      branch: ansible
+      branch: develop
   - provider: script
     skip_cleanup: true
     script: docker run --rm -v /tmp/deploy_rsa:/root/.ssh/id_rsa -v /home/travis/build/Atem18/kmdotnet/_ansible:/ansible/playbooks atem18/ansible-playbook:c9382b16c708777f0f194ae851520a94d6be480d -i www.kevin-messer.net, --extra-vars "TRAVIS_COMMIT=$TRAVIS_COMMIT" kmdotnet.yml
