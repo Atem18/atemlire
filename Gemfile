@@ -13,6 +13,7 @@ source "https://rubygems.org"
 
 # To upgrade, run `bundle update`.
 
-gem "jekyll", "~> 3.5"
+gem "jekyll"
+gem "html-proofer"
 gem "minimal-mistakes-jekyll"
 gem "jekyll-minifier"
