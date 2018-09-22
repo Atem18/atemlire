@@ -19,7 +19,7 @@ before_deploy:
 deploy:
   - provider: script
     skip_cleanup: true
-    script: cd _ansible && "$(pwd)" && "$(ls)" && docker run --rm -v /tmp/deploy_rsa:/root/.ssh/id_rsa -v "$(pwd):/ansible/playbooks" atem18/ansible-playbook:c9382b16c708777f0f194ae851520a94d6be480d -i www.kevin-messer.net, --extra-vars "TRAVIS_COMMIT=$TRAVIS_COMMIT" kmdotnet.yml
+    script: docker run --rm atem18/ansible-playbook:c9382b16c708777f0f194ae851520a94d6be480d -i www.kevin-messer.net, --extra-vars "TRAVIS_COMMIT=$TRAVIS_COMMIT" /home/travis/build/Atem18/kmdotnet/_ansible/kmdotnet.yml
     on:
       branch: ansible
   - provider: script
