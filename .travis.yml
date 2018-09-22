@@ -21,7 +21,7 @@ deploy:
   skip_cleanup: true
   script: cd _ansible && docker run --rm \
     -v /tmp/deploy_rsa:/root/.ssh/id_rsa \
-    "-v $(pwd):/ansible/playbooks" \
+    -v "$(pwd):/ansible/playbooks" \
     atem18/ansible-playbook \
     -i www.kevin-messer.net, \
     --extra-vars "TRAVIS_COMMIT=$TRAVIS_COMMIT" \
