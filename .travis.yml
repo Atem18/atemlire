@@ -22,18 +22,21 @@ jobs:
     - stage: deploy on testing
       script: skip
       deploy:
+        provider: script
         script: ./deploy.sh
         on:
           branch: develop
     - stage: deploy on staging
       script: skip
       deploy:
+        provider: script
         script: ./deploy.sh
         on:
           branch: content
     - stage: deploy on production
       script: skip
       deploy:
+        provider: script
         script: ./deploy.sh
         on:
           branch: master
