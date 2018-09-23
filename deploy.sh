@@ -1,8 +1,5 @@
 #!/bin/bash
 
-docker build -t atem18/kmdotnet:$TRAVIS_COMMIT .
-echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-docker push atem18/kmdotnet:$TRAVIS_COMMIT
 openssl aes-256-cbc -K $encrypted_d7452885b0d3_key -iv $encrypted_d7452885b0d3_iv -in deploy_rsa.enc -out /tmp/deploy_rsa -d
 eval "$(ssh-agent -s)"
 chmod 600 /tmp/deploy_rsa

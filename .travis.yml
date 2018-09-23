@@ -8,16 +8,18 @@ services:
   - docker
 stages:
   - build
-  - test
   - deploy on testing
   - deploy on staging
   - deploy on production
 jobs:
   include:
     - stage: build
-      script: ENV=PROD bundle exec jekyll build
-    - stage: test
-      script: ENV=PROD bundle exec htmlproofer ./_site
+      script:
+        - ENV=PROD bundle exec jekyll build
+        - ENV=PROD bundle exec htmlproofer ./_site
+        - docker build -t atem18/kmdotnet:$TRAVIS_COMMIT .
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        - docker push atem18/kmdotnet:$TRAVIS_COMMIT
     - stage: deploy on testing
       deploy:
         script: ./deploy.sh
