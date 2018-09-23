@@ -20,28 +20,28 @@ jobs:
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
         - docker push atem18/kmdotnet:$TRAVIS_COMMIT
     - stage: deploy on testing
-      skip_cleanup: true
       install: skip # bundle install is not required
       script: skip
       deploy:
+        skip_cleanup: true
         provider: script
         script: ./deploy.sh
         on:
           branch: develop
     - stage: deploy on staging
-      skip_cleanup: true
       install: skip # bundle install is not required
       script: skip
       deploy:
+        skip_cleanup: true
         provider: script
         script: ./deploy.sh
         on:
           branch: content
     - stage: deploy on production
-      skip_cleanup: true
       install: skip # bundle install is not required
       script: skip
       deploy:
+        skip_cleanup: true
         provider: script
         script: ./deploy.sh
         on:
