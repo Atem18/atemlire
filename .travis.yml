@@ -20,6 +20,7 @@ jobs:
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
         - docker push atem18/kmdotnet:$TRAVIS_COMMIT
     - stage: deploy on testing
+      install: skip # bundle install is not required
       script: skip
       deploy:
         provider: script
@@ -27,6 +28,7 @@ jobs:
         on:
           branch: develop
     - stage: deploy on staging
+      install: skip # bundle install is not required
       script: skip
       deploy:
         provider: script
@@ -34,6 +36,7 @@ jobs:
         on:
           branch: content
     - stage: deploy on production
+      install: skip # bundle install is not required
       script: skip
       deploy:
         provider: script
