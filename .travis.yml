@@ -4,8 +4,6 @@ cache: bundler
 exclude: [vendor]
 branches:
   only:
-    - develop
-    - content
     - master
 env:
   global:
