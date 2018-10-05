@@ -25,8 +25,6 @@ Be ready, it starts now !
 >
 > Jekyll sites can be connected to cloud-based CMS software such as CloudCannon, Forestry, Netlify or Siteleaf, enabling content editors to modify site content without having to know how to code.
 
-> 
->
 > Source : [https://en.wikipedia.org/wiki/Jekyll_(software)](https://en.wikipedia.org/wiki/Jekyll_(software) "https://en.wikipedia.org/wiki/Jekyll_(software)")
 
 [https://jekyllrb.com/](https://jekyllrb.com/ "https://jekyllrb.com/")
