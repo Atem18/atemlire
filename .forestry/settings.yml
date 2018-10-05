@@ -8,7 +8,7 @@ sections:
   path: ''
   label: Pages
   create: all
-  match: "**/*.md"
+  match: _pages/*.md
 - type: jekyll-posts
   label: Posts
   create: all
