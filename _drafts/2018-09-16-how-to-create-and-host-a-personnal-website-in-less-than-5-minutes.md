@@ -1,5 +1,5 @@
 ---
-title: How to create, host and monitor a Jekyll website for DevOps or lazy people
+title: How to create, host and monitor a Jekyll website, the DevOps way
 date: 2018-09-16 21:19:51 +0000
 subtitle: I will teach you how to hide complexity but keeping control of a self host
   website...
