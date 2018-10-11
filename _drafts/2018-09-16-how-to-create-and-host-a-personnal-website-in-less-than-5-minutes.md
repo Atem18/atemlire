@@ -9,7 +9,7 @@ You want to build a website ?
 
 You are a DevOps like me that loves to control everything he builds ?
 
-Well, you are in the right place. And even if you are not a DevOps but a lazy person that wants to learn how to self host a modern website, you are are welcomed as well.
+Well, you are in the right place.
 
 Today, we will learn about Jekyll, Forestry, Docker and Datadog.
 
