@@ -5,9 +5,9 @@ subtitle: I will teach you how to hide complexity but keeping control of a self 
   website...
 
 ---
-You want to build a website ?
+Want to create a website ?
 
-You are a DevOps like me that loves to control everything he builds ?
+Are you a DevOps like me that loves to control everything he builds ?
 
 Well, you are in the right place.
 
@@ -54,7 +54,7 @@ As written in the introduction of Jekyll, Forestry is a CMS that allows you to w
 
 I will not describe all the steps as their docs explains it better than me : [https://forestry.io/docs/quickstart/tour/](https://forestry.io/docs/quickstart/tour/ "https://forestry.io/docs/quickstart/tour/")
 
-My recommendation is to use Master branch from your github repository and if you do not want content to be published, set Draft to ON.
+My recommendation is to use Master branch from your GitHub repository and if you do not want content to be published, set Draft to ON.
 
 More info: [https://forestry.io](https://forestry.io "https://forestry.io")
 
