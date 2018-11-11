@@ -1,9 +1,10 @@
 FROM nginx:latest
+LABEL "traefik.backend"="kmdotnet"
+LABEL "traefik.docker.network"="kmdotnet"
+LABEL "traefik.enable"="true"
+LABEL "traefik.port"="80"
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY kmdotnet.conf /etc/nginx/conf.d/kmdotnet.conf
 COPY _site /usr/share/nginx/html
-ADD tls.conf /etc/nginx/includes/tls.conf
-ADD security_headers.conf /etc/nginx/includes/security_headers.conf
-ADD kmdotnet.conf /etc/nginx/conf.d/kmdotnet.conf
 VOLUME /usr/share/nginx/html
 EXPOSE 80
-EXPOSE 443

@@ -2,14 +2,16 @@
 Description=My personnal website
 After=docker.service
 Requires=docker.service
+After=traefik.service
+Requires=traefik.service
 
 [Service]
 Restart=always
 ExecStartPre=-/usr/bin/docker kill {{ SERVICE_NAME }}
 ExecStartPre=-/usr/bin/docker rm {{ SERVICE_NAME }}
 ExecStartPre=/usr/bin/docker pull atem18/kmdotnet:{{ TRAVIS_COMMIT }}
-ExecStart=/usr/bin/docker run --name {{ SERVICE_NAME }} -v /etc/nginx/certs:/etc/nginx/certs:ro -e VIRTUAL_HOST={{ VIRTUAL_HOST }} -e VIRTUAL_PROTO=https -e VIRTUAL_PORT=443 -e LETSENCRYPT_HOST={{ VIRTUAL_HOST }} -e LETSENCRYPT_EMAIL=contact@kevin-messer.net atem18/kmdotnet:{{ TRAVIS_COMMIT }}
-ExecStop=/usr/bin/docker stop kmdotnet
+ExecStart=/usr/bin/docker run --name {{ SERVICE_NAME }} --network=kmdotnet --label "traefik.frontend.rule"="Host:www.local.kevin-messer.net" atem18/kmdotnet:{{ TRAVIS_COMMIT }}
+ExecStop=/usr/bin/docker stop {{ SERVICE_NAME }}
 
 [Install]
 WantedBy=multi-user.target
