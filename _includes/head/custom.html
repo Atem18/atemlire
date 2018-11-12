@@ -8,47 +8,17 @@
 <meta name="theme-color" content="#ffffff">
 
 <script type="text/javascript">
-    /* First CSS File */
-    var giftofspeed = document.createElement('link');
-    giftofspeed.rel = 'stylesheet';
-    giftofspeed.href = "{{ '/assets/css/main.css' | relative_url }}";
-    giftofspeed.type = 'text/css';
-    var godefer = document.getElementsByTagName('link')[0];
-    godefer.parentNode.insertBefore(giftofspeed, godefer);
-    /* Second CSS File */
-    var giftofspeed2 = document.createElement('link');
-    giftofspeed2.rel = 'stylesheet';
-    giftofspeed2.href = "{{ '/assets/css/cookieconsent.min.css' | relative_url }}";
-    giftofspeed2.type = 'text/css';
-    var godefer2 = document.getElementsByTagName('link')[0];
-    godefer2.parentNode.insertBefore(giftofspeed2, godefer2);
+  (function(w, d){
+      var b = d.getElementsByTagName('body')[0];
+      var s = d.createElement("script"); 
+      var v = !("IntersectionObserver" in w) ? "8.17.0" : "10.19.0";
+      s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
+      s.src = "https://cdn.jsdelivr.net/npm/vanilla-lazyload@" + v + "/dist/lazyload.min.js";
+      w.lazyLoadOptions = {/* Your options here */};
+      b.appendChild(s);
+  }(window, document));
 </script>
 
-<link rel="stylesheet" type="text/css" href="{{ '/assets/css/cookieconsent.min.css' | relative_url }}">
-<script defer src="{{ '/assets/js/cookieconsent.min.js' | relative_url }}"></script>
-<script>
-    window.addEventListener("load", function(){
-    window.cookieconsent.initialise({
-      "palette": {
-        "popup": {
-          "background": "#000"
-        },
-        "button": {
-          "background": "#f1d600"
-        }
-      }
-    })});
-</script>
-
-<script type="text/javascript">
-    (function(w, d){
-        var b = d.getElementsByTagName('body')[0];
-        var s = d.createElement("script"); 
-        var v = !("IntersectionObserver" in w) ? "8.17.0" : "10.19.0";
-        s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
-        s.src = "https://cdn.jsdelivr.net/npm/vanilla-lazyload@" + v + "/dist/lazyload.min.js";
-        w.lazyLoadOptions = {/* Your options here */};
-        b.appendChild(s);
-    }(window, document));
-</script>
-
+<noscript>
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+</noscript>
