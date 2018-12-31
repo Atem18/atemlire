@@ -1,3 +1,4 @@
 services:
   - docker
+install: skip # bundle install is not required
 script: ./deploy.sh $TRAVIS_BRANCH
