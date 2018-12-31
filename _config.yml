@@ -164,6 +164,7 @@ exclude:
   - security_headers.conf
   - tls.conf
   - vendor
+  - deploy.sh
 keep_files:
   - .git
   - .svn
