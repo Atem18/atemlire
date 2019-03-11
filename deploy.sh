@@ -1,23 +1,7 @@
 #!/bin/bash
 
-BRANCH=$1
-
-if [ "$BRANCH" = "develop" ];then
-
-    SERVICE_NAME="kmdotnet-testing"
-    VIRTUAL_HOST="www.testing.kevin-messer.net"
-
-elif [ "$BRANCH" = "content" ];then
-
-    SERVICE_NAME="kmdotnet-staging"
-    VIRTUAL_HOST="www.staging.kevin-messer.net"
-
-elif [ "$BRANCH" = "master" ];then
-
-    SERVICE_NAME="kmdotnet"
-    VIRTUAL_HOST="www.kevin-messer.net"
-
-fi
+SERVICE_NAME="kmdotnet"
+VIRTUAL_HOST="www.kevin-messer.net"
 
 openssl aes-256-cbc -K "$encrypted_d7452885b0d3_key" -iv "$encrypted_d7452885b0d3_iv" -in deploy_rsa.enc -out /tmp/deploy_rsa -d
 
