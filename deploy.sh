@@ -11,4 +11,4 @@ chmod 600 /tmp/deploy_rsa
 
 ssh-add /tmp/deploy_rsa
 
-docker run --rm -v /tmp/deploy_rsa:/root/.ssh/id_rsa -v /home/travis/build/Atem18/kmdotnet/_ansible:/ansible/playbooks atem18/ansible-playbook:latest -u kmdotnet -i www.kevin-messer.net, --extra-vars "SERVICE_NAME=$SERVICE_NAME VIRTUAL_HOST=$VIRTUAL_HOST" kmdotnet.yml
+docker run --rm -v /tmp/deploy_rsa:/root/.ssh/id_rsa -v /home/travis/build/Atem18/kmdotnet/_ansible:/ansible/playbooks atem18/ansible-playbook:latest -u kmdotnet -i www.kevin-messer.net, --extra-vars "TRAVIS_COMMIT=$TRAVIS_COMMIT SERVICE_NAME=$SERVICE_NAME VIRTUAL_HOST=$VIRTUAL_HOST" kmdotnet.yml
