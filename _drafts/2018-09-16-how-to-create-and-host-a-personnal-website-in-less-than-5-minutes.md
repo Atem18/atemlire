@@ -60,10 +60,22 @@ More info: [https://forestry.io](https://forestry.io "https://forestry.io")
 
 # Docker
 
-[https://www.docker.com/](https://www.docker.com/ "https://www.docker.com/")
+Docker is a tool to manage containers. If you don't have it (yet), please install it : [https://docs.docker.com/install/](https://docs.docker.com/install/ "https://docs.docker.com/install/")
+
+For this website, I choosed to build with multistage in mind so that with one file, you can build the website with all the tools and have a small image to deploy in production.
+
+Here is an example : [https://github.com/Atem18/kmdotnet/blob/master/Dockerfile](https://github.com/Atem18/kmdotnet/blob/master/Dockerfile "https://github.com/Atem18/kmdotnet/blob/master/Dockerfile")
+
+For more info about what commands do what, please go [https://docs.docker.com](https://docs.docker.com "https://docs.docker.com")
+
+More info: [https://www.docker.com/](https://www.docker.com/ "https://www.docker.com/")
 
 # Travis CI
 
 # Datadog
 
 [https://www.datadoghq.com/](https://www.datadoghq.com/ "https://www.datadoghq.com/")
+
+If you want to learn and practice, clone or fork the repo of this website, build the docker and run it: [https://github.com/Atem18/kmdotnet](https://github.com/Atem18/kmdotnet "https://github.com/Atem18/kmdotnet")
+
+Happy DevOPS !
