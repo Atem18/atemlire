@@ -5,6 +5,8 @@ subtitle: I will teach you how to hide complexity but keeping control of a self 
   website...
 
 ---
+# Introduction
+
 Want to create a website ?
 
 Are you a DevOps like me that loves to control everything he builds ?
@@ -42,7 +44,7 @@ And finally, launch your new website:
 
 From now on, you can create pages, blog articles, collections and so on.
 
-I will not describe all the steps to do it, they have a proper documentation about it : [https://jekyllrb.com/docs/](https://jekyllrb.com/docs/ "https://jekyllrb.com/docs/")
+I will not explain all the steps to do so because they do it better than me : [https://jekyllrb.com/docs/](https://jekyllrb.com/docs/ "https://jekyllrb.com/docs/")
 
 And if you want an example of a running Jekyll website, well you have that website and the source code is here : [https://github.com/Atem18/kmdotnet](https://github.com/Atem18/kmdotnet "https://github.com/Atem18/kmdotnet")
 
@@ -52,7 +54,7 @@ More info: [https://jekyllrb.com/](https://jekyllrb.com/ "https://jekyllrb.com/"
 
 As written in the introduction of Jekyll, Forestry is a CMS that allows you to write content for your Jekyll website with a WYSIWYG interface.
 
-I will not describe all the steps as their docs explains it better than me : [https://forestry.io/docs/quickstart/tour/](https://forestry.io/docs/quickstart/tour/ "https://forestry.io/docs/quickstart/tour/")
+Same as Jekyll, take the tutorial : [https://forestry.io/docs/quickstart/tour/](https://forestry.io/docs/quickstart/tour/ "https://forestry.io/docs/quickstart/tour/")
 
 My recommendation is to use Master branch from your GitHub repository and if you do not want content to be published, set Draft to ON.
 
@@ -75,6 +77,8 @@ More info: [https://www.docker.com/](https://www.docker.com/ "https://www.docker
 # Datadog
 
 [https://www.datadoghq.com/](https://www.datadoghq.com/ "https://www.datadoghq.com/")
+
+# Conclusion
 
 If you want to learn and practice, clone or fork the repo of this website, build the docker and run it: [https://github.com/Atem18/kmdotnet](https://github.com/Atem18/kmdotnet "https://github.com/Atem18/kmdotnet")
 
