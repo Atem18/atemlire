@@ -7,13 +7,13 @@ subtitle: I will teach you how to hide complexity but keeping control of a self 
 ---
 # Introduction
 
-Want to create a website ?
-
-Are you a DevOps like me that loves to control everything he builds ?
+Want to create a website ? Are you lazy ? Do you know a bit about DevOps ?
 
 Well, you are in the right place.
 
 Today, we will learn about Jekyll, Forestry, Docker, Travis CI and Datadog.
+
+Please be advice that it's not a step by step tutorial but more of a collection of the technologies that I used to create my personal website.
 
 Be ready, it starts now !
 
@@ -56,15 +56,19 @@ As written in the introduction of Jekyll, Forestry is a CMS that allows you to w
 
 Same as Jekyll, take the tutorial : [https://forestry.io/docs/quickstart/tour/](https://forestry.io/docs/quickstart/tour/ "https://forestry.io/docs/quickstart/tour/")
 
-My recommendation is to use Master branch from your GitHub repository and if you do not want content to be published, set Draft to ON.
+My recommendation is to use Master branch from your GitHub repository if you are alone and a content branch that you merge into master if others people will do the content.
+
+If you do not want content to be published either way, set Draft to ON.
 
 More info: [https://forestry.io](https://forestry.io "https://forestry.io")
 
 # Docker
 
-Docker is a tool to manage containers. If you don't have it (yet), please install it : [https://docs.docker.com/install/](https://docs.docker.com/install/ "https://docs.docker.com/install/")
+Docker is a tool to manage containers.
 
-For this website, I choosed to build with multistage in mind so that with one file, you can build the website with all the tools and have a small image to deploy in production.
+If you don't know (yet) what is a container nor Docker, please take the tutorial : [https://docs.docker.com/get-started/#test-docker-installation](https://docs.docker.com/get-started/#test-docker-installation "https://docs.docker.com/get-started/#test-docker-installation")
+
+For this website, I have chosen to build with multistage in mind so that with one file, you can build the website with all the tools and have a small image to deploy in production. Plus, it does not matter where you build it, you can migrate to any platform at any moment.
 
 Here is an example : [https://github.com/Atem18/kmdotnet/blob/master/Dockerfile](https://github.com/Atem18/kmdotnet/blob/master/Dockerfile "https://github.com/Atem18/kmdotnet/blob/master/Dockerfile")
 
