@@ -1,6 +1,6 @@
 ---
 title: How to create, host and monitor a personnal website, the DevOps way
-date: 2018-09-16 21:19:51 +0000
+date: '2018-09-16T21:19:51.000+00:00'
 subtitle: I will teach you how to hide complexity but keeping control of a self host
   website...
 
@@ -13,7 +13,7 @@ Well, you are in the right place.
 
 Today, we will learn about Jekyll, Forestry, Docker, Travis CI and Datadog.
 
-Please be advice that it's not a step by step tutorial but more of a collection of the technologies that I used to create my personal website.
+Please be advice that it's not a step by step tutorial, as you can read the dockerfile and docker-compose, but notes of the technologies that I used to create my personal website.
 
 Be ready, it starts now !
 
@@ -72,11 +72,21 @@ For this website, I have chosen to build with multistage in mind so that with on
 
 Here is an example : [https://github.com/Atem18/kmdotnet/blob/master/Dockerfile](https://github.com/Atem18/kmdotnet/blob/master/Dockerfile "https://github.com/Atem18/kmdotnet/blob/master/Dockerfile")
 
-For more info about what commands do what, please go [https://docs.docker.com](https://docs.docker.com "https://docs.docker.com")
+Basically, I am first building my website in a subset of Jekyll containers and then I copy the static files in an Nginx containers with some flags for Traefik.
 
 More info: [https://www.docker.com/](https://www.docker.com/ "https://www.docker.com/")
 
-# Travis CI
+# Traefik
+
+Traefik is used as a reverse proxy for our website and to enable HTTPS.
+
+To launch Traefik:
+
+    /usr/bin/docker run --name traefik --network=kmdotnet -p 80:80 -p 443:443 -v /var/run/docker.sock:/var/run/docker.sock -v /etc/traefik/traefik.toml:/traefik.toml -v /etc/traefik/acme.json:/acme.json traefik --docker
+
+To launch your website with Traefik:
+
+    /usr/bin/docker run --name kmdotnet --network=kmdotnet --label "traefik.frontend.rule"="Host:www.kevin-messer.net" atem18/kmdotnet:git_commit
 
 # Datadog
 
