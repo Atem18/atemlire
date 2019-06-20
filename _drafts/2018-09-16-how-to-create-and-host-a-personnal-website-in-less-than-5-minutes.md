@@ -13,7 +13,7 @@ Well, you are in the right place.
 
 Today, we will learn about Jekyll, Forestry, Docker, Travis CI and Datadog.
 
-Please be advice that it's not a step by step tutorial, as you can read the dockerfile and docker-compose, but notes of the technologies that I used to create my personal website.
+Please be advice that it's not a step by step tutorial, you are encouraged to read the dockerfile and docker-compose files, but a tour of the technologies that I used to create my personal website.
 
 Be ready, it starts now !
 
@@ -88,9 +88,13 @@ To launch your website with Traefik:
 
     /usr/bin/docker run --name kmdotnet --network=kmdotnet --label "traefik.frontend.rule"="Host:www.kevin-messer.net" atem18/kmdotnet:git_commit
 
+More info: [https://traefik.io/](https://traefik.io/ "https://traefik.io/")
+
 # Datadog
 
-[https://www.datadoghq.com/](https://www.datadoghq.com/ "https://www.datadoghq.com/")
+To monitor my website, I am using a cloud monitoring provider to reduce the cost, because pulling and storing monitoring metrics is expensive.
+
+More info: [https://www.datadoghq.com/](https://www.datadoghq.com/ "https://www.datadoghq.com/")
 
 # Conclusion
 
