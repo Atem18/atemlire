@@ -1,7 +1,8 @@
 FROM jekyll/builder
+ENV NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 COPY --chown=jekyll:jekyll . /srv/jekyll
 RUN bundle install
-RUN jekyll build --destination /tmp/_site
+RUN ENV=PROD bundle exec jekyll build --destination /tmp/_site
 
 FROM nginx:latest
 LABEL "traefik.backend"="kmdotnet"

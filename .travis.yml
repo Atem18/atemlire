@@ -1,13 +1,7 @@
 language: python
-sudo: required
-cache: bundler
-exclude: [vendor]
 branches:
   only:
     - master
-env:
-  global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 services:
   - docker
 stages:
@@ -16,11 +10,12 @@ stages:
 jobs:
   include:
     - stage: build
-      script:
-        - ENV=PROD bundle exec jekyll build
-        - docker build -t atem18/kmdotnet:$TRAVIS_COMMIT .
-        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-        - docker push atem18/kmdotnet:$TRAVIS_COMMIT
+      install: skip # bundle install is not required
+      script: skip
+      build:
+        skip_cleanup: true
+        provider: script
+        script: ./build.sh
     - stage: deploy
       install: skip # bundle install is not required
       script: skip
