@@ -11,11 +11,7 @@ Want to create a website ? Are you lazy ? Do you know a bit about DevOps ?
 
 Well, you are in the right place.
 
-Today, we will learn about Jekyll, Forestry, Docker, Travis CI and Datadog.
-
-Please be advice that it's not a step by step tutorial, you are encouraged to read the dockerfile and docker-compose files, but a tour of the technologies that I used to create my personal website.
-
-Be ready, it starts now !
+Today, we will learn about Jekyll, Forestry and AWS.
 
 # Jekyll
 
@@ -61,40 +57,6 @@ My recommendation is to use Master branch from your GitHub repository if you are
 If you do not want content to be published either way, set Draft to ON.
 
 More info: [https://forestry.io](https://forestry.io "https://forestry.io")
-
-# Docker
-
-Docker is a tool to manage containers.
-
-If you don't know (yet) what is a container nor Docker, please take the tutorial : [https://docs.docker.com/get-started/#test-docker-installation](https://docs.docker.com/get-started/#test-docker-installation "https://docs.docker.com/get-started/#test-docker-installation")
-
-For this website, I have chosen to build with multistage in mind so that with one file, you can build the website with all the tools and have a small image to deploy in production. Plus, it does not matter where you build it, you can migrate to any platform at any moment.
-
-Here is an example : [https://github.com/Atem18/kmdotnet/blob/master/Dockerfile](https://github.com/Atem18/kmdotnet/blob/master/Dockerfile "https://github.com/Atem18/kmdotnet/blob/master/Dockerfile")
-
-Basically, I am first building my website in a subset of Jekyll containers and then I copy the static files in an Nginx containers with some flags for Traefik.
-
-More info: [https://www.docker.com/](https://www.docker.com/ "https://www.docker.com/")
-
-# Traefik
-
-Traefik is used as a reverse proxy for our website and to enable HTTPS.
-
-To launch Traefik:
-
-    /usr/bin/docker run --name traefik --network=kmdotnet -p 80:80 -p 443:443 -v /var/run/docker.sock:/var/run/docker.sock -v /etc/traefik/traefik.toml:/traefik.toml -v /etc/traefik/acme.json:/acme.json traefik --docker
-
-To launch your website with Traefik:
-
-    /usr/bin/docker run --name kmdotnet --network=kmdotnet --label "traefik.frontend.rule"="Host:www.kevin-messer.net" atem18/kmdotnet:git_commit
-
-More info: [https://traefik.io/](https://traefik.io/ "https://traefik.io/")
-
-# Datadog
-
-To monitor my website, I am using a cloud monitoring provider to reduce the cost, because pulling and storing monitoring metrics is expensive.
-
-More info: [https://www.datadoghq.com/](https://www.datadoghq.com/ "https://www.datadoghq.com/")
 
 # Conclusion
 
