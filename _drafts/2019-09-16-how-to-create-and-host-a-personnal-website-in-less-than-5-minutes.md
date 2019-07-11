@@ -1,8 +1,7 @@
 ---
 title: How to create, host and monitor a personnal website, the DevOps way
-date: '2018-09-16T21:19:51.000+00:00'
-subtitle: I will teach you how to hide complexity but keeping control of a self host
-  website...
+date: '2019-09-16T21:19:51.000+00:00'
+subtitle: Or how to host a website on AWS for cheap...
 
 ---
 # Introduction
@@ -58,8 +57,12 @@ If you do not want content to be published either way, set Draft to ON.
 
 More info: [https://forestry.io](https://forestry.io "https://forestry.io")
 
+# AWS
+
+TODO
+
 # Conclusion
 
 If you want to learn and practice, clone or fork the repo of this website, build the docker and run it: [https://github.com/Atem18/kmdotnet](https://github.com/Atem18/kmdotnet "https://github.com/Atem18/kmdotnet")
 
-Happy DevOPS !
+Happy DevOPS ! :)
