@@ -1,6 +1,6 @@
 ---
 title: How to create, host and monitor a personnal website, the DevOps way
-date: '2019-09-16T21:19:51.000+00:00'
+date: 2019-09-16 23:19:51 +0200
 subtitle: Or how to host a website on AWS for cheap...
 
 ---
@@ -59,7 +59,11 @@ More info: [https://forestry.io](https://forestry.io "https://forestry.io")
 
 # AWS
 
-TODO
+## S3
+
+## Cloudfront
+
+## Lambda
 
 # Conclusion
 
