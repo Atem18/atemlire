@@ -24,7 +24,7 @@ jobs:
           command: mkdir -p $JOB_RESULTS_PATH
       - run:
           name: Build site
-          command: bundle exec jekyll build 2>&1 | tee $JOB_RESULTS_PATH/build-results.txt
+          command: bundle exec jekyll build --trace 2>&1 | tee $JOB_RESULTS_PATH/build-results.txt
       - run:
           name: Index with Algolia
           command: bundle exec jekyll algolia
