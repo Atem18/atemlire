@@ -1,59 +1,58 @@
-defaults: &defaults
-  working_directory: ~/repo
 version: 2
 jobs:
   build:
-    <<: *defaults
     docker:
       - image: circleci/ruby:2.6
+    working_directory: ~/jekyll
     environment:
-      BUNDLE_PATH: ~/repo/vendor/bundle
+      - JEKYLL_ENV=production
+      - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+      - JOB_RESULTS_PATH=run-results
     steps:
       - checkout
       - restore_cache:
-          keys:
-            - rubygems-v1-{{ checksum "Gemfile.lock" }}
-            - rubygems-v1-fallback
+          key: jekyll-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
       - run:
-          name: Bundle Install
-          command: bundle check || bundle install
+          name: Install dependencies
+          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
       - save_cache:
-          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
+          key: jekyll-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
-            - vendor/bundle
+            - "vendor/bundle"
       - run:
-          name: Jekyll build
-          command: bundle exec jekyll build --trace
+          name: Create results directory
+          command: mkdir -p $JOB_RESULTS_PATH
       - run:
-          name: HTMLProofer tests
-          command: |
-            bundle exec htmlproofer ./_site \
-              --allow-hash-href \
-              --check-favicon  \
-              --check-html \
-              --disable-external
+          name: Build site
+          command: bundle exec jekyll build 2>&1 | tee $JOB_RESULTS_PATH/build-results.txt
+      - run:
+          name: Index with Algolia
+          command: bundle exec jekyll algolia
+      - store_artifacts:
+          path: run-results/
+          destination: run-results
       - persist_to_workspace:
-          root: ./
+          root: ~/jekyll
           paths:
             - _site
   deploy:
-    <<: *defaults
     docker:
       - image: circleci/python:3.7
     environment:
       S3_BUCKET_NAME: kmdotnet-s3bucket-1ucv72i21hs6g
+    working_directory: ~/jekyll
     steps:
       - attach_workspace:
-          at: ./
+          at: ~/jekyll
       - run:
-          name: Install AWS CLI
+          name: Install awscli
           command: pip install awscli --upgrade --user
       - run:
           name: Upload to s3
           command: ~/.local/bin/aws s3 sync ./_site s3://$S3_BUCKET_NAME/ --delete --acl public-read
 workflows:
   version: 2
-  test-deploy:
+  build-deploy:
     jobs:
       - build
       - deploy:
