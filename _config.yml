@@ -129,26 +129,14 @@ footer:
 include:
   - _pages
 exclude:
-  - _ansible
   - _site
-  - _dev
   - _config.yml
-  - .env
   - .forestry
   - .gitignore
-  - .travis.yml
-  - deploy_rsa.enc
-  - docker-compose.yml
-  - Dockerfile
   - Gemfile
   - Gemfile.lock
-  - kmdotnet.conf
-  - nginx.conf
   - README.md
-  - security_headers.conf
-  - tls.conf
-  - vendor
-  - deploy.sh
+  - renovate.json
 keep_files:
   - .git
   - .svn
