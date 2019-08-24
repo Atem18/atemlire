@@ -5,7 +5,7 @@ jobs:
   build:
     <<: *defaults
     docker:
-      - image: circleci/ruby:2.5
+      - image: circleci/ruby:2.6
     environment:
       BUNDLE_PATH: ~/repo/vendor/bundle
     steps:
@@ -39,7 +39,7 @@ jobs:
   deploy:
     <<: *defaults
     docker:
-      - image: circleci/python:3.6.3
+      - image: circleci/python:3.7
     environment:
       S3_BUCKET_NAME: kmdotnet-s3bucket-1ucv72i21hs6g
     steps:
