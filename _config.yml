@@ -129,6 +129,7 @@ footer:
 include:
   - _pages
 exclude:
+  - .circleci
   - _site
   - _config.yml
   - .forestry
