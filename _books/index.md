@@ -1,9 +1,7 @@
 ---
 title: Index
-layout: single
 ---
 
-Welcome to my books reading section
+Welcome to my library
 
-Sections:
-* [La perversion de narcisse](/books/la_perversion_de_narcisse/index)
+* [La perversion de Narcisse (WIP not yet published...)](/books/la-perversion-de-narcisse/)

@@ -1,9 +1,7 @@
 ---
 title: Mtg
-layout: single
 ---
 
-Welcome to my Mtg section.
+Welcome to my Mtg space.
 
-Sections:
 * [Decks](/games/mtg/decks)

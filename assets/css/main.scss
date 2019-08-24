@@ -4,11 +4,17 @@
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+$paragraph-indent: true;
 
 body {
     margin-bottom: 176px;
+}
+
+.sidebar__top {
+    position: fixed;
+    bottom: 1.5em;
+    right: 2em;
+    z-index: 10;
 }
 
 .tappedout_tcg {
@@ -18,3 +24,6 @@ body {
 .tappedout_ck {
     display: none !important;
 }
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials

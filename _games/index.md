@@ -1,9 +1,7 @@
 ---
 title: Index
-layout: single
 ---
 
-Welcome to my games section
+Welcome to my gaming area
 
-Sections:
 * [Mtg](/games/mtg/index)
