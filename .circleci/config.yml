@@ -64,26 +64,28 @@ jobs:
           key: v1-assets-{{ .Environment.CIRCLE_SHA1 }}
           paths:
             - ~/repo
+
   deploy:
     docker:
       - image: circleci/python:3.7
     environment:
       S3_BUCKET_NAME: kmdotnet-s3bucket-1ucv72i21hs6g
-    working_directory: ~/jekyll
+    working_directory: ~/repo
     steps:
       - attach_workspace:
-          at: ~/jekyll
+          at: ~/repo
       - run:
           name: Install awscli
           command: pip install awscli --upgrade --user
       - run:
           name: Upload to s3
           command: ~/.local/bin/aws s3 sync ./_site s3://$S3_BUCKET_NAME/ --delete --acl public-read
+
 workflows:
   version: 2
-  build-deploy:
+  build-and-deploy:
     jobs:
-      - checkout_code:
+      - checkout_code
       - bundle_dependencies:
           requires:
             - checkout_code
@@ -95,4 +97,5 @@ workflows:
             - precompile
           filters:
             branches:
-              only: master
+              only:
+                - master
