@@ -1,18 +1,17 @@
 version: 2.1
-  executors:
-    docker-publisher:
-      environment:
-        IMAGE_NAME: atem18/kmdotnet
-      docker:
-        - image: circleci/buildpack-deps:stretch
-  executors:
-    aws-cli:
-      environment:
-        AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
-        AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
-        AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
-      docker:
-        - image: mesosphere/aws-cli
+executors:
+  docker-publisher:
+    environment:
+      IMAGE_NAME: atem18/kmdotnet
+    docker:
+      - image: circleci/buildpack-deps:stretch
+  aws-cli:
+    environment:
+      AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+      AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+      AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+    docker:
+      - image: mesosphere/aws-cli
 jobs:
   build:
     executor: docker-publisher
