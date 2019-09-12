@@ -13,9 +13,9 @@ source "https://rubygems.org"
 
 # To upgrade, run `bundle update`.
 
-gem "jekyll", "4.0.0"
-gem "html-proofer", "3.11.1"
-gem "minimal-mistakes-jekyll", "4.16.6"
-gem "jekyll-minifier", "0.1.8"
-gem "jekyll-include-cache", "0.2.0"
-gem 'jemoji', "0.11.1"
+gem 'jekyll', '~> 4.0'
+gem 'html-proofer', '~> 3.11', '>= 3.11.1'
+gem 'minimal-mistakes-jekyll', '~> 4.16', '>= 4.16.6'
+gem 'jekyll-minifier', '~> 0.1.10'
+gem 'jekyll-include-cache', '~> 0.2.0'
+gem 'jemoji', '~> 0.11.1'

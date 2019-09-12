@@ -1,100 +1,57 @@
-version: 2
+version: 2.1
+  executors:
+    docker-publisher:
+      environment:
+        IMAGE_NAME: atem18/kmdotnet
+      docker:
+        - image: circleci/buildpack-deps:stretch
+  executors:
+    aws-cli:
+      environment:
+        AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+        AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+        AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+      docker:
+        - image: mesosphere/aws-cli
 jobs:
-  checkout_code:
-    docker:
-      - image: circleci/ruby:2.6
-
-    working_directory: ~/repo
-
+  build:
+    executor: docker-publisher
     steps:
       - checkout
-      - save_cache:
-          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
-          paths:
-            - ~/repo
-
-  bundle_dependencies:
-    docker:
-      - image: circleci/ruby:2.6
-
-    working_directory: ~/repo
-
-    steps:
-      - restore_cache:
-          keys:
-            - v1-repo-{{ .Environment.CIRCLE_SHA1 }}
-      - restore_cache:
-          keys:
-            - v1-bundle-{{ checksum "Gemfile.lock" }}
+      - setup_remote_docker
       - run:
-          name: install builder
-          command : |
-            gem install bundler
-      - run: bundle install --path vendor/bundle
-      - save_cache:
-          key: v1-bundle-{{ checksum "Gemfile.lock" }}
-          paths:
-            - ~/repo/vendor/bundle
-
-  precompile:
-    docker:
-      - image: circleci/ruby:2.6
-
-    working_directory: ~/repo
-
-    steps:
-      - restore_cache:
-          keys:
-            - v1-repo-{{ .Environment.CIRCLE_SHA1 }}
-      - restore_cache:
-          keys:
-            - v1-bundle-{{ checksum "Gemfile.lock" }}
+          name: Build Docker image
+          command: docker build -t $IMAGE_NAME:latest .
       - run:
-          name: Install Builder
-          command : |
-            gem install bundler            
-      - run: 
-          name: Link Bundle Path
-          command : |
-            bundle --path vendor/bundle
+          name: Create temp container
+          command: id=$(docker create atem18/kmdotnet)
       - run:
-          name: Precompile Assets
-          command: bundle exec jekyll build
-      - save_cache:
-          key: v1-assets-{{ .Environment.CIRCLE_SHA1 }}
+          name: Copy _site to local path
+          command: docker cp $id:/srv/jekyll/_site .
+      - run:
+          name: Remove temp container
+          command: docker rm -v $id
+      - persist_to_workspace:
+          root: .
           paths:
-            - ~/repo
-
+            - ./_site
   deploy:
-    docker:
-      - image: circleci/python:3.7
-    environment:
-      S3_BUCKET_NAME: kmdotnet-s3bucket-1ucv72i21hs6g
-    working_directory: ~/repo
+    executor: docker-publisher
     steps:
       - attach_workspace:
-          at: ~/repo
+          at: /tmp/workspace
+      - setup_remote_docker
       - run:
-          name: Install awscli
-          command: pip install awscli --upgrade --user
-      - run:
-          name: Upload to s3
-          command: ~/.local/bin/aws s3 sync ./_site s3://$S3_BUCKET_NAME/ --delete --acl public-read
-
+          name: Deploy _site
+          command: ./aws.sh s3 sync _site s3://kmdotnet-s3bucket-1ucv72i21hs6g
 workflows:
   version: 2
   build-and-deploy:
     jobs:
-      - checkout_code
-      - bundle_dependencies:
-          requires:
-            - checkout_code
-      - precompile:
-          requires:
-            - bundle_dependencies
+      - build
       - deploy:
           requires:
-            - precompile
+            - build
           filters:
             branches:
               only:
