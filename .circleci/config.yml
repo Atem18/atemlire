@@ -1,46 +1,51 @@
-version: 2
+version: 2.1
+executors:
+  docker-publisher:
+    environment:
+      IMAGE_NAME: atem18/kmdotnet
+    docker:
+      - image: circleci/buildpack-deps:stretch
+  aws-cli:
+    environment:
+      AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+      AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+      AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+    docker:
+      - image: mesosphere/aws-cli
 jobs:
   build:
-    docker:
-      - image: jekyll/builder:4.0
-    working_directory: /srv/jekyll
-    environment:
-      - JEKYLL_ENV=production
-      - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-      - JOB_RESULTS_PATH=run-results
+    executor: docker-publisher
     steps:
       - checkout
+      - setup_remote_docker
       - run:
-          name: Build site
-          command: jekyll build
+          name: Build Docker image
+          command: docker build -t $IMAGE_NAME:latest .
       - run:
-          name: Index with Algolia
-          command: jekyll algolia
-      - store_artifacts:
-          path: run-results/
-          destination: run-results
+          name: Create temp container
+          command: id=$(docker create $IMAGE_NAME:latest)
+      - run:
+          name: Copy _site to local path
+          command: docker cp $id:/srv/jekyll/_site .
+      - run:
+          name: Remove temp container
+          command: docker rm -v $id
       - persist_to_workspace:
           root: ./
           paths:
-            - _site
+            - ./_site
   deploy:
-    docker:
-      - image: circleci/python:3.7
-    environment:
-      S3_BUCKET_NAME: kmdotnet-s3bucket-1ucv72i21hs6g
-    working_directory: ~/jekyll
+    executor: docker-publisher
     steps:
       - attach_workspace:
           at: ./
+      - setup_remote_docker
       - run:
-          name: Install awscli
-          command: pip install awscli --upgrade --user
-      - run:
-          name: Upload to s3
-          command: ~/.local/bin/aws s3 sync ./_site s3://$S3_BUCKET_NAME/ --delete --acl public-read
+          name: Deploy _site
+          command: ./aws.sh s3 sync ./_site s3://kmdotnet-s3bucket-1ucv72i21hs6g
 workflows:
   version: 2
-  build-deploy:
+  build-and-deploy:
     jobs:
       - build
       - deploy:
@@ -48,4 +53,5 @@ workflows:
             - build
           filters:
             branches:
-              only: master
+              only:
+                - master
