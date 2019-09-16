@@ -13,7 +13,7 @@ executors:
       NOKOGIRI_USE_SYSTEM_LIBRARIES: true
       JOB_RESULTS_PATH: run-results
     docker:
-      - image: circleci/ruby:2.6
+      - image: circleci/ruby:2.6.3-buster-node
   aws-cli:
     environment:
       AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
