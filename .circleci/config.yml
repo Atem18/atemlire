@@ -19,17 +19,9 @@ jobs:
     executor: jekyll-builder
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - rubygems-v1-{{ checksum "Gemfile.lock" }}
-            - rubygems-v1-fallback
       - run:
           name: Bundle Install
           command: bundle install
-      - save_cache:
-          paths:
-            - /usr/local/bundle
-          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
       - run:
           name: Jekyll build
           command: bundle exec jekyll build --verbose
