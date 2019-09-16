@@ -1,9 +1,17 @@
 version: 2.1
+references:
+  workspace_root: &workspace_root
+    /tmp/workspace
+  attach_workspace: &attach_workspace
+    attach_workspace:
+      at: *workspace_root
 executors:
   jekyll-builder:
+    working_directory: ~/kmdotnet
     environment:
+      JEKYLL_ENV: production
       NOKOGIRI_USE_SYSTEM_LIBRARIES: true
-      BUNDLE_PATH: ~/repo/vendor/bundle
+      JOB_RESULTS_PATH: run-results
     docker:
       - image: circleci/ruby:2.6
   aws-cli:
@@ -19,23 +27,30 @@ jobs:
     executor: jekyll-builder
     steps:
       - checkout
+      - *attach_workspace
+      - restore_cache:
+          key: kmdotnet-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
       - run:
-          name: Bundle Install
-          command: bundle install
+          name: Install Ruby dependencies
+          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
+      - save_cache:
+          key: kmdotnet-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - "vendor/bundle"
       - run:
-          name: Tests
-          command: ls -lah && ls -lah vendor/bundle
+          name: Create results directory
+          command: mkdir -p $JOB_RESULTS_PATH
       - run:
-          name: Jekyll build
-          command: bundle exec jekyll build --verbose
+          name: Build the Jekyll site
+          command: bundle exec jekyll build --config _config.yml, --source jekyll --destination _site 2>&1 | tee $JOB_RESULTS_PATH/build-results.txt
       - run:
           name: HTMLProofer tests
           command: |
-            bundle exec htmlproofer ./_site \
+            bundle exec htmlproofer _site \
               --allow-hash-href \
               --check-favicon  \
               --check-html \
-              --disable-external
+              --disable-external | tee $JOB_RESULTS_PATH/htmlproofer-results.txt
       - persist_to_workspace:
           root: ./
           paths:
@@ -48,7 +63,7 @@ jobs:
           at: ./
       - run:
           name: Deploy _site
-          command: ./aws.sh s3 sync ./_site s3://kmdotnet-s3bucket-1ucv72i21hs6g
+          command: ./aws.sh s3 sync _site s3://kmdotnet-s3bucket-1ucv72i21hs6g
 workflows:
   version: 2
   build-and-deploy:
