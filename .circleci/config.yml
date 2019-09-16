@@ -43,14 +43,6 @@ jobs:
       - run:
           name: Build the Jekyll site
           command: bundle exec jekyll build --config _config.yml 2>&1 | tee $JOB_RESULTS_PATH/build-results.txt
-      - run:
-          name: HTMLProofer tests
-          command: |
-            bundle exec htmlproofer _site \
-              --allow-hash-href \
-              --check-favicon  \
-              --check-html \
-              --disable-external | tee $JOB_RESULTS_PATH/htmlproofer-results.txt
       - persist_to_workspace:
           root: ./
           paths:
