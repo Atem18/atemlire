@@ -1,10 +1,10 @@
 version: 2.1
 executors:
-  docker-publisher:
+  jekyll-builder:
     environment:
-      IMAGE_NAME: atem18/kmdotnet
+      NOKOGIRI_USE_SYSTEM_LIBRARIES: true
     docker:
-      - image: circleci/buildpack-deps:stretch
+      - image: jekyll/builder:4.0
   aws-cli:
     environment:
       AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
@@ -14,28 +14,22 @@ executors:
       - image: mesosphere/aws-cli
 jobs:
   build:
-    executor: docker-publisher
+    executor: jekyll-builder
     steps:
       - checkout
       - setup_remote_docker
       - run:
-          name: Build Docker image
-          command: docker build -t $IMAGE_NAME:latest .
+          name: Install Bundle
+          command: bundle install
       - run:
-          name: Create temp container
-          command: id=$(docker create $IMAGE_NAME:latest)
-      - run:
-          name: Copy _site to local path
-          command: docker cp $id:/srv/jekyll/_site .
-      - run:
-          name: Remove temp container
-          command: docker rm -v $id
+          name: Build jekyll website
+          command: ENV=PROD bundle exec jekyll build
       - persist_to_workspace:
           root: ./
           paths:
-            - ./_site
+            - _site
   deploy:
-    executor: docker-publisher
+    executor: aws-cli
     steps:
       - attach_workspace:
           at: ./
