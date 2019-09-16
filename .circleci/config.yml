@@ -42,7 +42,7 @@ jobs:
           command: mkdir -p $JOB_RESULTS_PATH
       - run:
           name: Build the Jekyll site
-          command: bundle exec jekyll build --config _config.yml, --source jekyll --destination _site 2>&1 | tee $JOB_RESULTS_PATH/build-results.txt
+          command: bundle exec jekyll build --config _config.yml 2>&1 | tee $JOB_RESULTS_PATH/build-results.txt
       - run:
           name: HTMLProofer tests
           command: |
