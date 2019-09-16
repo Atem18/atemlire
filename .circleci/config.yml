@@ -23,6 +23,9 @@ jobs:
           name: Bundle Install
           command: bundle install
       - run:
+          name: Tests
+          command: ls -lah && ls -lah vendor/bundle
+      - run:
           name: Jekyll build
           command: bundle exec jekyll build --verbose
       - run:
