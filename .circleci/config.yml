@@ -1,5 +1,3 @@
-defaults: &defaults
-  working_directory: ~/repo
 version: 2.1
 executors:
   jekyll-builder:
@@ -17,10 +15,9 @@ executors:
       - image: mesosphere/aws-cli
 jobs:
   build:
-    <<: *defaults
+    working_directory: ~/repo
     executor: jekyll-builder
     steps:
-      - checkout
       - checkout
       - restore_cache:
           keys:
@@ -28,14 +25,14 @@ jobs:
             - rubygems-v1-fallback
       - run:
           name: Bundle Install
-          command: bundle check || bundle install
+          command: bundle install
       - save_cache:
-          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
           paths:
-            - vendor/bundle
+            - /usr/local/bundle
+          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
       - run:
           name: Jekyll build
-          command: bundle exec jekyll build
+          command: bundle exec jekyll build --verbose
       - run:
           name: HTMLProofer tests
           command: |
@@ -49,7 +46,7 @@ jobs:
           paths:
             - _site
   deploy:
-    <<: *defaults
+    working_directory: ~/repo
     executor: aws-cli
     steps:
       - attach_workspace:
