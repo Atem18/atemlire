@@ -37,6 +37,9 @@ jobs:
       - attach_workspace:
           at: ./
       - run:
+        name: Test
+        command: echo $AWS_ACCESS_KEY_ID && echo $AWS_SECRET_ACCESS_KEY && echo $AWS_DEFAULT_REGION
+      - run:
           name: Deploy _site
           command: aws s3 sync _site s3://kmdotnet-s3bucket-1ucv72i21hs6g --delete
 workflows:
