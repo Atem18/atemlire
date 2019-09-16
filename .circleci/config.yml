@@ -38,7 +38,7 @@ jobs:
           at: ./
       - run:
           name: Deploy _site
-          command: ./aws.sh s3 sync _site s3://kmdotnet-s3bucket-1ucv72i21hs6g
+          command: aws s3 sync _site s3://kmdotnet-s3bucket-1ucv72i21hs6g --delete
 workflows:
   version: 2
   build-and-deploy:
