@@ -18,8 +18,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Test
-        command: ls -lah && pwd && uname -a
+          name: Test
+          command: ls -lah && pwd && uname -a
       - run:
           name: Install Bundle
           command: bundle install
