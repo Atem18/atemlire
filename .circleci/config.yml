@@ -1,10 +1,13 @@
+defaults: &defaults
+  working_directory: ~/repo
 version: 2.1
 executors:
   jekyll-builder:
     environment:
       NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+      BUNDLE_PATH: ~/repo/vendor/bundle
     docker:
-      - image: jekyll/builder:4.0
+      - image: circleci/ruby:2.6
   aws-cli:
     environment:
       AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
@@ -14,23 +17,39 @@ executors:
       - image: mesosphere/aws-cli
 jobs:
   build:
+    <<: *defaults
     executor: jekyll-builder
     steps:
       - checkout
+      - checkout
+      - restore_cache:
+          keys:
+            - rubygems-v1-{{ checksum "Gemfile.lock" }}
+            - rubygems-v1-fallback
       - run:
-          name: Test
-          command: ls -lah && pwd && uname -a
+          name: Bundle Install
+          command: bundle check || bundle install
+      - save_cache:
+          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
       - run:
-          name: Install Bundle
-          command: bundle install
+          name: Jekyll build
+          command: bundle exec jekyll build
       - run:
-          name: Build jekyll website
-          command: ENV=PROD bundle exec jekyll build
+          name: HTMLProofer tests
+          command: |
+            bundle exec htmlproofer ./_site \
+              --allow-hash-href \
+              --check-favicon  \
+              --check-html \
+              --disable-external
       - persist_to_workspace:
           root: ./
           paths:
             - _site
   deploy:
+    <<: *defaults
     executor: aws-cli
     steps:
       - attach_workspace:
