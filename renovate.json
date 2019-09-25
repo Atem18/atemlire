@@ -2,5 +2,13 @@
   "extends": [
     "config:base"
   ],
-  "bundler": { "enabled": true }
+  "bundler": { "enabled": true },
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "packageRules": [{
+    "depTypeList": ["devDependencies"],
+    "automerge": true
+  }]
 }
