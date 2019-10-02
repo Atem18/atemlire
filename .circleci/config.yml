@@ -6,7 +6,7 @@ executors:
       JEKYLL_ENV: production
       NOKOGIRI_USE_SYSTEM_LIBRARIES: true
     docker:
-      - image: circleci/ruby:2.6.4-buster-node
+      - image: circleci/ruby:2.6.5-buster-node
   aws-cli:
     docker:
       - image: cibuilds/aws:1.16.250
