@@ -1,6 +1,6 @@
 ---
-title: How to create, host and monitor a personnal website, the DevOps way
-date: 2019-09-16 23:19:51 +0200
+title: How to create, host and monitor a personnal website, the DevSecOps way
+date: 2019-09-16T21:19:51.000+00:00
 subtitle: Or how to host a website on AWS for cheap...
 
 ---
@@ -10,7 +10,7 @@ Want to create a website ? Are you lazy ? Do you know a bit about DevOps ?
 
 Well, you are in the right place.
 
-Today, we will learn about Jekyll, Forestry and AWS.
+Today, we will learn about Jekyll, Forestry, CircleCI and AWS.
 
 # Jekyll
 
@@ -61,12 +61,14 @@ More info: [https://forestry.io](https://forestry.io "https://forestry.io")
 
 ## S3
 
+S3 is used to store the complete website.
+
 ## Cloudfront
 
 ## Lambda
 
 # Conclusion
 
-If you want to learn and practice, clone or fork the repo of this website, build the docker and run it: [https://github.com/Atem18/kmdotnet](https://github.com/Atem18/kmdotnet "https://github.com/Atem18/kmdotnet")
+If you want to learn and practice, clone, fork, build the website, deploy, and run that repo to understand how it's made: [https://github.com/Atem18/kmdotnet](https://github.com/Atem18/kmdotnet "https://github.com/Atem18/kmdotnet")
 
-Happy DevOPS ! :)
+Happy DevSecOPS ! :)
