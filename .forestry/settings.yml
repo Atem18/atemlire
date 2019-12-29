@@ -34,8 +34,6 @@ use_front_matter_path: false
 file_template: ":filename:"
 instant_preview: true
 build:
-  preview_env:
-  - JEKYLL_ENV=staging
   preview_output_directory: _site
   install_dependencies_command: bundle check --path=vendor/bundle || bundle install
     --path=vendor/bundle --jobs=4 --retry=3
