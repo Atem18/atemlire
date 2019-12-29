@@ -37,9 +37,10 @@ build:
   preview_env:
   - JEKYLL_ENV=staging
   preview_output_directory: _site
-  install_dependencies_command: bundle install --path vendor/bundle
-  preview_docker_image: forestryio/ruby:2.6
-  mount_path: "/srv"
+  install_dependencies_command: bundle check --path=vendor/bundle || bundle install
+    --path=vendor/bundle --jobs=4 --retry=3
+  preview_docker_image: circleci/ruby:2.7.0-buster-node
+  mount_path: "~/repo"
   instant_preview_command: bundle exec jekyll serve --drafts --unpublished --future
     --port 8080 --host 0.0.0.0 -d _site
   publish_command: bundle exec jekyll build -d _site
