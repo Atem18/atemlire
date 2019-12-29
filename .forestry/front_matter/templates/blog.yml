@@ -7,3 +7,5 @@ fields:
   label: Title
   config:
     required: true
+pages:
+- _posts/how-to-setup-a-vpn-on-ubuntu-19-10-using-wireguard.md
