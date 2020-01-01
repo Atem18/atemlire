@@ -36,3 +36,5 @@ If you get nothing, you will have to enable it either :
 In my fresh Ubuntu 19.10 installation, I had to enable it manually.
 
 # Configuration
+
+To configure Wireguard, 
