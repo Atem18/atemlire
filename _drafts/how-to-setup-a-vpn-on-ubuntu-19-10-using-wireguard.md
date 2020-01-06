@@ -37,4 +37,4 @@ In my fresh Ubuntu 19.10 installation, I had to enable it manually.
 
 # Configuration
 
-To configure Wireguard, 
+There are many ways to configure Wireguard. I will present you one that works but feel free to research for other methods.
