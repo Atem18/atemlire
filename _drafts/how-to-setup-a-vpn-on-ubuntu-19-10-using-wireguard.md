@@ -2,13 +2,9 @@
 title: How to setup a VPN on Ubuntu 19.10 using Wireguard
 
 ---
----
-title: How to setup a VPN on Ubuntu 19.10 using Wireguard
-
----
 Today, we will learn how to setup Wireguard. We will be using Ubuntu 19.10 as I am using it for my Raspberry Pi 4 but except for the install part, you should be able to follow that tutorial on any other recent Linux distribution.
 
-# Installation
+## Installation
 
 Wireguard is already included in Ubuntu’s main repositories so you only have to call APT to install it:
 
@@ -16,14 +12,16 @@ Wireguard is already included in Ubuntu’s main repositories so you only have t
 apt install wireguard
 ```
 
-As Wireguard is a kernel module, soon to be mainlined (included inside the Linux kernel) :e mainlined (included inside the Linux kernel) : [https://arstechnica.com/gadgets/2019/12/wireguard-vpn-is-a-step-closer-to-mainstream-adoption/](https://arstechnica.com/gadgets/2019/12/wireguard-vpn-is-a-step-closer-to-mainstream-adoption/ "https://arstechnica.com/gadgets/2019/12/wireguard-vpn-is-a-step-closer-to-mainstream-adoption/"), you will need to check if it’s enabled and enable it if it’s not.
+As Wireguard is a kernel module, soon to be mainlined (included inside the Linux kernel): [https://arstechnica.com/gadgets/2019/12/wireguard-vpn-is-a-step-closer-to-mainstream-adoption/](https://arstechnica.com/gadgets/2019/12/wireguard-vpn-is-a-step-closer-to-mainstream-adoption/ "https://arstechnica.com/gadgets/2019/12/wireguard-vpn-is-a-step-closer-to-mainstream-adoption/"), you will need to check if it’s enabled and enable it if it’s not.
 
 To check if you will have to do so:
+
 ```bash
 lsmod | grep wireguard
 ```
 
 If it’s ok, you will get something like this:
+
 ```bash
 root@ubuntu:~# lsmod | grep wireguard
 wireguard             208896  0
@@ -35,17 +33,21 @@ root@ubuntu:~#
 If you get nothing, you will have to enable it either :
 
 * Manually for one time:
+
 ```bash
 modprobe wireguard
 ```
 
 * Automatically so it starts at boot:
+
 ```bash
 echo "wireguard" > /etc/modules-load.d/wireguard.conf
 ```
 
 In my fresh Ubuntu 19.10 installation, I had to enable it manually.
 
-# Configuration
+## Configuration
 
 There are many ways to configure Wireguard. I will present you one that works but feel free to research for other methods.
+
+### Keys generation
