@@ -54,10 +54,16 @@ In my fresh Ubuntu 19.10 installation, I had to enable it manually.
 
 There are many ways to configure Wireguard. I will present you one that works but feel free to research for other methods.
 
-Wireguard works kinda like OpenSSH, each client have a pair of private and public key but  unlike OpenSSH, Wireguard needs to know each public keys and private IP address of each peer he will allow the connection.
+Wireguard works kinda like OpenSSH, each peer have a pair of private and public key but  unlike OpenSSH, Wireguard needs to know each public keys and private IP address of each peer he will allow the connection.
 
-### Keys generation
+### Server keys generation
+
+Execute the following commands on Ubuntu which as said previously will be our « server »:
 
 ```bash
+mkdir /etc/wireguard
+cd /etc/wireguard
 wg genkey | tee privatekey | wg pubkey > publickey
 ```
+
+Then, create a configuration file for wg0 which will be our device for routing. 
