@@ -91,7 +91,7 @@ AllowedIPs = 192.168.2.2/32
 
 ### Client keys generation
 
-We will host "clients" keys and configuration files on the "server" in that example. But you can also generate them on your client and keep them safely there. It's up to you.
+We will host "clients" keys and configuration files on the "server" in that example. But you can also generate them on your client and keep them safely there. It's up to you. {: .notice--info}
 
 Create a new directory to put client's configuration files
 
