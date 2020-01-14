@@ -17,29 +17,20 @@
 <meta name="application-name" content="Kmdotet">
 <meta name="theme-color" content="#ffffff">
 
-<script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+<script type="text/javascript">
+  /* Defer Main CSS */
+  var giftofspeed = document.createElement('link');
+  giftofspeed.rel = 'stylesheet';
+  giftofspeed.href = "{{ '/assets/css/main.css' | relative_url }}";
+  giftofspeed.type = 'text/css';
+  var godefer = document.getElementsByTagName('link')[0];
+  godefer.parentNode.insertBefore(giftofspeed, godefer);
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
-
+<noscript>
 <!-- For all browsers -->
 <link rel="stylesheet" type="text/css" href="{{ '/assets/css/main.css' | relative_url }}">
-
-<!--[if lte IE 9]>
-  <style>
-    /* old IE unsupported flexbox fixes */
-    .greedy-nav .site-title {
-      padding-right: 3em;
-    }
-    .greedy-nav button {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-    }
-  </style>
-<![endif]-->
+</noscript>
 
 {% if site.head_scripts %}
   {% for script in site.head_scripts %}
