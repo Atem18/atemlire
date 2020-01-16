@@ -2,7 +2,8 @@
 
 {% include seo.html %}
 
-<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"
+  type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
 <!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,11 +30,31 @@
   giftofspeed.type = 'text/css';
   var godefer = document.getElementsByTagName('link')[0];
   godefer.parentNode.insertBefore(giftofspeed, godefer);
+
+  // This is the "Offline page" service worker
+
+  // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+
+  // Check compatibility for the browser we're running this in
+  if ("serviceWorker" in navigator) {
+    if (navigator.serviceWorker.controller) {
+      console.log("[PWA Builder] active service worker found, no need to register");
+    } else {
+      // Register the service worker
+      navigator.serviceWorker
+        .register("pwabuilder-sw.js", {
+          scope: "./"
+        })
+        .then(function (reg) {
+          console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+        });
+    }
+  }
 </script>
-  
+
 <noscript>
-<!-- For all browsers -->
-<link rel="stylesheet" type="text/css" href="{{ '/assets/css/main.css' | relative_url }}">
+  <!-- For all browsers -->
+  <link rel="stylesheet" type="text/css" href="{{ '/assets/css/main.css' | relative_url }}">
 </noscript>
 
 <!--[if IE]>
@@ -52,12 +73,12 @@
 <![endif]-->
 
 {% if site.head_scripts %}
-  {% for script in site.head_scripts %}
-    {% if script contains "://" %}
-      {% capture script_path %}{{ script }}{% endcapture %}
-    {% else %}
-      {% capture script_path %}{{ script | relative_url }}{% endcapture %}
-    {% endif %}
-    <script src="{{ script_path }}"></script>
-  {% endfor %}
+{% for script in site.head_scripts %}
+{% if script contains "://" %}
+{% capture script_path %}{{ script }}{% endcapture %}
+{% else %}
+{% capture script_path %}{{ script | relative_url }}{% endcapture %}
+{% endif %}
+<script src="{{ script_path }}"></script>
+{% endfor %}
 {% endif %}
