@@ -123,3 +123,33 @@ PresharedKey = PRE-SHARED_KEY
 AllowedIPs = 0.0.0.0/0, ::/0
 Endpoint = ubuntu.mydomain.com:51820
 ```
+
+## Mobile clients configuration
+
+### Create configuration manually
+
+This is self-explanatory, you actually create the config on the mobile device then transfer the relevant keys to the server's config.
+
+### Create configuration from archive
+
+Here you have to create a .zip archive of the client configuration file, transfer it to the device then import it into the app.
+
+### Import by reading a QR code (most secure method)
+
+The mobile client supports QR code based input.
+
+You need to install qrencode to generate a qr code from a configuration file:
+
+```bash
+apt install qrencode
+```
+
+Then call qrencode and pass the client configuration:
+
+```bash
+qrencode -t ansiutf8 < client.conf
+```
+
+This will generate a QR code that is readable by the mobile client.
+
+The advantage of this approache is that there is no need to transfer sensitive information via data channels that can potentially be compromised and there is no need of any other supplementary software besides a terminal or console.
