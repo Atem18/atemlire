@@ -58,7 +58,7 @@ Wireguard works kinda like OpenSSH, each peer have a pair of private and public 
 
 All the following commands will be performed on Ubuntu which as said previously will be our « server ».
 
-### Server keys generation
+### Server configuration
 
 Create private and public keys
 
@@ -89,7 +89,7 @@ PublicKey = PEER_IPHONE_PUBLIC_KEY
 AllowedIPs = 192.168.2.2/32
 ```
 
-### Client keys generation
+### Client configuration
 
 We will host "clients" keys and configuration files on the "server" in that example. But you can also generate them on your client and keep them safely there. It's up to you. {: .notice--info}
 
