@@ -89,6 +89,16 @@ PublicKey = PEER_IPHONE_PUBLIC_KEY
 AllowedIPs = 192.168.2.2/32
 ```
 
+Here we define a network in /24, feel free to change it.
+
+We also make our "server" **listen on port 51820 in UDP so don't forget to open it in your firewall(s).**
+
+Replace SERVER_PRIVATE_KEY by the content of /etc/wireguard/privatekey.
+
+Leave PEER_IPHONE_PUBLIC_KEY for now, we will replace it after with our client's public key.
+
+Change the AllowedIP if you change the network or if you want to attribute another IP to your client.
+
 ### Client configuration
 
 We will host "clients" keys and configuration files on the "server" in that example. But you can also generate them on your client and keep them safely there. It's up to you. {: .notice--info}
