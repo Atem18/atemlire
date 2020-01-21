@@ -97,7 +97,7 @@ Replace SERVER_PRIVATE_KEY by the content of /etc/wireguard/privatekey.
 
 Leave PEER_IPHONE_PUBLIC_KEY for now, we will replace it after with our client's public key.
 
-Change the AllowedIP if you change the network or if you want to attribute another IP to your client.
+Change the AllowedIP if you change the network or if you want to attribute another IP to your peer/client.
 
 ### Client configuration
 
