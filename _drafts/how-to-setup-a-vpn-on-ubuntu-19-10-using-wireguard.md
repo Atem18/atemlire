@@ -140,6 +140,10 @@ Put whatever DNS you want.
 
 Replace SERVER_PUBLICKEY by the content of /etc/wireguard/publickey.
 
+Allow specific IP if it's a static one or all if it's dynamic IP.
+
+Specify the hostname or IP of your server and the port.
+
 In /etc/wireguard/wg0.conf, replace PEER_IPHONE_PUBLIC_KEY by the content of /etc/wireguard/clients/iphone/publickey
 
 ## Mobile clients configuration
