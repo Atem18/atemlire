@@ -89,15 +89,15 @@ PublicKey = PEER_IPHONE_PUBLIC_KEY
 AllowedIPs = 192.168.2.2/32
 ```
 
-Here we define a network in /24, feel free to change it.
+Adress: Here we define a network in /24, feel free to change it.
 
-We also make our "server" **listen on port 51820 in UDP so don't forget to open it in your firewall(s).**
+ListenPort: We also make our "server" **listen on port 51820 in UDP so don't forget to open it in your firewall(s).**
 
-Replace SERVER_PRIVATE_KEY by the content of /etc/wireguard/privatekey.
+PrivateKey: Replace SERVER_PRIVATE_KEY by the content of /etc/wireguard/privatekey.
 
 Leave PEER_IPHONE_PUBLIC_KEY for now, we will replace it after with our client's public key.
 
-Change the AllowedIPs if you change the network or if you want to attribute another IP to your peer/client.
+AllowedIPs: Change the AllowedIPs if you change the network or if you want to attribute another IP to your peer/client.
 
 ### Client configuration
 
@@ -132,17 +132,17 @@ AllowedIPs = 0.0.0.0/0, ::/0
 Endpoint = ubuntu.mydomain.com:51820
 ```
 
-He the client’s IP address, it has to match the one you defined in the server’s configuration.
+Address: Client’s IP address, it has to match the one you defined in the server’s configuration.
 
-Replace PEER_IPHONE_PRIVATE_KEY by the content of /etc/wireguard/clients/iphone/privatekey
+PrivateKey: Replace PEER_IPHONE_PRIVATE_KEY by the content of /etc/wireguard/clients/iphone/privatekey
 
-Put whatever DNS you want.
+DNS: Put whatever DNS you want.
 
-Replace SERVER_PUBLICKEY by the content of /etc/wireguard/publickey.
+PublicKey: Replace SERVER_PUBLICKEY by the content of /etc/wireguard/publickey.
 
-Allow specific IP if it's a static one or all if it's dynamic IP.
+AllowedIPs: Allow specific IP if it's a static one or all if it's dynamic IP.
 
-Specify the hostname or IP of your server and the port.
+Endpoint: Specify the hostname or IP of your server and the port.
 
 In /etc/wireguard/wg0.conf, replace PEER_IPHONE_PUBLIC_KEY by the content of /etc/wireguard/clients/iphone/publickey
 
@@ -175,3 +175,9 @@ qrencode -t ansiutf8 < client.conf
 This will generate a QR code that is readable by the mobile client.
 
 The advantage of this approache is that there is no need to transfer sensitive information via data channels that can potentially be compromised and there is no need of any other supplementary software besides a terminal or console.
+
+### Conclusion
+
+I hope you enjoyed this small tutorial about WireGuard on Ubuntu 19.10.
+
+Feel free to comment below and I will gladly answer !
