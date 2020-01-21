@@ -97,7 +97,7 @@ Replace SERVER_PRIVATE_KEY by the content of /etc/wireguard/privatekey.
 
 Leave PEER_IPHONE_PUBLIC_KEY for now, we will replace it after with our client's public key.
 
-Change the AllowedIP if you change the network or if you want to attribute another IP to your peer/client.
+Change the AllowedIPs if you change the network or if you want to attribute another IP to your peer/client.
 
 ### Client configuration
 
@@ -112,8 +112,7 @@ mkdir -p /etc/wireguard/clients/iphone
 Generate private and public keys
 
 ```bash
-mkdir /etc/wireguard
-cd /etc/wireguard
+cd /etc/wireguard/clients/iphone
 wg genkey | tee privatekey | wg pubkey > publickey
 ```
 
@@ -129,10 +128,19 @@ DNS = 192.168.2.1
 
 [Peer]
 PublicKey = SERVER_PUBLICKEY
-PresharedKey = PRE-SHARED_KEY
 AllowedIPs = 0.0.0.0/0, ::/0
 Endpoint = ubuntu.mydomain.com:51820
 ```
+
+He the client’s IP address, it has to match the one you defined in the server’s configuration.
+
+Replace PEER_IPHONE_PRIVATE_KEY by the content of /etc/wireguard/clients/iphone/privatekey
+
+Put whatever DNS you want.
+
+Replace SERVER_PUBLICKEY by the content of /etc/wireguard/publickey.
+
+In /etc/wireguard/wg0.conf, replace PEER_IPHONE_PUBLIC_KEY by the content of /etc/wireguard/clients/iphone/publickey
 
 ## Mobile clients configuration
 
