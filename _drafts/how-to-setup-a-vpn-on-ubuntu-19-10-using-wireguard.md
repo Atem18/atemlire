@@ -58,7 +58,7 @@ Wireguard works kinda like OpenSSH, each peer have a pair of private and public 
 
 All the following commands will be performed on Ubuntu which as said previously will be our « server ».
 
-### Server keys generation
+### Server configuration
 
 Create private and public keys
 
@@ -89,7 +89,17 @@ PublicKey = PEER_IPHONE_PUBLIC_KEY
 AllowedIPs = 192.168.2.2/32
 ```
 
-### Client keys generation
+Here we define a network in /24, feel free to change it.
+
+We also make our "server" **listen on port 51820 in UDP so don't forget to open it in your firewall(s).**
+
+Replace SERVER_PRIVATE_KEY by the content of /etc/wireguard/privatekey.
+
+Leave PEER_IPHONE_PUBLIC_KEY for now, we will replace it after with our client's public key.
+
+Change the AllowedIPs if you change the network or if you want to attribute another IP to your peer/client.
+
+### Client configuration
 
 We will host "clients" keys and configuration files on the "server" in that example. But you can also generate them on your client and keep them safely there. It's up to you. {: .notice--info}
 
@@ -102,8 +112,7 @@ mkdir -p /etc/wireguard/clients/iphone
 Generate private and public keys
 
 ```bash
-mkdir /etc/wireguard
-cd /etc/wireguard
+cd /etc/wireguard/clients/iphone
 wg genkey | tee privatekey | wg pubkey > publickey
 ```
 
@@ -119,7 +128,50 @@ DNS = 192.168.2.1
 
 [Peer]
 PublicKey = SERVER_PUBLICKEY
-PresharedKey = PRE-SHARED_KEY
 AllowedIPs = 0.0.0.0/0, ::/0
 Endpoint = ubuntu.mydomain.com:51820
 ```
+
+He the client’s IP address, it has to match the one you defined in the server’s configuration.
+
+Replace PEER_IPHONE_PRIVATE_KEY by the content of /etc/wireguard/clients/iphone/privatekey
+
+Put whatever DNS you want.
+
+Replace SERVER_PUBLICKEY by the content of /etc/wireguard/publickey.
+
+Allow specific IP if it's a static one or all if it's dynamic IP.
+
+Specify the hostname or IP of your server and the port.
+
+In /etc/wireguard/wg0.conf, replace PEER_IPHONE_PUBLIC_KEY by the content of /etc/wireguard/clients/iphone/publickey
+
+## Mobile clients configuration
+
+### Create configuration manually
+
+This is self-explanatory, you actually create the config on the mobile device then transfer the relevant keys to the server's config.
+
+### Create configuration from archive
+
+Here you have to create a .zip archive of the client configuration file, transfer it to the device then import it into the app.
+
+### Import by reading a QR code (most secure method)
+
+The mobile client supports QR code based input.
+
+You need to install qrencode to generate a qr code from a configuration file:
+
+```bash
+apt install qrencode
+```
+
+Then call qrencode and pass the client configuration:
+
+```bash
+qrencode -t ansiutf8 < client.conf
+```
+
+This will generate a QR code that is readable by the mobile client.
+
+The advantage of this approache is that there is no need to transfer sensitive information via data channels that can potentially be compromised and there is no need of any other supplementary software besides a terminal or console.

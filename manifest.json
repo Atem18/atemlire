@@ -14,5 +14,11 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "display": "standalone"
+    "display": "standalone",
+    "start_url" : "https://www.kevin-messer.net/",
+	"lang" : "",
+	"screenshots" : [],
+	"short_name" : "Kmdotnet",
+	"orientation" : "undefined",
+	"generated" : "undefined"
 }
