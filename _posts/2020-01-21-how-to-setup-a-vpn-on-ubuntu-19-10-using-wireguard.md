@@ -179,3 +179,5 @@ The advantage of this approache is that there is no need to transfer sensitive i
 ### Conclusion
 
 I hope you enjoyed this small tutorial about WireGuard on Ubuntu 19.10.
+
+Feel free to comment below :D
