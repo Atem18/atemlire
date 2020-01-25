@@ -101,7 +101,8 @@ AllowedIPs: Change the AllowedIPs if you change the network or if you want to at
 
 ### Client configuration
 
-We will host "clients" keys and configuration files on the "server" in that example. But you can also generate them on your client and keep them safely there. It's up to you. {: .notice--info}
+We will host "clients" keys and configuration files on the "server" in that example. But you can also generate them on your client and keep them safely there. It's up to you.
+{: .notice--info}
 
 Create a new directory to put client's configuration files
 
