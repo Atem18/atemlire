@@ -14,4 +14,4 @@ source "https://rubygems.org"
 # To upgrade, run `bundle update`.
 
 gem 'jekyll', '~> 4.0'
-gem 'minimal-mistakes-jekyll', '~> 4.16', '>= 4.16.6'
+gem 'minimal-mistakes-jekyll', '~> 4.18', '>= 4.18.1'
