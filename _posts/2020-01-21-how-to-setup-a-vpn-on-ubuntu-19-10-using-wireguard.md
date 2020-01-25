@@ -177,6 +177,8 @@ This will generate a QR code that is readable by the mobile client.
 
 The advantage of this approache is that there is no need to transfer sensitive information via data channels that can potentially be compromised and there is no need of any other supplementary software besides a terminal or console.
 
-### Conclusion
+## Conclusion
 
 I hope you enjoyed this small tutorial about WireGuard on Ubuntu 19.10.
+
+Feel free to comment below :D
