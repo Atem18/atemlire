@@ -16,19 +16,16 @@ Vais-je me réincarner ? La vie après la mort existe-t-elle ?*
 Tant de questions et aucune réponse. Je me sentais à l'image de mon
 environnement. Froid, inhospitalier, vide.
 
-*Pourquoi ai-je le sentiment d'avoir perdu une chose très importante ?*
+*Pourquoi ai-je le sentiment d'avoir perdu mon âme ?*
 
-Un faible halo de lumière luisant dans l'obscurité apparut au fin fond
-de l'horizon et se rapprochait de plus en plus près.
+Un faible halo de lumière luisant dans l'obscurité apparut alors à l'horizon et semblait se rapprocher de plus en plus.
 
-Malgré la pénombre, je crus distinguer une ombre. À mesure qu'elle
-approchait, je vis une entité auréolée dont la lumière s'intensifiait au
-fur et à mesure.
+Malgré la pénombre, je crus distinguer une ombre. À mesure qu'elle approchait, je vis une entité auréolée dont la lumière s'intensifiait au fur et à mesure.
 
-*Un ange ? Est-il venu pour moi ? Est-ce mon heure ?*
+*Un ange ? Est-il l’heure pour moi de le rejoindre dans son royaume celeste ?*
 
 La réponse ne se fit pas attendre. Lorsque l'ange fut devant moi, il
-m'illumina de sa sainte lumière. Alors, je vis.
+m'illumina de son eblouissante lumière. Alors, je vis.
 
 Je me trouvais allongé sur le sol, recroquevillé tel un fœtus. Une
 longue aube blanche recouvrait la totalité de mon corps, à l'exception
