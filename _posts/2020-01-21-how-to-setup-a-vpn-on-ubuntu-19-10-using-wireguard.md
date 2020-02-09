@@ -50,7 +50,7 @@ echo "wireguard" > /etc/modules-load.d/wireguard.conf
 
 In my fresh Ubuntu 19.10 installation, I had to enable it manually.
 
-## Configuration
+## Configuration on Ubuntu
 
 There are many ways to configure Wireguard. I will present you one that works but feel free to research for other methods.
 
@@ -146,6 +146,15 @@ AllowedIPs: Allow specific IP if it's a static one or all if it's dynamic IP.
 Endpoint: Specify the hostname or IP of your server and the port.
 
 In /etc/wireguard/wg0.conf, replace PEER_IPHONE_PUBLIC_KEY by the content of /etc/wireguard/clients/iphone/publickey
+
+### Start Wireguard at boot
+
+You can simply use systemd and wg-quick to enable and start your interface:
+
+```bash
+systemctl enable wg-quick@wg0 
+systemctl start wg-quick@wg0
+```
 
 ## Mobile clients configuration
 
