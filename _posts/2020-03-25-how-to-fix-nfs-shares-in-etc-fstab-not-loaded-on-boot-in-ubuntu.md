@@ -2,7 +2,7 @@
 title: How to fix nfs shares in /etc/fstab not loaded on boot in Ubuntu
 
 ---
- Hi,
+Hi,
 
 Just a quick blog post to show you how to fix an NFS share that does not want to mount at boot on Ubuntu. I tested it on Ubuntu 19.10 but it should work also on 18.04 and following.
 
@@ -37,7 +37,7 @@ To fix the problem, change **optional: true** to **optional: false** like the fo
         ethernets:
             eth0:
                 dhcp4: true
-                optional: true
+                optional: false
         version: 2
 
 That's all, hope you enjoyed the quick fix just like I did !
