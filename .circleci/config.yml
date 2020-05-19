@@ -9,7 +9,7 @@ executors:
       - image: circleci/ruby:2.7.1-buster-node
   aws-cli:
     docker:
-      - image: cibuilds/aws:1.18.61
+      - image: cibuilds/aws:1.18.62
 jobs:
   build:
     working_directory: ~/repo
