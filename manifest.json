@@ -1,5 +1,8 @@
 {
-    "name": "Kmdotet",
+    "name" : "{{ site.title }}",
+    "short_name" : "{{ site.title }}",
+    "description" : "{{ site.description }}",
+    "start_url" : "{{ "/" | relative_url }}",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -15,10 +18,8 @@
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone",
-    "start_url" : "https://www.kevin-messer.net/",
-	"lang" : "",
+	"lang" : "{{ site.language }}",
 	"screenshots" : [],
-	"short_name" : "Kmdotnet",
 	"orientation" : "undefined",
 	"generated" : "undefined"
 }
