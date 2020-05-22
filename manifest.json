@@ -1,8 +1,8 @@
 {
-    "name" : "{{ site.title }}",
-    "short_name" : "{{ site.title }}",
-    "description" : "{{ site.description }}",
-    "start_url" : "{{ "/" | relative_url }}",
+    "name" : "Kevin Messer",
+    "short_name" : "Kmdotnet",
+    "description" : "My personnal website.",
+    "start_url" : "/",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -18,7 +18,7 @@
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone",
-	"lang" : "{{ site.language }}",
+	"lang" : "en",
 	"screenshots" : [],
 	"orientation" : "undefined",
 	"generated" : "undefined"
