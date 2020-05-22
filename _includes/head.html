@@ -20,12 +20,10 @@
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-  // Check compatibility for the browser we're running this in
   if ("serviceWorker" in navigator) {
     if (navigator.serviceWorker.controller) {
       console.log("[{{ site.title }}] active service worker found, no need to register");
     } else {
-      // Register the service worker
       navigator.serviceWorker
         .register("{{ site.baseurl }}/pwabuilder-sw.js", {
           scope: "./"
