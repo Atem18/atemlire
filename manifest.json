@@ -1,8 +1,14 @@
+---
+layout: none
+
+---
+
+
 {
-    "name" : "Kmdotnet",
-    "short_name" : "Kmdotnet",
-    "description" : "My personnal website.",
-    "start_url" : "/",
+    "name" : "{{ site.title }}",
+    "short_name" : "{{ site.title }}",
+    "description" : "{{ site.description }}",
+    "start_url" : "{{ site.url }}",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -18,8 +24,9 @@
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone",
-	"lang" : "en",
+	"lang" : "{{ site.locale }}",
 	"screenshots" : [],
-	"orientation" : "undefined",
+    "orientation" : "undefined",
+    "url" : "{{ site.url }}",
 	"generated" : "undefined"
 }
