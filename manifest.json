@@ -26,6 +26,7 @@ layout: none
     "display": "standalone",
 	"lang" : "{{ site.locale }}",
 	"screenshots" : [],
-	"orientation" : "undefined",
+    "orientation" : "undefined",
+    "url" : "{{ site.url }}",
 	"generated" : "undefined"
 }
