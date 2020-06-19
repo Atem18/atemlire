@@ -8,7 +8,7 @@ executors:
       JEKYLL_ENV: production
       NOKOGIRI_USE_SYSTEM_LIBRARIES: true
     docker:
-      - image: cimg/ruby:2.7.1-buster-node
+      - image: cimg/ruby:2.7.1-node
   aws-cli:
     docker:
       - image: cibuilds/aws:1.18.81
