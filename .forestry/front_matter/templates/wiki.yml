@@ -10,3 +10,4 @@ fields:
     required: true
 pages:
 - _wiki/aws/index.md
+- _wiki/wordpress/index.md
