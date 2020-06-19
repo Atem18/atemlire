@@ -10,4 +10,3 @@ fields:
     required: true
 pages:
 - _wiki/aws/index.md
-- _wiki/index-1.md
