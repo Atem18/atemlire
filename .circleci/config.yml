@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  ruby: circleci/ruby@1.0.2
 executors:
   jekyll-builder:
     working_directory: ~/kmdotnet
@@ -6,7 +8,7 @@ executors:
       JEKYLL_ENV: production
       NOKOGIRI_USE_SYSTEM_LIBRARIES: true
     docker:
-      - image: circleci/ruby:2.7.1-buster-node
+      - image: cimg/ruby:2.7.1-buster-node
   aws-cli:
     docker:
       - image: cibuilds/aws:1.18.81
@@ -16,9 +18,7 @@ jobs:
     executor: jekyll-builder
     steps:
       - checkout
-      - run:
-          name: Install Ruby dependencies
-          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
+      - ruby/install-deps
       - run:
           name: Build the Jekyll site
           command: bundle exec jekyll build --config _config.yml
