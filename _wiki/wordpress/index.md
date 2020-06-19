@@ -1,6 +1,5 @@
 ---
 title: Index
-published: false
 
 ---
 ## Discover enqueued styles and scripts in Wordpress
