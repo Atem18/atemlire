@@ -11,7 +11,7 @@ executors:
       - image: cimg/ruby:2.7.1-node
   aws-cli:
     docker:
-      - image: cibuilds/aws:1.18.84
+      - image: cibuilds/aws:1.18.86
 jobs:
   build:
     working_directory: ~/repo
