@@ -4,6 +4,8 @@ layout: single
 permalink: "/blog/"
 ---
 
+Small articles about anything
+
 <ul>
   {% for post in site.posts %}
     <li>
