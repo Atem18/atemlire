@@ -1,6 +1,7 @@
 ---
 title: How to create your own adblock
-
+toc: true
+toc_sticky: true
 ---
 Hi folks, today we will learn how to build your own adblock, one that does not sell your navigation data to big corporations.
 

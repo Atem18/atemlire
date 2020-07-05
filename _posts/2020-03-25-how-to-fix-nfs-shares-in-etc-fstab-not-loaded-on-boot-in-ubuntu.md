@@ -1,6 +1,7 @@
 ---
 title: How to fix nfs shares in /etc/fstab not loaded on boot in Ubuntu
-
+toc: true
+toc_sticky: true
 ---
 Hi,
 
