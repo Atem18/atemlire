@@ -9,4 +9,3 @@ fields:
     required: true
 pages:
 - _posts/2020-01-21-how-to-setup-a-vpn-on-ubuntu-19-10-using-wireguard.md
-- _posts/2020-07-05-how-to-create-your-own-adblock.md
