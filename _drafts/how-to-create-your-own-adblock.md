@@ -2,6 +2,7 @@
 title: How to create your own adblock
 toc: true
 toc_sticky: true
+
 ---
 Hi folks, today we will learn how to build your own adblock, one that does not sell your navigation data to big corporations.
 
@@ -29,7 +30,7 @@ We move the original file in case we want to restore it
 mv /etc/dnsmasq.conf.ori /etc/dnsmasq.conf
 ```
 
-Then edit the configuration file /etc/dnsmasq.conf and put the following content
+Then create a configuration file named **/etc/dnsmasq.conf** and put the following content
 
 ```bash
 domain-needed
@@ -43,13 +44,13 @@ expand-hosts
 domain=kevin-messer.lan
 ```
 
-Replace domain by your personnal domain.
+Replace kevin-messer.lan by your personnal domain.
 
 ### DNS
 
 Open your firewall on port 53 both in UDP and TCP.
 
-Create a file named /etc/dnsmasq-dns.conf and put the following inside:
+Create a file named **/etc/dnsmasq-dns.conf** and put the following inside:
 
 ```bash
 nameserver 8.8.8.8
@@ -60,9 +61,7 @@ If you don't like Google's DNS, feel free to use others.
 
 ### CRON
 
-Create a file called adblocker in /etc/cron.daily and put the following content
-
-    /etc/cron.daily/adblocker
+Create a file called **/etc/cron.daily/adblocker** and put the following content
 
 ```bash
 #!/bin/bash
@@ -75,3 +74,11 @@ cat /etc/dnsmasq-adblock >> /etc/dnsmasq-hosts.conf
 
 systemctl restart dnsmasq
 ```
+
+We are using the excellent project [https://github.com/StevenBlack/hosts](https://github.com/StevenBlack/hosts "https://github.com/StevenBlack/hosts"). Feel free to use another list or even run your own. It will work as long as it's a list in the same format than an hosts file.
+
+
+
+## Conclusion
+
+Setting up your own adblock is really easy
