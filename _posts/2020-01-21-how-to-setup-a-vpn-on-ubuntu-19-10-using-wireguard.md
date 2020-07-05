@@ -1,6 +1,7 @@
 ---
 title: How to setup a VPN on Ubuntu 19.10 using Wireguard
-
+toc: true
+toc_sticky: true
 ---
 Today, we will learn how to setup Wireguard as VPN.
 
