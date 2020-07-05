@@ -6,7 +6,7 @@ toc_sticky: true
 ---
 Hi folks, today we will learn how to build your own adblock, one that does not sell your navigation data to big corporations.
 
-We will be using Dnsmasq as our DNS server which will have a list of domains to block (spoiler: domain ads). And we will update that list everyday by cron.
+We will be using Dnsmasq as our DNS server which will have a list of domains to block (spoiler: domain ads). And we will update that list everyday by cron. Of course that means that you should then update your DNS to use the one we are configuring.
 
 ## Installation
 
@@ -59,6 +59,11 @@ nameserver 8.8.4.4
 
 If you don't like Google's DNS, feel free to use others.
 
+Create a file named **/etc/dnsmasq-custom** where you will put custom domain resolution like :
+
+    127.0.0.1 alpha.example.com
+    127.0.0.1 beta.example.com
+
 ### CRON
 
 Create a file called **/etc/cron.daily/adblocker** and put the following content
@@ -75,10 +80,19 @@ cat /etc/dnsmasq-adblock >> /etc/dnsmasq-hosts.conf
 systemctl restart dnsmasq
 ```
 
-We are using the excellent project [https://github.com/StevenBlack/hosts](https://github.com/StevenBlack/hosts "https://github.com/StevenBlack/hosts"). Feel free to use another list or even run your own. It will work as long as it's a list in the same format than an hosts file.
+Basically what we are doing is :
 
+* getting the last version of the ads domains
+* put any custom domain to dnsmasq hosts file
+* append ads domain to the previous list
+* restart dnsmasq
 
+We are using the excellent project [https://github.com/StevenBlack/hosts.](https://github.com/StevenBlack/hosts. "https://github.com/StevenBlack/hosts.")
+
+Feel free to use another list or even run your own. It will work as long as it's a list in the same format than an hosts file.
 
 ## Conclusion
 
-Setting up your own adblock is really easy
+Setting up and maintaining your own adblock is really easy.
+
+Also if you wish to use it as you go like on your mobile phone, feel free to use my tutorial about [/how-to-setup-a-vpn-on-ubuntu-19-10-using-wireguard/]("Wireguard")
