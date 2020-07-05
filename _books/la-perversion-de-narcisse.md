@@ -1,26 +1,26 @@
 ---
 title: La perversion de Narcisse
 toc: true
-toc_label: "Chapters"
+toc_label: Chapters
 toc_sticky: true
 published: false
----
 
-*Par Kevin Messer*
+---
+_Par Kevin Messer_
 
 ## Renaissance
 
-*Quel est cet endroit dépourvu de lumière ? Serais-je dans l'au-delà ? Vais-je me réincarner ? La vie après la mort existe-t-elle ?*
+_Quel est cet endroit dépourvu de lumière ? Serais-je dans l'au-delà ? Vais-je me réincarner ? La vie après la mort existe-t-elle ?_
 
 Tant de questions et aucune réponse. Je me sentais à l'image de mon environnement. Froid, inhospitalier, vide.
 
-*Pourquoi ai-je le sentiment d'avoir perdu mon âme ?*
+_Pourquoi ai-je le sentiment d'avoir perdu mon âme ?_
 
 Un faible halo de lumière luisant dans l'obscurité apparut alors à l'horizon et semblait se rapprocher de plus en plus.
 
 Malgré la pénombre, je crus distinguer une ombre. À mesure qu'elle approchait, je vis une entité auréolée dont la lumière s'intensifiait au fur et à mesure.
 
-*Un ange ? Est-il l’heure pour moi de le rejoindre dans son royaume céleste ?*
+_Un ange ? Est-il l’heure pour moi de le rejoindre dans son royaume céleste ?_
 
 La réponse ne se fit pas attendre. Lorsque l'ange fut devant moi, il m'illumina de son éblouissante lumière. Alors, je vis.
 
@@ -30,7 +30,7 @@ J'entrepris de découvrir ce corps donné par une quelconque entité supérieure
 
 Après la découverte de ma tête vint le temps du reste de mon corps. De mes deux mains, chacune pourvue de cinq doigts, luisants de la même blancheur que ma toge, j'entrepris de retirer cette dernière. À présent nu, j'eus tout le loisir de parcourir mon anatomie en détail. L'effleurement de sa douce surface me procurait une agréable sensation, notamment au niveau de l'entrejambe.
 
-*À quoi donc peut bien servir ce truc qui se balance entre mes jambes ?*
+_À quoi donc peut bien servir ce truc qui se balance entre mes jambes ?_
 
 Après avoir pris connaissance de ma morphologie, je voulus faire de même pour celle de l'ange, néanmoins, sa lumière aveuglante m'en empêchait.
 
@@ -40,11 +40,11 @@ En admirant sa physionomie, la première chose qui me venait à l'esprit était 
 
 Percevant mon attrait pour ses qualités physiques, elle se pencha et me dévisagea. Un frisson me parcourut l'échine, son aspect général me faisant penser à un corbeau, annonciateur de mauvais augure.
 
-*Serait-ce un ange noir ?*
+_Serait-ce un ange noir ?_
 
 — Bonjour, mon ange ! lança « l'ange noir » avec un grand sourire.
 
-*Cette créature est capable de communiquer...*
+_Cette créature est capable de communiquer..._
 
 — Moi ? répondis-je
 
@@ -58,7 +58,7 @@ Je regardais à l'emplacement que désignait son doigt, néanmoins nul ne se tro
 
 — Je ne vois pas où tu veux en venir.
 
-*Je ne vois réellement pas où tu veux en venir...*
+_Je ne vois réellement pas où tu veux en venir..._
 
 — Tu comprendras bien assez tôt. Que fais-tu seul dans cet endroit, jeune et bel inconnu ?
 
@@ -66,13 +66,13 @@ Je regardais à l'emplacement que désignait son doigt, néanmoins nul ne se tro
 
 — Ce n'est pas grave, je me contenterais de « mon ange ». À ce propos, je me prénomme Célestine, rétorqua-t-elle d'un large sourire.
 
-*J'ai déjà entendu ce prénom et vu ce sourire quelque part...*
+_J'ai déjà entendu ce prénom et vu ce sourire quelque part..._
 
 — Ravi de te rencontrer, Célestine. Et sache que tu peux m'appeler « mon ange ». Après tout, je n'ai pas d'autres suggestions à te faire.
 
 — Pour ma part, j'en ai bien quelques-unes, si tu vois ce que je veux dire.
 
-*Non, je n'ai aucune idée de ce que tu veux dire... D'ailleurs, pourquoi fixe-t-elle mon entrejambe avec insistance ?*
+_Non, je n'ai aucune idée de ce que tu veux dire... D'ailleurs, pourquoi fixe-t-elle mon entrejambe avec insistance ?_
 
 — Et quelles sont-elles ? fis-je, interloqué.
 
@@ -82,7 +82,7 @@ Je regardais à l'emplacement que désignait son doigt, néanmoins nul ne se tro
 
 — Sur une route.
 
-*Quelle réponse pertinente, je n'aurais pu mieux répondre moi-même...*
+_Quelle réponse pertinente, je n'aurais pu mieux répondre moi-même..._
 
 — « Une route » ou « la route » ?
 
@@ -98,7 +98,7 @@ Dans le même instant qu'elle m'aida à me tenir debout, Célestine me fit une p
 
 — Puisque tu as fait le premier pas pour notre future relation, je m'occupe de faire le second.
 
-*Quel premier pas ? Et quelle future relation ?*
+_Quel premier pas ? Et quelle future relation ?_
 
 — Je possède un appartement. Il n'est certes pas très grand, mais je puis y accueillir une personne supplémentaire. De plus, par pure coïncidence, mon lit dispose d'une place libre en ce moment. Il est donc possible d'y coucher à deux, si tu le désires. Voudrais-tu venir chez moi, pour te réchauffer et éventuellement te reposer ?
 
@@ -112,7 +112,7 @@ Curieux et troublé, je la suivis vers l'inconnu.
 
 Mes yeux s'ouvrirent et je me découvris dans un lit.
 
-*À qui donc pouvait-il bien appartenir ?*
+_À qui donc pouvait-il bien appartenir ?_
 
 À mes côtés se trouvait une femme endormie et complètement nue. Si mes souvenirs, intacts cette fois-ci, étaient exacts, elle correspondait à la personne m'ayant invité à passer la nuit chez elle.
 
@@ -120,7 +120,7 @@ Son corps coïncidait parfaitement à l'avant-gout, contemplé des heures plus t
 
 Ainsi dévêtue, une irrépressible envie me prie de l'embrasser. J'approchai avec douceur mes lèvres des siennes.
 
-*Quel est cet étrange pressentiment ?*
+_Quel est cet étrange pressentiment ?_
 
 Pour une raison m'étant encore inconnue, l'espace d'un instant, le passé d'un autre venait de défiler au travers de mes yeux.
 
@@ -148,7 +148,7 @@ Ces paroles provenaient de la maitresse de maison, tout juste éveillée, sans d
 
 Je me sentais mal de trahir ma nouvelle et seule connaissance. Néanmoins, au fond de moi, une petite voix me disait de ne pas lui faire confiance.
 
-*Trouverais-je qu'il soit étrange de rencontrer une inconnue, au bord d'une chaussée, au beau milieu de la nuit ? Ou alors, cette vision y était peut-être pour quelque chose...*
+_Trouverais-je qu'il soit étrange de rencontrer une inconnue, au bord d'une chaussée, au beau milieu de la nuit ? Ou alors, cette vision y était peut-être pour quelque chose..._
 
 — À quoi penses-tu donc ? me fit Célestine, alors que je me perdais dans mes pensées confuses.
 
@@ -164,7 +164,7 @@ Je me sentais mal de trahir ma nouvelle et seule connaissance. Néanmoins, au fo
 
 À cet instant, je me rendis compte que j'étais actuellement moi aussi nu.
 
-*Elle m'a vraiment...*
+_Elle m'a vraiment..._
 
 — Tu m'as vraiment...
 
@@ -174,7 +174,7 @@ Je me sentais mal de trahir ma nouvelle et seule connaissance. Néanmoins, au fo
 
 — Et à quoi pensais-tu, mon cher amant ?
 
-*Elle sait très bien à quoi je pense... À quel jeu sadique s'adonne-t-elle donc ?*
+_Elle sait très bien à quoi je pense... À quel jeu sadique s'adonne-t-elle donc ?_
 
 — Je sais ce que tu penses, mon bel inconnu amnésique, à moi.
 
@@ -194,7 +194,7 @@ Je me sentais mal de trahir ma nouvelle et seule connaissance. Néanmoins, au fo
 
 — Mais n'aie pas peur, voyons. Tout va très bien se passer...
 
-*Mais, qu'est-ce qui lui arrive, à cette folle ? Pourquoi me dit-elle cela en se rapprochant aussi près ? De plus, j'ai la désagréable impression que cette scène s'est déjà produite par le passé...*
+_Mais, qu'est-ce qui lui arrive, à cette folle ? Pourquoi me dit-elle cela en se rapprochant aussi près ? De plus, j'ai la désagréable impression que cette scène s'est déjà produite par le passé..._
 
 Lorsqu'elle fût toute proche de moi, pris de panique, je voulus m'enfuir le plus loin possible. Un jeu du « chat et de la souris » s'engagea entre elle et moi. Je courrais à travers l'appartement, et elle, de son côté, essayait de m'attraper afin de me faire d'horribles choses auxquelles je préférais ne pas penser.
 
@@ -216,55 +216,55 @@ Je sentis son souffle contre mes poings, signe qu'elle s'était elle aussi mis p
 
 J'ouvris les yeux. Je n'eus pas le temps d'admirer son joli minois, ses lèvres s'étant posées sur les miennes en une fraction de seconde.
 
-*Est-il bien en train de se passer ce que je crois qu'il se passe ? Est-elle bel et bien en train de m'embrasser ?*
+_Est-il bien en train de se passer ce que je crois qu'il se passe ? Est-elle bel et bien en train de m'embrasser ?_
 
 À cet instant, je ne savais que faire. Devais-je la repousser de toutes mes forces ou au contraire, accepter d'embrasser mon destin ?
 
 Ma réflexion ne dura pas une éternité, car une étrange scène se joua devant mes yeux :
 
-*« Célestine se trouvait face à moi, sa bouche collée à la mienne. Nos langues, entremêlées dans une danse sans fin, décrivaient des mouvements aléatoires tout autour de nos bouches.*
+_« Célestine se trouvait face à moi, sa bouche collée à la mienne. Nos langues, entremêlées dans une danse sans fin, décrivaient des mouvements aléatoires tout autour de nos bouches._
 
-*Lorsque la chorégraphie fut finie, nos yeux se plongeaient les uns dans les autres. Liés par l'amour, nos regards refusaient de se décoller l'un de l'autre.*
+_Lorsque la chorégraphie fut finie, nos yeux se plongeaient les uns dans les autres. Liés par l'amour, nos regards refusaient de se décoller l'un de l'autre._
 
-*Nos phéromones, entrées en action depuis de longs moments, intensifièrent leur effet sur nos corps respectifs et l'envie de les découvrir en profondeur se fit de plus en plus fort... »*
+_Nos phéromones, entrées en action depuis de longs moments, intensifièrent leur effet sur nos corps respectifs et l'envie de les découvrir en profondeur se fit de plus en plus fort... »_
 
-À cet instant, le décor de ce qui semblait être une résurgence de mon passé commença à se brouiller\... Puis, revint pour déboucher sur un autre acte.
+À cet instant, le décor de ce qui semblait être une résurgence de mon passé commença à se brouiller... Puis, revint pour déboucher sur un autre acte.
 
-*« Nous nous trouvions dans une pièce dont les murs, recouverts de peintures, reconstituaient la trame d'un récit. Chaque pan de mur portait trois fresques différentes dans leur mise en scène, mais dont les parties se mélangeaient pour ne former qu'un seul et même acte.*
+_« Nous nous trouvions dans une pièce dont les murs, recouverts de peintures, reconstituaient la trame d'un récit. Chaque pan de mur portait trois fresques différentes dans leur mise en scène, mais dont les parties se mélangeaient pour ne former qu'un seul et même acte._
 
-*Sur le mur derrière nous, une étoile en formation était représentée. Composé de matière et de poussière, ce corps céleste attirait à lui tous les éléments environnants afin de former l'entité présente dans la scène suivante.*
+_Sur le mur derrière nous, une étoile en formation était représentée. Composé de matière et de poussière, ce corps céleste attirait à lui tous les éléments environnants afin de former l'entité présente dans la scène suivante._
 
-*L'astre solaire, désormais complet, entrait en éruption, dans un torrent de lumières et d'explosions. Rougeoyant d'un jaune éclatant, il illuminait l'obscurité à présent révolue. Tout autour de lui, les prémices de ses congénères commençaient à s'esquisser.*
+_L'astre solaire, désormais complet, entrait en éruption, dans un torrent de lumières et d'explosions. Rougeoyant d'un jaune éclatant, il illuminait l'obscurité à présent révolue. Tout autour de lui, les prémices de ses congénères commençaient à s'esquisser._
 
-*Une galaxie fraichement formée recouvrait la troisième fresque de ses immenses bras. La profondeur du dessin donnait toute sa splendeur à cette merveille née du chaos.*
+_Une galaxie fraichement formée recouvrait la troisième fresque de ses immenses bras. La profondeur du dessin donnait toute sa splendeur à cette merveille née du chaos._
 
-*La création d'un Nouveau Monde prenait forme sur le mur suivant. Une planète, pas plus grosse que ses voisines, allait bientôt voir la vie éclore à sa surface. En attendant, des volcans préparaient le terreau fertile, nécessaire au développement des diverses futures espèces de cette terre.*
+_La création d'un Nouveau Monde prenait forme sur le mur suivant. Une planète, pas plus grosse que ses voisines, allait bientôt voir la vie éclore à sa surface. En attendant, des volcans préparaient le terreau fertile, nécessaire au développement des diverses futures espèces de cette terre._
 
-*À la dureté des éruptions, succéda la douceur de l'ondée. Aux bouillonnements, les remous prenaient place, porteurs de la première bactérie.*
+_À la dureté des éruptions, succéda la douceur de l'ondée. Aux bouillonnements, les remous prenaient place, porteurs de la première bactérie._
 
-*La terre voyait à présent fleurir de nombreux germes animaux et floraux, dans un torrent d'évolution. La vie avait trouvé son chemin...*
+_La terre voyait à présent fleurir de nombreux germes animaux et floraux, dans un torrent d'évolution. La vie avait trouvé son chemin..._
 
-*Sur le mur devant nous, l'évolution de la race dont nous faisons partie, les êtres humains, prenait forme sur la première fresque. Partant d'une créature peu évoluée, l'être humain acquerrait progressivement tous les traits qui lui sont propres, jusqu'à sa représentation finale sur le tableau suivant.*
+_Sur le mur devant nous, l'évolution de la race dont nous faisons partie, les êtres humains, prenait forme sur la première fresque. Partant d'une créature peu évoluée, l'être humain acquerrait progressivement tous les traits qui lui sont propres, jusqu'à sa représentation finale sur le tableau suivant._
 
-*Sur le quatrième et dernier mur, terminant la boucle entamée, la conquête de l'espace, représentée par un vaisseau spatial, se dirigeant vers le trou noir de la toute première scène...*
+_Sur le quatrième et dernier mur, terminant la boucle entamée, la conquête de l'espace, représentée par un vaisseau spatial, se dirigeant vers le trou noir de la toute première scène..._
 
-*— Pourquoi fixes-tu les murs avec tant d'insistance, mon amour ? Ce ne sont que des peintures après tout, me dit Célestine.*
+_— Pourquoi fixes-tu les murs avec tant d'insistance, mon amour ? Ce ne sont que des peintures après tout, me dit Célestine._
 
-*— Cette pièce de ta maison me fascine au plus haut point, car toutes ces peintures réveillent l'artiste qui sommeille en moi.*
+_— Cette pièce de ta maison me fascine au plus haut point, car toutes ces peintures réveillent l'artiste qui sommeille en moi._
 
-*— Ah oui ? Si tu le désires, je puis te laisser repeindre mon intérieur avec ton pinceau...*
+_— Ah oui ? Si tu le désires, je puis te laisser repeindre mon intérieur avec ton pinceau..._
 
-*— Je n'oserais pas, sache-le. Surtout les murs de cette pièce.*
+_— Je n'oserais pas, sache-le. Surtout les murs de cette pièce._
 
-*— Si mon salon ne te va pas, nous pouvons aller dans ma chambre. Par pure coïncidence, mon lit dispose d'une place supplémentaire, toute prête à t'accueillir.*
+_— Si mon salon ne te va pas, nous pouvons aller dans ma chambre. Par pure coïncidence, mon lit dispose d'une place supplémentaire, toute prête à t'accueillir._
 
-*— Si tu fais référence à cet autre "art", le pratiquer entre ces murs me semble tout indiqué, au vu des peintures murales.*
+_— Si tu fais référence à cet autre "art", le pratiquer entre ces murs me semble tout indiqué, au vu des peintures murales._
 
-*— Alors, allons-y, complétons la grande histoire de l'humanité.*
+_— Alors, allons-y, complétons la grande histoire de l'humanité._
 
-*— En vérité, je n'ai aucune idée de comment faire.*
+_— En vérité, je n'ai aucune idée de comment faire._
 
-*— C'est facile, pourtant. Laisse-moi te montrer... »*
+_— C'est facile, pourtant. Laisse-moi te montrer... »_
 
 Retour dans la réalité. Célestine me fixait d'un air horrifié.
 
@@ -272,11 +272,11 @@ Nous restâmes un long moment à nous fixer que l'un de nous n'ose enfin prononc
 
 — Non !
 
-*Non ? Qu'est-ce qu'elle entend par là ?*
+_Non ? Qu'est-ce qu'elle entend par là ?_
 
 — Non, non, non, non ! répétait Célestine en se secouant la tête.
 
-*Mais qu'est-ce qui lui prend, enfin ?*
+_Mais qu'est-ce qui lui prend, enfin ?_
 
 — Non, je n'y crois pas ! Ce n'est pas possible !
 
@@ -356,7 +356,7 @@ J'ouvris les yeux. Je me trouvais dans ma salle de bain, immergée sous l'eau. L
 
 Je fermai les yeux, prête à me plonger dans un sommeil infini, quand soudain une voix résonna dans ma tête :
 
-*Ton heure n'est pas encore venue. Respire... Respire... Respire !*
+_Ton heure n'est pas encore venue. Respire... Respire... Respire !_
 
 J'ouvris à nouveau les yeux. Je me sentis poussée vers la surface par une incroyable envie de vivre. Néanmoins le retour à la réalité fut rude lorsque l'air entra violemment dans mes poumons et me força à vomir toute l'eau contenue dans ces derniers.
 
@@ -442,7 +442,7 @@ Le patron nous intima de le suivre et rentra le premier, suivi par moi et Céles
 
 Je me réveillai. Je me trouvais immergé sous l'eau, dans la salle de bain de Célestine.
 
-*M'étais-je endormi ? Quel était cet étrange rêve ?*
+_M'étais-je endormi ? Quel était cet étrange rêve ?_
 
 Apparemment alertée par un quelconque évènement, mon hôte accourut dans la pièce. Lorsque je me relevai brusquement de l'ondée, Célestine eut tout le loisir d'admirer le spectacle. Un homme nu au corps ruisselant de masse aqueuse, visiblement en état de choc, était en train de la fixer et il se demandait certainement ce qu'elle pouvait bien penser de lui en cet instant.
 
@@ -556,13 +556,13 @@ Arrivés devant l'entrée, nous trouvâmes porte close.
 
 — Il faut parfois reconsidérer les choses sous un autre angle.
 
-— Je ne suis pas certain de comprendre\...
+— Je ne suis pas certain de comprendre...
 
 — Suis-moi, tu comprendras bien assez vite.
 
 Nous entrâmes, tout en poussant les cadavres au passage, et nous vîmes l'intérieur aussi peuplé que l'extérieur. Cet état de fait me semblait réellement bizarre. Un étrange sentiment de déjà-vu me vint lorsque je vis la tête décapitée d'une statue renversée.
 
-*Cet endroit me disait quelque chose...*
+_Cet endroit me disait quelque chose..._
 
 Célestine me fit signe de la suivre et elle me guida jusqu'à une pièce aux doubles portes enfoncées. Nous nous frayâmes un chemin au travers de ces dernières, non sans quelques acrobaties.
 
@@ -572,9 +572,9 @@ Je décidai donc de m'accrocher au bras de Célestine, afin de ne pas la perdre 
 
 ## Obéissance
 
-*Quelle est cette douleur ? Où suis-je donc tombé ?*
+_Quelle est cette douleur ? Où suis-je donc tombé ?_
 
-*J'étais dans cette étroite pièce avec Célestine, et...*
+_J'étais dans cette étroite pièce avec Célestine, et..._
 
 — N'ayez crainte pour votre migraine, les effets de mon tranquillisant vont bientôt se dissiper, dit calmement le patron.
 
@@ -602,7 +602,7 @@ Cette dernière phrase me laissait pantois quant à sa signification. Je reçus 
 
 Mon intronisation faite, le patron se retira et nous laissa tous les deux. Seuls, nous nous regardions dans le blanc des yeux.
 
-*Ce regard me dit quelque chose...*
+_Ce regard me dit quelque chose..._
 
 — Aurais-je quelque chose sur le nez ? demanda Célestine
 
@@ -678,7 +678,7 @@ Le patron semblait être ravi de ma transformation, ce dernier me tournant autou
 
 — Célestine ! Où es-tu ?
 
-*Aucune réponse...*
+_Aucune réponse..._
 
 Dans cette noirceur, nulle présence n'existait, hormis la mienne. Célestine avait disparu et je me trouvais à présent seul dans un lieu m'étant inconnu.
 
@@ -690,7 +690,7 @@ Je continuais pendant si longtemps dans l'obscurité que les instants me paraiss
 
 Enfin arrivé au bout du tunnel, une autre porte. Sur quoi pouvait-elle donner ? Un décor de vieux western pour riches des temps modernes espérant assoiffer leurs envies de meurtre et de viol ?
 
-*Impossible, on ne voit ça que dans les séries à la narcivision.*
+_Impossible, on ne voit ça que dans les séries à la narcivision._
 
 Soudain, la porte s'ouvrit...
 
@@ -700,11 +700,8 @@ Je m'avançais prudemment, tout en gardant mes sens en éveil, à l'affut du moi
 
 D'étranges bruits se faisaient entendre ici et là.
 
-*Moi qui croyais que tout le monde était censé être mort...*
+_Moi qui croyais que tout le monde était censé être mort..._
 
 Du moins, c'est ce que je croyais.
 
-Soudain, une ombre se jeta sur moi ! Je me débattais sans rêlache pour ôter ses mains de mon visage.
-
-
-
+Soudain, une ombre se jeta sur moi ! Je me débattais sans rêlache pour ôter ses mains de mon visage. C'est alors qu'elle
