@@ -1,5 +1,5 @@
 ---
-title: How to create your own adblock
+title: How to easily create your own adblock using Dnsmasq
 toc: true
 toc_sticky: true
 
