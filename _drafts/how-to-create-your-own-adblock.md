@@ -10,33 +10,33 @@ We will be using Dnsmasq as our DNS server which will have a list of domains to 
 
 For Debian
 
-\`\`\`bash
+```bash
 
 apt update && apt install dnsmasq
 
-\`\`\`
+```
 
 For CentOS
 
-\`\`\`bash
+```bash
 
 yum update && yum install dnsmasq
 
-\`\`\`
+```
 
 ## Configuration
 
 We move the original file in case we want to restore it
 
-\`\`\`bash
+```bash
 
 mv /etc/dnsmasq.conf.ori /etc/dnsmasq.conf
 
-\`\`\`
+```
 
 Then edit the configuration file /etc/dnsmasq.conf and put the following content
 
-\`\`\`bash
+```bash
 
 domain-needed
 
@@ -56,7 +56,7 @@ expand-hosts
 
 domain=kevin-messer.lan
 
-\`\`\`
+```
 
 Replace domain by your personnal domain.
 
@@ -66,13 +66,13 @@ Open your firewall on port 53 both in UDP and TCP.
 
 Create a file named /etc/dnsmasq-dns.conf and put the following inside:
 
-\`\`\`bash
+```bash
 
 nameserver 8.8.8.8
 
 nameserver 8.8.4.4
 
-\`\`\`
+```
 
 If you don't like Google's DNS, feel free to use others.
 
@@ -82,9 +82,9 @@ Create a file called adblocker in /etc/cron.daily and put the following content
 
     /etc/cron.daily/adblocker
 
-\`\`\`bash
+```bash
 
-\#!/bin/bash
+#!/bin/bash
 
 curl -s -o /etc/dnsmasq-adblock https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 
@@ -94,4 +94,4 @@ cat /etc/dnsmasq-adblock >> /etc/dnsmasq-hosts.conf
 
 systemctl restart dnsmasq
 
-\`\`\`
+```
