@@ -2,12 +2,12 @@
 title: Blog
 layout: single
 permalink: "/blog/"
----
 
+---
 <ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
+{% for post in site.posts %}
+<li>
+<a href="{{ post.url }}">{{ post.title }}</a>
+</li>
+{% endfor %}
 </ul>
