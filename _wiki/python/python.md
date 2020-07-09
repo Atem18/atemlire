@@ -1,5 +1,5 @@
 ---
-title: Python
+title: Index
 
 ---
 ## How to solve PyLint “Unable to import” error
