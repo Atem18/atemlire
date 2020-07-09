@@ -10,5 +10,4 @@ fields:
     required: true
 pages:
 - _wiki/aws/index.md
-- _wiki/python/python.md
 - _wiki/wordpress/index.md
