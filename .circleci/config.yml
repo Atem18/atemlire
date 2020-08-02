@@ -18,6 +18,9 @@ jobs:
     executor: jekyll-builder
     steps:
       - checkout
+      - run:
+          name: Add vendor dir
+          command: mkdir -p ./vendor/bundle
       - ruby/install-deps
       - run:
           name: Build the Jekyll site
