@@ -8,7 +8,7 @@ executors:
       JEKYLL_ENV: production
       NOKOGIRI_USE_SYSTEM_LIBRARIES: true
     docker:
-      - image: jekyll/builder:4
+      - image: cimg/ruby:2.7.1-node
   aws-cli:
     docker:
       - image: cibuilds/aws:1.18.108
@@ -19,8 +19,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Add vendor dir
-          command: mkdir -p ./vendor/bundle
+          name: Add libxml2
+          command: sudo apt update && sudo apt install libxml2-dev
       - ruby/install-deps
       - run:
           name: Build the Jekyll site
