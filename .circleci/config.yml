@@ -8,7 +8,7 @@ executors:
       JEKYLL_ENV: production
       NOKOGIRI_USE_SYSTEM_LIBRARIES: true
     docker:
-      - image: cimg/ruby:2.7.1-node
+      - image: jekyll/jekyll:4
   aws-cli:
     docker:
       - image: cibuilds/aws:1.18.108
@@ -24,7 +24,7 @@ jobs:
           command: bundle exec jekyll build --config _config.yml
       - run:
           name: Test the Jekyll site
-          command: htmlproofer --assume-extension _site
+          command: htmlproofer --url-ignore "/#.*/" _site
       - persist_to_workspace:
           root: ./
           paths:

@@ -87,7 +87,7 @@ Basically what we are doing is :
 * append ads domain to the previous list
 * restart dnsmasq
 
-We are using the excellent project [https://github.com/StevenBlack/hosts.](https://github.com/StevenBlack/hosts. "https://github.com/StevenBlack/hosts.")
+We are using the excellent project [https://github.com/StevenBlack/hosts](https://github.com/StevenBlack/hosts)
 
 Feel free to use another list or even run your own. It will work as long as it's a list in the same format than an hosts file.
 
