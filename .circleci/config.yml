@@ -19,7 +19,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Add libxml2
+          name: Add htmlproofer deps
           command: sudo apt update && sudo apt install libxml2-dev libxslt1-dev
       - ruby/install-deps
       - run:
@@ -27,7 +27,7 @@ jobs:
           command: bundle exec jekyll build --config _config.yml
       - run:
           name: Test the Jekyll site
-          command: htmlproofer --url-ignore "/#.*/" _site
+          command: bundle exec htmlproofer --url-ignore "/#.*/" _site
       - persist_to_workspace:
           root: ./
           paths:
