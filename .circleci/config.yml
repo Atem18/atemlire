@@ -19,8 +19,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Add libxml2
-        command: apt update && apt install libxml2-dev
+          name: Add libxml2
+          command: apt update && apt install libxml2-dev
       - ruby/install-deps
       - run:
           name: Build the Jekyll site
