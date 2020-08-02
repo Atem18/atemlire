@@ -8,7 +8,7 @@ executors:
       JEKYLL_ENV: production
       NOKOGIRI_USE_SYSTEM_LIBRARIES: true
     docker:
-      - image: jekyll/jekyll:4
+      - image: jekyll/builder:4
   aws-cli:
     docker:
       - image: cibuilds/aws:1.18.108
