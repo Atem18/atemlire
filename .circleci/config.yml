@@ -27,7 +27,7 @@ jobs:
           command: bundle exec jekyll build --config _config.yml
       - run:
           name: Test the Jekyll site
-          command: bundle exec htmlproofer --url-ignore "/#.*/" _site
+          command: bundle exec htmlproofer --url-ignore "/#.*/,/offline,/404" _site
       - persist_to_workspace:
           root: ./
           paths:
