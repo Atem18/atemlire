@@ -18,10 +18,10 @@ jobs:
     executor: jekyll-builder
     steps:
       - checkout
-      - ruby/install-deps
       - run:
-          name: Add libxml2
-          command: apt update && apt install libxml2-dev
+        name: Add libxml2
+        command: apt update && apt install libxml2-dev
+      - ruby/install-deps
       - run:
           name: Build the Jekyll site
           command: bundle exec jekyll build --config _config.yml
