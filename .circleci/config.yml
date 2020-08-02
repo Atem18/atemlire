@@ -21,7 +21,7 @@ jobs:
       - ruby/install-deps
       - run:
           name: Add libxml2
-          command: apt update && apt install libxml2
+          command: apt update && apt install libxml2-dev
       - run:
           name: Build the Jekyll site
           command: bundle exec jekyll build --config _config.yml
