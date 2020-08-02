@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  ruby: circleci/ruby@1.0.2
+  ruby: circleci/ruby@1.0.7
 executors:
   jekyll-builder:
     working_directory: ~/kmdotnet
@@ -8,7 +8,7 @@ executors:
       JEKYLL_ENV: production
       NOKOGIRI_USE_SYSTEM_LIBRARIES: true
     docker:
-      - image: cimg/ruby:2.7.1-node
+      - image: jekyll/builder:4
   aws-cli:
     docker:
       - image: cibuilds/aws:1.18.108
@@ -18,9 +18,6 @@ jobs:
     executor: jekyll-builder
     steps:
       - checkout
-      - run:
-          name: Add libxml2
-          command: sudo apt update && sudo apt install libxml2-dev
       - ruby/install-deps
       - run:
           name: Build the Jekyll site
