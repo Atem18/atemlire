@@ -15,3 +15,4 @@ source "https://rubygems.org"
 
 gem 'jekyll', '= 4.1.1'
 gem 'minimal-mistakes-jekyll', '= 4.19.3'
+gem "html-proofer", "= 3.15.3"
