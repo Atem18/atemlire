@@ -17,21 +17,21 @@ feature_row:
     title: Technology
     excerpt: DevOps, Linux, Network, DBA, etc.
     url: "/wiki/index"
-    btn_label: Read More
+    btn_label: Read about technology
     btn_class: btn--inverse
   - image_path: "/assets/images/games.jpg"
     alt: games
     title: Games
     excerpt: Magic, E-sport, Guild of Gamers, etc.
     url: "/games/index"
-    btn_label: Read More
+    btn_label: Read about games
     btn_class: btn--inverse
   - image_path: "/assets/images/writing.jpg"
     alt: writing
     title: Writing
     excerpt: Shh, it's a secret...
     url: "/books/index"
-    btn_label: Read More
+    btn_label: Read about books
     btn_class: btn--inverse
 ---
 
