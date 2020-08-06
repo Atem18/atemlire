@@ -1,8 +1,6 @@
 const ASSETS = [
-  "/assets/css/main.css",
-  "/index.html",
+  "/assets/images/offline.gif",
   "/offline.html",
-  "/"
 ];
 
 let cache_name = "kmdotnet"; // The string used to identify our cache
