@@ -1,5 +1,5 @@
 const ASSETS = [
-  "/main.css",
+  "/assets/css/main.css",
   "/index.html",
   "/offline.html",
   "/"
