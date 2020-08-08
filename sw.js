@@ -1,5 +1,4 @@
 const ASSETS = [
-  "/assets/images/offline.gif",
   "/offline.html",
 ];
 

@@ -6,6 +6,4 @@ layout: single
 permalink: /offline
 ---
 
-We are currently offline, our kittengineers are working hard on resolving the issue 
-
-<img src="/assets/images/offline.gif" alt="offline"/>
+We are currently offline, please come back later.
