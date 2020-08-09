@@ -3,7 +3,6 @@ orbs:
   ruby: circleci/ruby@1.0.7
 executors:
   jekyll-builder:
-    working_directory: ~/kmdotnet
     environment:
       JEKYLL_ENV: production
       NOKOGIRI_USE_SYSTEM_LIBRARIES: true
@@ -14,7 +13,6 @@ executors:
       - image: cibuilds/aws:1.18.115
 jobs:
   build:
-    working_directory: ~/repo
     executor: jekyll-builder
     steps:
       - checkout
@@ -33,7 +31,6 @@ jobs:
           paths:
             - _site
   deploy:
-    working_directory: ~/repo
     executor: aws-cli
     steps:
       - attach_workspace:
