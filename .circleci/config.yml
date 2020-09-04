@@ -10,7 +10,7 @@ executors:
       - image: cimg/ruby:2.7.1-node
   aws-cli:
     docker:
-      - image: cibuilds/aws:1.18.130
+      - image: cibuilds/aws:1.18.131
 jobs:
   build:
     executor: jekyll-builder
