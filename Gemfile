@@ -14,5 +14,5 @@ source "https://rubygems.org"
 # To upgrade, run `bundle update`.
 
 gem "jekyll", "= 4.1.1"
-gem "minimal-mistakes-jekyll", "= 4.20.1"
+gem "minimal-mistakes-jekyll", "= 4.20.2"
 gem "html-proofer", "= 3.15.3"
