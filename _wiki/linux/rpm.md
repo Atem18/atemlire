@@ -2,12 +2,12 @@
 title: RPM
 
 ---
-
 ## Packaging
 
 ### Download sources of SPEC file
+
 ```bash
-spectool -g -R
+spectool -g -R my-package.spec
 ```
 
 ### Install dependencies of SPEC file
