@@ -1,5 +1,5 @@
 ---
-title: RPM packaging
+title: RPM
 
 ---
 ## Download sources of SPEC file
