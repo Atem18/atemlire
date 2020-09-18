@@ -2,12 +2,15 @@
 title: RPM
 
 ---
-## Download sources of SPEC file
+
+## Packaging
+
+### Download sources of SPEC file
 ```bash
 spectool -g -R
 ```
 
-## Install dependencies of SPEC file
+### Install dependencies of SPEC file
 
 Ensure dnf-plugins-core is installed
 
