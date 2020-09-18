@@ -17,3 +17,9 @@ Ensure dnf-plugins-core is installed
 ```bash
 dnf builddep my-package.spec
 ```
+
+### Build package of SPEC file
+
+```bash
+rpmbuild -ba my-package.spec
+```
