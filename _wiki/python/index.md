@@ -2,12 +2,14 @@
 title: Index
 
 ---
-## How to solve PyLint “Unable to import” error
+## Generate dynamic dict based on function parameter
 
-Create a file called .env at the top most of your project and put the following content
-
-```ini
-PYTHONPATH=./project:${PYTHONPATH}
+```python
+async def get_ohlc_data(self, pair: str, interval: int, since=None):
+    data = {
+        arg: value
+        for arg, value in locals().items()
+        if arg != "self" and value is not None
+    }
+    return await self.public_request(endpoint="OHLC", data=data)
 ```
-
-Replace project by your name where your python code is and you're done !
