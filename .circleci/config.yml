@@ -7,7 +7,7 @@ executors:
       JEKYLL_ENV: production
       NOKOGIRI_USE_SYSTEM_LIBRARIES: true
     docker:
-      - image: cimg/ruby:2.7.1-node
+      - image: jekyll/jekyll:4.1.0
   aws-cli:
     docker:
       - image: cibuilds/aws:1.18.153
@@ -16,9 +16,6 @@ jobs:
     executor: jekyll-builder
     steps:
       - checkout
-      - run:
-          name: Add htmlproofer deps
-          command: sudo apt update && sudo apt install libxml2-dev libxslt1-dev
       - ruby/install-deps
       - run:
           name: Build the Jekyll site
