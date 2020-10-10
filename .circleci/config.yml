@@ -16,7 +16,6 @@ jobs:
     executor: jekyll-builder
     steps:
       - checkout
-      - ruby/install-deps
       - run:
           name: Build the Jekyll site
           command: bundle exec jekyll build --config _config.yml
