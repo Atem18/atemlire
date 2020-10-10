@@ -18,6 +18,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install dependencies
+          command: bundle install
+      - run:
           name: Build the Jekyll site
           command: bundle exec jekyll build --config _config.yml
       - run:
