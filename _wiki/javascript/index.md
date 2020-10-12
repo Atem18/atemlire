@@ -4,6 +4,8 @@ title: Index
 ---
 ## Set automatically Dark mode in Nuxt.JS and Vuetify
 
+Put the following code to your layout(s)
+
 ```javascript
 created () {
   this.initDarkMode()
