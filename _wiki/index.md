@@ -8,3 +8,4 @@ Welcome to my personnal wiki
 * [Containers](/wiki/containers/index)
 * [Devops](/wiki/devops/index)
 * [Python](/wiki/python/index)
+* [Javascript](/wiki/javascript/index)
