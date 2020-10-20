@@ -1,17 +1,15 @@
 version: 2.1
-orbs:
-  ruby: circleci/ruby@1.0.7
 executors:
   jekyll-builder:
     environment:
       JEKYLL_ENV: production
-      NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+      NOKOGIRI_USE_SYSTEM_LIBRARIES: "true"
     docker:
       - image: jekyll/jekyll:4.1.0
     working_directory: /srv/jekyll
   aws-cli:
     docker:
-      - image: cibuilds/aws:1.18.160
+      - image: cibuilds/aws:1.18.159
 jobs:
   build:
     executor: jekyll-builder
