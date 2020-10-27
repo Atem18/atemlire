@@ -9,7 +9,7 @@ executors:
     working_directory: /srv/jekyll
   aws-cli:
     docker:
-      - image: cibuilds/aws:1.18.159
+      - image: cibuilds/aws:1.18.165
 jobs:
   build:
     executor: jekyll-builder
