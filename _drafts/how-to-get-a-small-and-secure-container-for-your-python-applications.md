@@ -2,6 +2,8 @@
 title: How to get a small and secure container for your Python applications
 
 ---
+## Introduction
+
 Hi,
 
 Today we are gonna talk about containers.
@@ -41,4 +43,10 @@ CMD ["/app/main"]
 
 Do note that this is a minimal example, your final one will most probably have more commands.
 
-Let's dive into each "blocks" of commands.
+## Multi stage
+
+As you can see in the example, we are declaring three "FROM" as opposed to regular one "FROM".
+We are doing this to allow us to :
+1. Have a complete dev env
+2. Build a static binary that can be deployed anywhere
+3. Use scratch image as base of our final container to run our container
