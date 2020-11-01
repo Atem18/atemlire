@@ -43,11 +43,12 @@ CMD ["/app/main"]
 
 Do note that this is a minimal example, your final one will most probably have more commands.
 
-## Multi stage
+## Explanations
 
-As you can see in the example, we are declaring three "FROM" as opposed to regular one "FROM".
+As you can see in the example, we are declaring three "FROM" as opposed to regular one "FROM". It's called [multi-stage](https://docs.docker.com/develop/develop-images/multistage-build/ "multi-stage").
 Three stages, each one has a specific utility:
+
 1. Have a complete dev env
 2. Build a static binary that can be deployed anywhere
-3. Use scratch image as base of our final container to run our container
+3. Use scratch image as base of our final container to run our binary
 
