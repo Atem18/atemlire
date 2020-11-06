@@ -1,7 +1,9 @@
 ---
 title: Podman
+
 ---
+## Create a pod and expose ports
 
-# Introduction
-
-TODO
+```bash
+podman pod create --name pod-name -p 127.0.0.1:3306:3306
+```
