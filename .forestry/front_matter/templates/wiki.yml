@@ -12,4 +12,5 @@ pages:
 - _wiki/aws/index.md
 - _wiki/javascript/index.md
 - _wiki/linux/firewalld.md
+- _wiki/linux/swap.md
 - _wiki/wordpress/index.md
