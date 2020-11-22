@@ -6,7 +6,7 @@ title: How to get a small and secure container for your Python applications
 
 Hi,
 
-Today we are gonna talk about containers. Whether you are using Docker, Podman, Kubernetes or something else, if you are developing an application in Python, you will have create an image and most of the time, people don't really know how to get a small and secure image. Let's fix it.
+Today we are gonna talk about containers. Whether you are using Docker, Podman, Kubernetes or something else, if you want to put a Python application in a container, you will have create an image and most of the time, people don't really know how to get a small and secure image. Let's fix it.
 
 For reference, here is the Dockerfile we will be using:
 
@@ -47,6 +47,7 @@ As you can see in the example, we are declaring three "FROM" as opposed to regul
 Three stages, each one has a specific utility.
 
 Also, the order of commands matter because you want to use Docker cache as much as possible. So respect those requirements:
+
 * **Put the commands that are changing less often of top of the other to use as much as cache as possible**
 * **Don't call RUN command to execute a bash script, unless it's un the CMD or ENTRYPOINT commands**
 * **Don't pipe commands that will not change**
@@ -83,8 +84,41 @@ ENV PATH="/venv/bin:$PATH"
 ENV PYTHONPATH=/app
 ```
 
-We add the venv/bin directory to the path because we want to be able to call some binaries from our project.
+We add the venv/bin directory to the path because we want to be able to call some binaries from our project. This is optional if you don't do it.
+
 The PYTHONPATH env var is optional is your program does not depends on it but it's always good to set it.
+
+```Dockerfile
+COPY requirements.txt /requirements.txt
+```
+
+We copy the requirements of your project.
+
+```Dockerfile
+RUN python -m venv /venv
+````
+
+We create a folder where to install all the dependencies.
+
+```Dockerfile
+RUN pip install -r /requirements.txt
+````
+
+We install the dependencies. PIP will install them in the folder /venv because we did previously set ENV PATH="/venv/bin:$PATH"
+
+```Dockerfile
+CMD ["python", "main.py"]
+```
+
+Finally we run the app.
+
+If you use docker-compose, you can specify the following to develop using that specific stage.
+
+```yaml
+build:
+  context: ./app
+  target: develop-stage
+```
 
 ### Build stage
 
