@@ -92,13 +92,13 @@ We copy the requirements of your project.
 
 ```Dockerfile
 RUN python -m venv /venv
-````
+```
 
 We create a folder where to install all the dependencies.
 
 ```Dockerfile
 RUN pip install -r /requirements.txt
-````
+```
 
 We install the dependencies. PIP will install them in the folder /venv because we did previously set ENV PATH="/venv/bin:$PATH"
 
@@ -126,19 +126,17 @@ COPY --from=develop-stage /venv /venv
 COPY ./app /app
 RUN pyinstaller -F main.py
 RUN staticx /app/dist/main /app/dist/main_tmp
-````
+```
 
 In this stage, the goal is to generate the binary of your application. It does not have to be minimal in size or secured because it will never be used outside of your device.
 
 ```Dockerfile
 FROM develop-stage as build-stage
-````
+```
 
 We are using the same container as the develop-stage to save time and space.
 
-````
-RUN mkdir tmp
-````
+    RUN mkdir tmp
 
 We create a tmp folder that we will use later. It's for Pyinstaller because it needs to uncompress some files into /tmp and the final image "scratch" has no utility to create that /tmp folder.
 
@@ -172,8 +170,7 @@ RUN staticx /app/dist/main /app/dist/main_tmp
 
 Finally, we link the system libs against your app and generate a file out of it. Don't forget to add statixc to your requirements.txt.
 
-
-You can now either stop and distribute the file main_tmp to your clients or keep reading and distribute a container with only your application inside.
+**You can now either stop and distribute the file main_tmp to your clients or keep reading and distribute a container with only your application inside.**
 
 ### Production stage
 
@@ -189,7 +186,7 @@ In this stage, the goal is to generate the final container for your application.
 
 ```Dockerfile
 FROM scratch
-````
+```
 
 As said previously, we use scratch as it's an empty image so there is no exploit possible outside of your application.
 
@@ -216,7 +213,6 @@ CMD ["/app/main"]
 ```
 
 Finally, we set the final command of the container.
-
 
 ## Conclusion
 
