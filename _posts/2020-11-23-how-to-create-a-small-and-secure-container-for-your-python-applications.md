@@ -10,7 +10,7 @@ Today we are gonna talk about containers. Whether you are using Docker, Podman, 
 
 TL;DR: For reference, here is the Dockerfile we will be using:
 
-```Dockerfile
+```bash
 FROM python:3.8.6 AS develop-stage
 WORKDIR /app
 ENV PATH="/venv/bin:$PATH"
@@ -52,7 +52,7 @@ Now let's review the stages.
 
 ### Develop stage
 
-```Dockerfile
+```bash
 ENV PATH="/venv/bin:$PATH"
 ENV PYTHONPATH=/app
 COPY requirements.txt /requirements.txt
@@ -63,19 +63,19 @@ CMD ["python", "main.py"]
 
 In this stage, the goal is to have the best container for developing your application. It does not have to be minimal in size or secured because it will never be used outside of your device.
 
-```Dockerfile
+```bash
 FROM python:3.8.6 AS develop-stage
 ```
 
 We use the official Python docker image with all the tools, because we want to have a full Python environement to develop.
 
-```Dockerfile
+```bash
 WORKDIR /app
 ```
 
 We set the workdir to /app so each next commands are executed in the directory /app
 
-```Dockerfile
+```bash
 ENV PATH="/venv/bin:$PATH"
 ENV PYTHONPATH=/app
 ```
@@ -84,25 +84,25 @@ We add the venv/bin directory to the path because we want to be able to call som
 
 The PYTHONPATH env var is optional if your program does not depends on it but it's always good to set it.
 
-```Dockerfile
+```bash
 COPY requirements.txt /requirements.txt
 ```
 
 We copy the requirements of your project.
 
-```Dockerfile
+```bash
 RUN python -m venv /venv
 ```
 
 We create a folder where to install all the dependencies.
 
-```Dockerfile
+```bash
 RUN pip install -r /requirements.txt
 ```
 
 We install the dependencies. PIP will install them in the folder /venv because we did previously set ENV PATH="/venv/bin:$PATH"
 
-```Dockerfile
+```bash
 CMD ["python", "main.py"]
 ```
 
@@ -118,7 +118,7 @@ build:
 
 ### Build stage
 
-```Dockerfile
+```bash
 FROM develop-stage as build-stage
 RUN mkdir tmp
 RUN apt update && apt install patchelf
@@ -130,7 +130,7 @@ RUN staticx /app/dist/main /app/dist/main_tmp
 
 In this stage, the goal is to generate the binary of your application. It does not have to be minimal in size or secured because it will never be used outside of your device.
 
-```Dockerfile
+```bash
 FROM develop-stage as build-stage
 ```
 
@@ -140,31 +140,31 @@ We are using the same container as the develop-stage to save time and space.
 
 We create a tmp folder that we will use later. It's for Pyinstaller because it needs to uncompress some files into /tmp and the final image "scratch" has no utility to create that /tmp folder.
 
-```Dockerfile
+```bash
 RUN apt update && apt install patchelf
 ```
 
 We install patchelf as it's a dependency of staticx, the tool we will use to generate our final binary with the system libs embeded.
 
-```Dockerfile
+```bash
 COPY --from=develop-stage /venv /venv
 ```
 
 We copy the Python dependencies so we can call Pyinstaller and it can find all your program dependencies.
 
-```Dockerfile
+```bash
 COPY ./app /app
 ```
 
 We copy your program source source.
 
-```Dockerfile
+```bash
 RUN pyinstaller -F main.py
 ```
 
 Now, we generate a static binary out of your main entry program. Don't forget to add pyinstaller to your requirements.txt.
 
-```Dockerfile
+```bash
 RUN staticx /app/dist/main /app/dist/main_tmp
 ```
 
@@ -174,7 +174,7 @@ Finally, we link the system libs against your app and generate a file out of it.
 
 ### Production stage
 
-```Dockerfile
+```bash
 FROM scratch
 USER 65535
 COPY --from=build-stage --chown=65535:65535 /app/tmp /tmp
@@ -184,31 +184,31 @@ CMD ["/app/main"]
 
 In this stage, the goal is to generate the final container for your application. We need it to be minimal in size and secured, that's why we will be using scratch as base image.
 
-```Dockerfile
+```bash
 FROM scratch
 ```
 
 As said previously, we use scratch as it's an empty image so there is no exploit possible outside of your application.
 
-```Dockerfile
+```bash
 USER 65535
 ```
 
 We set the user to a non-root user. Please do note that your application cannot bind to a port lower than 1024 because it does not run as root.
 
-```Dockerfile
+```bash
 COPY --from=build-stage --chown=65535:65535 /app/tmp /tmp
 ```
 
 As said previously, Pyinstaller needs a /tmp directory so we copy it from the previous stage.
 
-```Dockerfile
+```bash
 COPY --from=build-stage --chown=65535:65535 /app/dist/main_tmp /app/main
 ```
 
 We copy our final binary to the main directory.
 
-```Dockerfile
+```bash
 CMD ["/app/main"]
 ```
 
