@@ -24,7 +24,7 @@ yum update && yum install dnsmasq
 
 ## Configuration
 
-We move the original file in case we want to restore it
+We copy the original file in case we want to restore it
 
 ```bash
 cp /etc/dnsmasq.conf /etc/dnsmasq.conf.ori
