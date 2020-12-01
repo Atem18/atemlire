@@ -53,11 +53,11 @@ Open your firewall on port 53 both in UDP and TCP.
 Create a file named **/etc/dnsmasq-dns.conf** and put the following inside:
 
 ```bash
-nameserver 8.8.8.8
-nameserver 8.8.4.4
+nameserver 1.1.1.1
+nameserver 1.0.0.1
 ```
 
-If you don't like Google's DNS, feel free to use others.
+If you don't like Cloudflare's DNS, feel free to use others.
 
 Create a file named **/etc/dnsmasq-custom** where you will put custom domain resolution like :
 
