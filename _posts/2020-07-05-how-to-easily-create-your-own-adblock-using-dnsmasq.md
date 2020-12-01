@@ -61,8 +61,10 @@ If you don't like Cloudflare's DNS, feel free to use others.
 
 Create a file named **/etc/dnsmasq-custom** where you will put custom domain resolution like :
 
-    127.0.0.1 alpha.example.com
-    127.0.0.1 beta.example.com
+    127.0.0.1 alpha
+    127.0.0.1 beta
+
+They will resolve as alpha.kevin-messer.lan and beta.kevin-messer.lan
 
 ### CRON
 
