@@ -24,10 +24,10 @@ yum update && yum install dnsmasq
 
 ## Configuration
 
-We move the original file in case we want to restore it
+We copy the original file in case we want to restore it
 
 ```bash
-mv /etc/dnsmasq.conf.ori /etc/dnsmasq.conf
+cp /etc/dnsmasq.conf /etc/dnsmasq.conf.ori
 ```
 
 Then create a configuration file named **/etc/dnsmasq.conf** and put the following content
@@ -53,16 +53,18 @@ Open your firewall on port 53 both in UDP and TCP.
 Create a file named **/etc/dnsmasq-dns.conf** and put the following inside:
 
 ```bash
-nameserver 8.8.8.8
-nameserver 8.8.4.4
+nameserver 1.1.1.1
+nameserver 1.0.0.1
 ```
 
-If you don't like Google's DNS, feel free to use others.
+If you don't like Cloudflare's DNS, feel free to use others.
 
 Create a file named **/etc/dnsmasq-custom** where you will put custom domain resolution like :
 
-    127.0.0.1 alpha.example.com
-    127.0.0.1 beta.example.com
+    127.0.0.1 alpha
+    127.0.0.1 beta
+
+They will resolve as alpha.kevin-messer.lan and beta.kevin-messer.lan
 
 ### CRON
 

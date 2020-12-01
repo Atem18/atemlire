@@ -12,19 +12,31 @@ Keep also in mind that Wireguard is different than OpenVPN for example because t
 
 ## Installation
 
-Wireguard is not in CentOS official repos so install EPEL and ELREPO:
+Wireguard is not included in CentOS’s main repositories so you have to add additional repos to install it:
 
 ```bash
-dnf install epel-release elrepo-release
-```
-
-You can then install Wireguard:
-
-```bash
+dnf install elrepo-release epel-release
 dnf install kmod-wireguard wireguard-tools
 ```
 
-Then you need to enable to kernel module:
+As Wireguard is a kernel module, you will need to check if it’s enabled and enable it if it’s not.
+
+To check if you will have to do so:
+
+```bash
+lsmod | grep wireguard
+```
+
+If it’s ok, you will get something like this:
+
+```bash
+root@centos:~# lsmod | grep wireguard
+wireguard             208896  0
+ip6_udp_tunnel         16384  1 wireguard
+udp_tunnel             16384  1 wireguard
+```
+
+If you get nothing, you will have to enable it either :
 
 * Manually for one time:
 
@@ -38,29 +50,22 @@ modprobe wireguard
 echo "wireguard" > /etc/modules-load.d/wireguard.conf
 ```
 
-Then check if Wireguard kernel module is enabled:
-
-```bash
-root@centos:~# lsmod | grep wireguard
-wireguard             208896  0
-ip6_udp_tunnel         16384  1 wireguard
-udp_tunnel             16384  1 wireguard
-```
-
 ## Configuration
 
 There are many ways to configure Wireguard. I will present you one that works but feel free to research for other methods.
 
-Wireguard works kinda like OpenSSH, each peer have a pair of private and public key but unlike OpenSSH, Wireguard needs to know each public keys and private IP address of each peer he will allow the connection.
+Wireguard works kinda like OpenSSH, each peer have a pair of private and public key but  unlike OpenSSH, Wireguard needs to know each public keys and private IP address of each peer he will allow the connection.
 
-All the following commands will be performed on CentOS which as said previously will be our « server ».
+All the following commands will be performed on Ubuntu which as said previously will be our « server ».
 
 ### Server configuration
 
-Create private and public keys:
+Create private and public keys
 
 ```bash
-wg genkey | tee /etc/wireguard/privatekey | wg pubkey > /etc/wireguard/publickey
+mkdir /etc/wireguard
+cd /etc/wireguard
+wg genkey | tee privatekey | wg pubkey > publickey
 ```
 
 Then, create a configuration file for wg0 which will be our device for routing.
@@ -74,7 +79,7 @@ ListenPort = 51820
 PrivateKey = SERVER_PRIVATE_KEY
 
 [Peer]
-# iPhone
+# iphone
 PublicKey = PEER_IPHONE_PUBLIC_KEY
 AllowedIPs = 192.168.2.2/32
 ```
@@ -92,6 +97,7 @@ AllowedIPs: Change the AllowedIPs if you change the network or if you want to at
 ### Client configuration
 
 We will host "clients" keys and configuration files on the "server" in that example. But you can also generate them on your client and keep them safely there. It's up to you.
+{: .notice--info}
 
 Create a new directory to put client's configuration files
 
@@ -114,20 +120,23 @@ Create client's configuration file
 [Interface]
 Address = 192.168.2.2/24
 PrivateKey = PEER_IPHONE_PRIVATE_KEY
+DNS = 192.168.2.1
 
 [Peer]
 PublicKey = SERVER_PUBLICKEY
-AllowedIPs = 192.168.2.2/24
-Endpoint = mydomain.com:51820
+AllowedIPs = 0.0.0.0/0, ::/0
+Endpoint = ubuntu.mydomain.com:51820
 ```
 
 Address: Client’s IP address, it has to match the one you defined in the server’s configuration.
 
 PrivateKey: Replace PEER_IPHONE_PRIVATE_KEY by the content of /etc/wireguard/clients/iphone/privatekey
 
+DNS: Put whatever DNS you want.
+
 PublicKey: Replace SERVER_PUBLICKEY by the content of /etc/wireguard/publickey.
 
-AllowedIPs: Allow peer private IP.
+AllowedIPs: Allow specific IP if it's a static one or all if it's dynamic IP.
 
 Endpoint: Specify the hostname or IP of your server and the port.
 
@@ -170,10 +179,10 @@ qrencode -t ansiutf8 < client.conf
 
 This will generate a QR code that is readable by the mobile client.
 
-The advantage of this approache is that there is no need to transfer sensitive information via data channels that can potentially be compromised and there is no need of any other supplementary software besides a terminal or console.
+The advantage of this approach is that there is no need to transfer sensitive information via data channels that can potentially be compromised and there is no need of any other supplementary software besides a terminal or console.
 
 ## Conclusion
 
-I hope you enjoyed this small tutorial about WireGuard on CentOS.
+I hope you enjoyed this small tutorial about WireGuard on CentOS 8.
 
 Feel free to comment below :D
