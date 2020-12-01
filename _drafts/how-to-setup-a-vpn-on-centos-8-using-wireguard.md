@@ -78,11 +78,6 @@ Address = 192.168.2.1/24
 ListenPort = 51820
 PrivateKey = SERVER_PRIVATE_KEY
 
-# note - substitute eth0 in the following lines to match the Internet-facing interface
-# if the server is behind a router and receive traffic via NAT, this iptables rules are not needed
-PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
-
 [Peer]
 # iphone
 PublicKey = PEER_IPHONE_PUBLIC_KEY
