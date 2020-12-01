@@ -8,6 +8,5 @@ fields:
   config:
     required: true
 pages:
-- _posts/2020-01-21-how-to-setup-a-vpn-on-ubuntu-19-10-using-wireguard.md
 - _posts/2020-11-23-how-to-create-a-small-and-secure-container-for-your-python-applications.md
 - _posts/how-to-setup-a-vpn-on-centos-8-using-wireguard.md
