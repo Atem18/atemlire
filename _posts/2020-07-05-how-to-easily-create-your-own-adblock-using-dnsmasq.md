@@ -89,7 +89,7 @@ Basically what we are doing is :
 * append ads domain to the previous list
 * restart dnsmasq
 
-We are using the excellent project [https://github.com/StevenBlack/hosts.](https://github.com/StevenBlack/hosts. "https://github.com/StevenBlack/hosts.")
+We are using the excellent project [https://github.com/StevenBlack/hosts](https://github.com/StevenBlack/hosts)
 
 Feel free to use another list or even run your own. It will work as long as it's a list in the same format than an hosts file.
 
@@ -97,6 +97,6 @@ Feel free to use another list or even run your own. It will work as long as it's
 
 Setting up and maintaining your own adblock is really easy.
 
-Also if you wish to use it as you go like on your mobile phone, feel free to use my tutorial about [Wireguard](/how-to-setup-a-vpn-on-ubuntu-19-10-using-wireguard/).
+Also if you wish to use it as you go like on your mobile phone, feel free to use my tutorial about [Wireguard](/how-to-setup-a-vpn-on-ubuntu-using-wireguard/).
 
 In the meantime, happy DevOps  and stay safe!

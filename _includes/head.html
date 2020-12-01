@@ -2,44 +2,17 @@
 
 {% include seo.html %}
 
-<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"
-  type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
 <!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="apple-mobile-web-app-title" content="Kmdotnet">
-<meta name="application-name" content="Kmdotnet">
-<meta name="msapplication-TileColor" content="#5bbad5">
-<meta name="theme-color" content="#ffffff">
-
-<link rel="preconnect" href="https://ssl.google-analytics.com">
-<link rel="preconnect" href="https://storage.googleapis.com">
-
-<link rel="stylesheet" type="text/css" href="{{ '/assets/css/main.css' | relative_url }}" media="print" onload="this.media='all'; this.onload=null;">
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-  if ("serviceWorker" in navigator) {
-    if (navigator.serviceWorker.controller) {
-      console.log("[{{ site.title }}] active service worker found, no need to register");
-    } else {
-      navigator.serviceWorker
-        .register("{{ site.baseurl }}/pwabuilder-sw.js", {
-          scope: "./"
-        })
-        .then(function (reg) {
-          console.log("[{{ site.title }}] Service worker has been registered for scope: " + reg.scope);
-        });
-    }
-  }
 </script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" media="print" onload="this.media='all'; this.onload=null;">
 
 <!--[if IE]>
   <style>
@@ -57,12 +30,7 @@
 <![endif]-->
 
 {% if site.head_scripts %}
-{% for script in site.head_scripts %}
-{% if script contains "://" %}
-{% capture script_path %}{{ script }}{% endcapture %}
-{% else %}
-{% capture script_path %}{{ script | relative_url }}{% endcapture %}
-{% endif %}
-<script src="{{ script_path }}"></script>
-{% endfor %}
+  {% for script in site.head_scripts %}
+    <script src="{{ script | relative_url }}"></script>
+  {% endfor %}
 {% endif %}

@@ -1,40 +1,41 @@
 version: 2.1
-orbs:
-  ruby: circleci/ruby@1.0.2
 executors:
   jekyll-builder:
-    working_directory: ~/kmdotnet
     environment:
       JEKYLL_ENV: production
-      NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+      NOKOGIRI_USE_SYSTEM_LIBRARIES: "true"
     docker:
-      - image: cimg/ruby:2.7.1-node
+      - image: jekyll/jekyll:4.1.0
+    working_directory: /srv/jekyll
   aws-cli:
     docker:
-      - image: cibuilds/aws:1.18.91
+      - image: cibuilds/aws:1.18.183
 jobs:
   build:
-    working_directory: ~/repo
     executor: jekyll-builder
     steps:
       - checkout
-      - ruby/install-deps
+      - run:
+          name: Install dependencies
+          command: bundle install
       - run:
           name: Build the Jekyll site
           command: bundle exec jekyll build --config _config.yml
+      - run:
+          name: Test the Jekyll site
+          command: bundle exec htmlproofer --url-ignore "/#.*/,/.*offline/,/.*404/,/www.kevin-messer.net/" _site
       - persist_to_workspace:
           root: ./
           paths:
             - _site
   deploy:
-    working_directory: ~/repo
     executor: aws-cli
     steps:
       - attach_workspace:
           at: ./
       - run:
           name: Deploy _site
-          command: aws s3 sync _site s3://kmdotnet-s3bucket-1ucv72i21hs6g --delete
+          command: aws s3 sync _site s3://kmdotnet-s3bucket-1ucv72i21hs6g --delete --cache-control max-age=14400
       - run:
           name: Invalidate cache for non-www
           command: aws cloudfront create-invalidation --distribution-id E1ZZFI3OO0FZA8 --paths "/*"
