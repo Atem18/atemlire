@@ -5,8 +5,8 @@ executors:
       JEKYLL_ENV: production
       NOKOGIRI_USE_SYSTEM_LIBRARIES: "true"
     docker:
-      - image: jekyll/jekyll:4.1.0
-    working_directory: /srv/jekyll
+      - image: ruby:2.7.2-buster
+    working_directory: /app
   aws-cli:
     docker:
       - image: cibuilds/aws:1.18.189
@@ -15,6 +15,9 @@ jobs:
     executor: jekyll-builder
     steps:
       - checkout
+      - run:
+          name: Install bundler
+          command: gem install bundler
       - run:
           name: Install dependencies
           command: bundle install
