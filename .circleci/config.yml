@@ -37,7 +37,7 @@ jobs:
           at: ./
       - run:
           name: Deploy _site
-          command: aws s3 sync app/_site s3://atemlire --delete --cache-control max-age=14400
+          command: aws s3 sync app/_site s3://www.kevin-messer.net --delete --cache-control max-age=14400
 workflows:
   version: 2
   build-and-deploy:
