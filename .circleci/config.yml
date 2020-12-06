@@ -38,12 +38,6 @@ jobs:
       - run:
           name: Deploy _site
           command: aws s3 sync app/_site s3://atemlire --delete --cache-control max-age=14400
-      - run:
-          name: Invalidate cache for non-www
-          command: aws cloudfront create-invalidation --distribution-id E1ZZFI3OO0FZA8 --paths "/*"
-      - run:
-          name: Invalidate cache for www
-          command: aws cloudfront create-invalidation --distribution-id E2QG9YBHY9LBBS --paths "/*"   
 workflows:
   version: 2
   build-and-deploy:
