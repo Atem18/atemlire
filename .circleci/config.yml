@@ -6,7 +6,6 @@ executors:
       NOKOGIRI_USE_SYSTEM_LIBRARIES: "true"
     docker:
       - image: ruby:2.7.2-buster
-    working_directory: /app
   aws-cli:
     docker:
       - image: cibuilds/aws:1.18.189
@@ -15,6 +14,9 @@ jobs:
     executor: jekyll-builder
     steps:
       - checkout
+      - run:
+          name: Change directory
+          command: cd app
       - run:
           name: Install bundler
           command: gem install bundler

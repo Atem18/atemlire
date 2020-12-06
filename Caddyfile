@@ -1,0 +1,12 @@
+:80 {
+  respond /live 200
+  respond /ready 200
+}
+
+http://www.kevin-messer.net {
+  reverse_proxy http://atemlire.s3-website-eu-west-1.amazonaws.com {
+    encode gzip zstd
+    respond /live 200
+    respond /ready 200
+  }
+}
