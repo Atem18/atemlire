@@ -14,9 +14,9 @@ GEM
     faraday (1.1.0)
       multipart-post (>= 1.2, < 3)
       ruby2_keywords
-    ffi (1.13.1)
+    ffi (1.14.2)
     forwardable-extended (2.6.0)
-    html-proofer (3.18.0)
+    html-proofer (3.18.2)
       addressable (~> 2.3)
       mercenary (~> 0.3)
       nokogumbo (~> 2.0)
@@ -108,7 +108,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  html-proofer (= 3.18.0)
+  html-proofer (= 3.18.2)
   minimal-mistakes-jekyll (= 4.21.0)
 
 BUNDLED WITH
