@@ -25,7 +25,7 @@ jobs:
           command: cd app && bundle exec jekyll build --config _config.yml
       - run:
           name: Test the Jekyll site
-          command: cd app && bundle exec htmlproofer --url-ignore "/#.*/,/.*offline/,/.*404/,/www.kevin-messer.net/,/twitter.com" _site
+          command: cd app && bundle exec htmlproofer --url-ignore "/#.*/,/.*offline/,/.*404/,/www.kevin-messer.net/,/twitter.com/" _site
       - persist_to_workspace:
           root: ./
           paths:
