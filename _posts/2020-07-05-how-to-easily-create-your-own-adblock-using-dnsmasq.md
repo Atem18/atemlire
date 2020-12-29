@@ -59,7 +59,7 @@ nameserver 1.0.0.1
 
 If you don't like Cloudflare's DNS, feel free to use others.
 
-Create a file named **/etc/dnsmasq-hosts.conf** where you will put custom domain resolution like :
+Create a file named **/etc/dnsmasq-custom.conf** where you will put custom domain resolution like :
 
     127.0.0.1 alpha
     127.0.0.1 beta
