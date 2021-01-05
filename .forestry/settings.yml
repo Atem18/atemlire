@@ -38,8 +38,8 @@ build:
   preview_output_directory: _site
   install_dependencies_command: bundle check --path=vendor/bundle || bundle install
     --path=vendor/bundle --jobs=4 --retry=3
-  preview_docker_image: cimg/ruby:2.7.1-node
-  mount_path: "~/repo"
+  preview_docker_image: forestryio/ruby:2.6-node12
+  mount_path: "/srv"
   working_dir: "~/repo"
   instant_preview_command: bundle exec jekyll serve --config _config.yml --drafts
     --unpublished --future --port 8080 --host 0.0.0.0 -d _site
