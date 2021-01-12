@@ -1,0 +1,11 @@
+---
+title: Filesystem
+
+---
+## General
+
+### Rescan physical disk after increased size
+
+```bash
+echo 1 > /sys/block/sda/device/rescan
+```
