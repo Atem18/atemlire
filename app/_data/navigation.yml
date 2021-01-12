@@ -1,14 +1,14 @@
 # main links
 main:
   - title: "Blog"
-    url: /blog
+    url: /blog/
   - title: "Wiki"
-    url: /wiki/index
+    url: /wiki/
   - title: "Games"
-    url: /games/index
+    url: /games/
   - title: "Books"
-    url: /books/index
+    url: /books/
   - title: "About"
-    url: /about
+    url: /about/
   - title: "Contact"
-    url: /contact
+    url: /contact/
