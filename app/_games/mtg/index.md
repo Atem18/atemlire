@@ -1,7 +1,8 @@
 ---
 title: Mtg
+permalink: /games/mtg/
 ---
 
 Welcome to my Mtg space.
 
-* [Decks](/games/mtg/decks)
+* [Decks](/games/mtg/decks/)

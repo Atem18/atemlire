@@ -1,6 +1,6 @@
 ---
 title: RPM
-
+permalink: /wiki/linux/rpm/
 ---
 ## Packaging
 

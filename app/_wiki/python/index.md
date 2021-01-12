@@ -1,6 +1,6 @@
 ---
-title: Index
-
+title: Python
+permalink: /wiki/python/
 ---
 ## Generate dynamic dict based on function parameter
 

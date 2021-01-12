@@ -1,6 +1,6 @@
 ---
 title: Swap
-
+permalink: /wiki/linux/swap/
 ---
 ## Creating and Activating a Swap File
 
