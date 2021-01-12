@@ -31,7 +31,7 @@ feature_row:
   alt: books
   title: Books
   excerpt: Reading, writing, etc.
-  url: "/books/index"
+  url: "/books/"
   btn_label: Read about books
   btn_class: btn--inverse
 
