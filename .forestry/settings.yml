@@ -5,25 +5,25 @@ admin_path: app/admin
 webhook_url: 
 sections:
 - type: directory
-  path: _pages
+  path: app/_pages
   label: Pages
   create: all
-  match: "/*.md"
+  match: "**/*"
 - type: jekyll-posts
   label: Posts
   create: all
 - type: directory
-  path: _books
+  path: app/_books
   label: Books
   create: all
   match: "**/*"
 - type: directory
-  path: _games
+  path: app/_games
   label: Games
   create: all
   match: "**/*"
 - type: directory
-  path: _wiki
+  path: app/_wiki
   label: Wiki
   create: all
   match: "**/*"
