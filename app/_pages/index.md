@@ -24,7 +24,7 @@ feature_row:
   alt: games
   title: Games
   excerpt: Magic, E-sport, Guild of Gamers, etc.
-  url: "/games/index"
+  url: "/games/"
   btn_label: Read about games
   btn_class: btn--inverse
 - image_path: "/assets/images/writing.jpg"
