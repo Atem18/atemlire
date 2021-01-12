@@ -1,5 +1,6 @@
 ---
 title: Docker
+permalink: /wiki/containers/docker/
 ---
 
 # Cleanup

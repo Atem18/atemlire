@@ -1,7 +1,7 @@
 ---
 title: Welcome to my personnal network
 layout: splash
-permalink: "/"
+permalink: /
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

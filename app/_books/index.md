@@ -1,5 +1,6 @@
 ---
 title: Index
+permalink: /books/
 
 ---
 ## Welcome to my library

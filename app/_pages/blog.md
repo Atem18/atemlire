@@ -1,7 +1,7 @@
 ---
 title: Blog
 layout: single
-permalink: "/blog/"
+permalink: /blog/
 ---
 
 Small articles about anything

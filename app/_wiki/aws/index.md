@@ -1,4 +1,5 @@
 ---
-title: Index
+title: AWS
+permalink: /wiki/aws/
 
 ---

@@ -4,6 +4,7 @@ toc: true
 toc_label: Chapters
 toc_sticky: true
 published: false
+permalink: /books/la-perversion-de-narcisse/
 
 ---
 _Par Kevin Messer_

@@ -3,6 +3,7 @@ title: Decks
 toc: true
 toc_label: "Decks"
 toc_sticky: true
+permalink: /games/mtg/decks/
 ---
 
 <script src="https://tappedout.net/tappedout.js"></script>

@@ -1,6 +1,6 @@
 ---
 title: Filesystem
-
+permalink: /wiki/linux/filesystem/
 ---
 ## General
 

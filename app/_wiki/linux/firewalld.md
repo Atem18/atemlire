@@ -1,6 +1,6 @@
 ---
 title: Firewalld
-
+permalink: /wiki/linux/firewalld/
 ---
 ## Commands
 
