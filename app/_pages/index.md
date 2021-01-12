@@ -7,7 +7,7 @@ header:
   overlay_filter: "0.5"
   overlay_image: "/assets/images/home.jpg"
   cta_label: About me
-  cta_url: "/about"
+  cta_url: "/about/"
 excerpt: You will find here all the stuff I love, personnal stuff, technical stuff
   and so much more
 intro:
