@@ -1,6 +1,6 @@
 ---
 title: Linux
-
+permalink: /wiki/linux/
 ---
 ## Dedicated subjects
 
