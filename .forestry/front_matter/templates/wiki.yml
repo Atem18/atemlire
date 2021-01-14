@@ -4,7 +4,12 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
   description: The title of the page
   config:
     required: true
+- name: permalink
+  type: text
+  config:
+    required: false
+  label: Permalink
