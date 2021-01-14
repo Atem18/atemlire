@@ -1,5 +1,5 @@
 ---
-title: Index
+title: Python
 permalink: "/wiki/python/"
 
 ---
