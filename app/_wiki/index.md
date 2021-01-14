@@ -1,5 +1,5 @@
 ---
-title: Index
+title: Wiki
 permalink: "/wiki/"
 
 ---
