@@ -15,3 +15,4 @@ fields:
   label: Permalink
 pages:
 - app/_wiki/linux/swap.md
+- app/_wiki/wordpress/index.md

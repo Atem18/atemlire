@@ -1,6 +1,7 @@
 ---
-title: Wordpress
-permalink: /wiki/wordpress/
+title: Index
+permalink: "/wiki/wordpress/"
+
 ---
 ## Discover enqueued styles and scripts in Wordpress
 
