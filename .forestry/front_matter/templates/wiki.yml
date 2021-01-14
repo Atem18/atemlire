@@ -14,6 +14,7 @@ fields:
     required: false
   label: Permalink
 pages:
+- app/_wiki/linux/filesystem.md
 - app/_wiki/linux/index.md
 - app/_wiki/linux/swap.md
 - app/_wiki/python/index.md
