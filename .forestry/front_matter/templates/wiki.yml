@@ -16,6 +16,7 @@ fields:
 pages:
 - app/_wiki/linux/filesystem.md
 - app/_wiki/linux/index.md
+- app/_wiki/linux/rpm.md
 - app/_wiki/linux/swap.md
 - app/_wiki/python/index.md
 - app/_wiki/wordpress/index.md
