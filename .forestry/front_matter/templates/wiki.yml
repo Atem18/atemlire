@@ -13,3 +13,5 @@ fields:
   config:
     required: false
   label: Permalink
+pages:
+- app/_wiki/linux/swap.md
