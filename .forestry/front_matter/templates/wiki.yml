@@ -14,6 +14,7 @@ fields:
     required: false
   label: Permalink
 pages:
+- app/_wiki/containers/index.md
 - app/_wiki/devops/index.md
 - app/_wiki/index.md
 - app/_wiki/javascript/index.md

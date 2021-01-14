@@ -1,8 +1,7 @@
 ---
 title: Containers
-permalink: /wiki/containers/
+permalink: "/wiki/containers/"
 
 ---
-
-* [Docker](/wiki/containers/docker/)
-* [Podman](/wiki/containers/podman/)
+* [Docker](/wiki/containers/docker)
+* [Podman](/wiki/containers/podman)
