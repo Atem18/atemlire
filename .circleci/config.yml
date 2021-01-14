@@ -25,7 +25,7 @@ jobs:
           command: cd app && bundle exec jekyll build --config _config.yml
       - run:
           name: Test the Jekyll site
-          command: cd app && bundle exec htmlproofer --url-ignore "/#.*/,/.*offline/,/.*404/,/www.kevin-messer.net/,/twitter.com/" _site
+          command: cd app && bundle exec htmlproofer --url-ignore "/#.*/,/.*offline/,/.*404/,/www.atemlire.io/,/twitter.com/" _site
       - persist_to_workspace:
           root: ./
           paths:
@@ -37,7 +37,7 @@ jobs:
           at: ./
       - run:
           name: Deploy _site
-          command: aws s3 sync app/_site s3://www.kevin-messer.net --delete --cache-control max-age=14400
+          command: aws s3 sync app/_site s3://www.atemlire.io --delete --cache-control max-age=14400
 workflows:
   version: 2
   build-and-deploy:

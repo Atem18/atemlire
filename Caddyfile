@@ -3,6 +3,6 @@
   respond /ready "This is working" 200
 }
 
-http://www.kevin-messer.net {
-  reverse_proxy http://www.kevin-messer.net.s3-website-eu-west-1.amazonaws.com
+http://www.atemlire.io {
+  reverse_proxy http://www.atemlire.io.s3-website-eu-west-1.amazonaws.com
 }
