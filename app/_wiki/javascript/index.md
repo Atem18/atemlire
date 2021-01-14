@@ -1,6 +1,7 @@
 ---
 title: Javascript
-permalink: /wiki/javascript/
+permalink: "/wiki/javascript/"
+
 ---
 ## Set automatically Dark mode in Nuxt.JS and Vuetify
 

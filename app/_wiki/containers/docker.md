@@ -1,8 +1,8 @@
 ---
 title: Docker
-permalink: /wiki/containers/docker/
----
+permalink: "/wiki/containers/docker/"
 
+---
 # Cleanup
 
 Once in a while, you may need to cleanup resources (containers, volumes, images, networks) ...

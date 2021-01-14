@@ -1,14 +1,12 @@
 ---
 title: Wiki
-permalink: /wiki/
+permalink: "/wiki/"
 
 ---
 Welcome to my personnal wiki
 
-* [AWS](/wiki/aws/)
+* [Linux](/wiki/linux/)
 * [Containers](/wiki/containers/)
 * [Devops](/wiki/devops/)
-* [Javascript](/wiki/javascript/)
-* [Linux](/wiki/linux/)
 * [Python](/wiki/python/)
-* [Wordpress](/wiki/wordpress/)
+* [Javascript](/wiki/javascript/)

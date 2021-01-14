@@ -1,6 +1,7 @@
 ---
 title: Python
-permalink: /wiki/python/
+permalink: "/wiki/python/"
+
 ---
 ## Generate dynamic dict based on function parameter
 

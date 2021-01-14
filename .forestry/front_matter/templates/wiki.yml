@@ -4,7 +4,27 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
   description: The title of the page
   config:
     required: true
+- name: permalink
+  type: text
+  config:
+    required: false
+  label: Permalink
+pages:
+- app/_wiki/aws/index.md
+- app/_wiki/containers/docker.md
+- app/_wiki/containers/index.md
+- app/_wiki/containers/podman.md
+- app/_wiki/devops/index.md
+- app/_wiki/index.md
+- app/_wiki/javascript/index.md
+- app/_wiki/linux/filesystem.md
+- app/_wiki/linux/firewalld.md
+- app/_wiki/linux/index.md
+- app/_wiki/linux/rpm.md
+- app/_wiki/linux/swap.md
+- app/_wiki/python/index.md
+- app/_wiki/wordpress/index.md

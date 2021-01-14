@@ -1,5 +1,6 @@
 ---
 title: AWS
-permalink: /wiki/aws/
+permalink: "/wiki/aws/"
 
 ---
+Welcome to my wiki's AWS section.
