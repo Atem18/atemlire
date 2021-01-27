@@ -5,6 +5,7 @@ permalink: "/wiki/linux/"
 ---
 ## Dedicated subjects
 
+* [Filesystem](/wiki/linux/filesystem)
 * [Firewalld](/wiki/linux/firewalld)
 * [RPM](/wiki/linux/rpm)
 * [Swap](/wiki/linux/swap)
