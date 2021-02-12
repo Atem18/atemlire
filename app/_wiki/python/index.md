@@ -3,6 +3,16 @@ title: Python
 permalink: "/wiki/python/"
 
 ---
+## Flake8 config file for Black
+
+```ini
+[flake8]
+max-line-length = 88
+select = C,E,F,W,B,B9
+ignore = E203, E501, W503
+exclude = __init__.py
+```
+
 ## Generate dynamic dict based on function parameter
 
 ```python
