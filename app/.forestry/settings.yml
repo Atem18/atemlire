@@ -9,6 +9,8 @@ sections:
   label: Posts
   create: documents
   match: "**/*"
+  templates:
+  - blog
 - type: directory
   path: app/_pages
   label: Pages
@@ -29,6 +31,8 @@ sections:
   label: Wiki
   create: all
   match: "**/*"
+  templates:
+  - wiki
 upload_dir: app/uploads
 public_path: "/uploads"
 front_matter_path: ''
