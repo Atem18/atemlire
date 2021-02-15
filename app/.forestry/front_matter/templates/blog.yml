@@ -7,3 +7,5 @@ fields:
   label: Title
   config:
     required: true
+pages:
+- app/_posts/easily-add-svelte-to-a-django-project.md
