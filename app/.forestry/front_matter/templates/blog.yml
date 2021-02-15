@@ -7,3 +7,5 @@ fields:
   label: Title
   config:
     required: true
+pages:
+- app/_posts/how-to-develop-build-and-deploy-a-wordpress-theme-the-devops-way.md
