@@ -1,4 +1,4 @@
-FROM golang:1.15.8-buster AS builder
+FROM golang:1.16.0-buster AS builder
 RUN mkdir -p /caddydir/data && \
     chmod -R 700 /caddydir
 ENV GO111MODULE=on \
