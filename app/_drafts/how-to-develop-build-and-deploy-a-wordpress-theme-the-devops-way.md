@@ -1,7 +1,11 @@
 ---
-title: How to develop, build and deploy a wordpress theme, the DevOps way
+title: How to develop and build a Wordpress theme inside a container
 
 ---
+Hi,
+
+Today we will learn about developping, building and deploying a wordpress theme
+
 ```yaml
 version: '3'
 services:
