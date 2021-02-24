@@ -82,9 +82,10 @@ As you can see upper in the compose file, we start MariaDB, WordPress, Node.js a
 
 ### MariaDB
 
-Nothing fancy here, we just the official MariaDB image.
+Nothing fancy here, we just use the official MariaDB image.
 
 What only changes is that we mount data into a local folder so it's not lost when we restart the container.
+
 And we also mount a local folder so we can easily restore a dump from production.
 
 ### WordPress
