@@ -1,10 +1,18 @@
 ---
-title: How to develop and build a Wordpress theme inside a container
+title: How to develop and build a WordPress theme inside a container
 
 ---
 Hi,
 
-Today we will learn about developping, building and deploying a wordpress theme
+Today we will learn about developing and building a WordPress theme inside a container.
+
+We will use Docker compose because infrastructure as code is the way to go nowadays.
+
+If you don't know yet Docker compose, please go to [https://docs.docker.com/compose/](https://docs.docker.com/compose/ "https://docs.docker.com/compose/") and come back to this tutorial.
+
+If you know already everything, here is the Github repo : [https://github.com/Atem18/docker-wordpress](https://github.com/Atem18/docker-wordpress "https://github.com/Atem18/docker-wordpress")
+
+For reference, here is the Docker Compose we will use:
 
 ```yaml
 version: '3'
@@ -67,3 +75,28 @@ services:
 networks:
   mytheme:
 ```
+
+## Develop
+
+As you can see upper in the compose file, we start MariaDB, WordPress, Node.js and Caddy.
+
+### MariaDB
+
+Nothing fancy here, we just the official MariaDB image.
+
+What only changes is that we mount data into a local folder so it's not lost when we restart the container.
+And we also mount a local folder so we can easily restore a dump from production.
+
+### WordPress
+
+```dockerfile
+FROM wordpress:php7.4-fpm
+COPY mytheme.ini /usr/local/etc/php/conf.d/mytheme.ini
+EXPOSE 9000
+```
+
+### Node.js
+
+### Caddy
+
+## Build
