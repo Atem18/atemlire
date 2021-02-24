@@ -89,6 +89,8 @@ And we also mount a local folder so we can easily restore a dump from production
 
 ### WordPress
 
+Here comes the first interesting part.
+
 ```dockerfile
 FROM wordpress:php7.4-fpm
 COPY mytheme.ini /usr/local/etc/php/conf.d/mytheme.ini
