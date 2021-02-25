@@ -237,13 +237,6 @@ tag_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
-# HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
-
 # Defaults
 defaults:
   # _posts
@@ -264,6 +257,7 @@ defaults:
       layout: single
       author_profile: true
       share: true
+      toc: true
   - scope:
       path: ""
       type: games
@@ -271,6 +265,7 @@ defaults:
       layout: single
       author_profile: true
       share: true
+      toc: true
   - scope:
       path: ""
       type: books
@@ -279,6 +274,7 @@ defaults:
       author_profile: false
       read_time: true
       share: true
+      toc: true
 collections:
   wiki:
     output: true
