@@ -40,3 +40,8 @@ find . -type f -printf '%TY-%Tm\n' | sort | uniq -c
 ```bash
 find . -type f -printf '%TY-%Tm-%Td\n' | sort | uniq -c
 ```
+
+### Find files between two dates
+```bash
+find . -type f -newermt "1970-01-01 00:00:00" ! -newermt "1970-01-01 23:59:59"
+```
