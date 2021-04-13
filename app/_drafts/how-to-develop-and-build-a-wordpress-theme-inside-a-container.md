@@ -14,6 +14,7 @@ If you know already everything, here is the GitHub repo : [https://github.com/At
 
 For reference, here is the Docker Compose we will use:
 
+docker-compose.yml
 ```yaml
 version: '3'
 services:
@@ -92,6 +93,7 @@ And we also mount a local folder so we can easily restore a dump from production
 
 Here comes the first interesting part.
 
+Dockerfile
 ```dockerfile
 FROM wordpress:php7.4-fpm
 COPY mytheme.ini /usr/local/etc/php/conf.d/mytheme.ini
@@ -100,6 +102,7 @@ EXPOSE 9000
 
 We declare a custom Dockerfile for Wordpress because we want to be able to declare our own PHP configuration file.
 
+mytheme.ini
 ```ini
 file_uploads = On
 memory_limit = 64M
@@ -109,9 +112,32 @@ max_execution_time = 600
 expose_php = off
 ```
 
-As you can see, we are tuning some variables. Please refer to the documentation to ajust the values or add values according to your needs.
+As you can see, we are tuning some variables. Please refer to the documentation to adjust the values or add values according to your needs.
 
 ### Node.js
+
+This part is only used in development and because I develop my own Wordpress themes, so feel free to skip it if you don't need it.
+
+Dockerfile
+```dockerfile
+FROM node:lts-alpine as develop-stage
+WORKDIR /app
+COPY docker-entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
+```
+
+docker-entrypoint.sh
+```sh
+#!/bin/sh
+set -e
+
+[[ -d "/app/node_modules" ]] || npm install
+
+npm run watch
+```
+
+
 
 ### Caddy
 
