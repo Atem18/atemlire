@@ -137,7 +137,7 @@ set -e
 npm run watch
 ```
 
-
+The whole point here is to be able to only install the nodes modules if they do not exists on the system. Of course, don't forget to mount the folder /app on your system.
 
 ### Caddy
 
