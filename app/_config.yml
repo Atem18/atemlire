@@ -5,15 +5,6 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-# Theme Settings
-#
-# Review documentation to determine if you should use `theme` or `remote_theme`
-# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
-
-theme                    : minimal-mistakes-jekyll
-# remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-
 # Site Settings
 locale                   : "en"
 title                    : "Atemlire"
@@ -195,19 +186,10 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Plugins (previously gems:)
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
-  - jekyll-include-cache
-
-# mimic GitHub Pages with --safe
-whitelist:
   - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-include-cache
+  - jekyll-postcss
+  - jekyll-seo-tag
 
 # Archives
 #  Type
@@ -244,7 +226,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: page
       author_profile: true
       read_time: true
       comments: true
@@ -254,7 +236,7 @@ defaults:
       path: ""
       type: wiki
     values:
-      layout: single
+      layout: page
       author_profile: true
       share: true
       toc: true
@@ -262,7 +244,7 @@ defaults:
       path: ""
       type: games
     values:
-      layout: single
+      layout: page
       author_profile: true
       share: true
       toc: true
@@ -270,7 +252,7 @@ defaults:
       path: ""
       type: books
     values:
-      layout: single
+      layout: page
       author_profile: false
       read_time: true
       share: true
