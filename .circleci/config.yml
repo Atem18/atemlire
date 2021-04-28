@@ -3,6 +3,7 @@ executors:
   jekyll-builder:
     environment:
       JEKYLL_ENV: production
+      NODE_ENV: production
       NOKOGIRI_USE_SYSTEM_LIBRARIES: "true"
     docker:
       - image: ruby:2.7.3-buster
