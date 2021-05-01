@@ -8,7 +8,7 @@ executors:
       - image: ruby:2.7.3-buster
   aws-cli:
     docker:
-      - image: cibuilds/aws:1.19.55
+      - image: cibuilds/aws:1.19.60
 jobs:
   build:
     executor: jekyll-builder
