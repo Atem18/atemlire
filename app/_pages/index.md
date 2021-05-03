@@ -1,5 +1,7 @@
 ---
-title: Welcome to my personnal network
+title: Hello
 layout: home
 permalink: /
 ---
+
+Hello

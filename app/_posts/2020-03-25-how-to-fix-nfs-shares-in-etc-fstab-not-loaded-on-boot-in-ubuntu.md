@@ -4,9 +4,10 @@ toc: true
 toc_sticky: true
 tags: ubuntu, nfs
 ---
-Hi,
 
-Just a quick blog post to show you how to fix an NFS share that does not want to mount at boot on Ubuntu. I tested it on Ubuntu 19.10 but it should work also on 18.04 and following.
+Hi folks, today, we will learn how to fix an NFS share that does not want to mount at boot on Ubuntu.
+
+I tested it on Ubuntu 19.10 but it should work also on 18.04 and following.
 
 First check that the mount is ok when you do a manual:
 

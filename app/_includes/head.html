@@ -5,17 +5,19 @@
   {%- seo -%}
   {%- feed_meta -%}
   {% assign cacheBust = site.time | date:'?v=%s' %}
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url | append: cacheBust }}">
+  <link rel="preload" href="{{ '/assets/webfonts/Inter-Regular.woff' | relative_url }}">
+  <link rel="preload" href="{{ '/assets/webfonts/Inter-Regular.woff2' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url | append: cacheBust }}">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ 'apple-touch-icon.png' | absolute_url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | absolute_url }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | absolute_url }}">
-  <link rel="manifest" href="{{ '/manifest.json' | absolute_url }}">
-  <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | absolute_url }}" color="#5bbad5">
+  <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
+  <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | relative_url }}" color="#5bbad5">
   <meta name="apple-mobile-web-app-title" content="Kmdotnet">
   <meta name="application-name" content="Kmdotnet">
   <meta name="msapplication-TileColor" content="#5bbad5">
   <meta name="theme-color" content="#ffffff">
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"></script>
 </head>

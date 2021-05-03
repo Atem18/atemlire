@@ -1,12 +1,12 @@
 ---
 title: How to create a small and secure container for your Python applications
-
 ---
+
+Hi folks, today, we will learn how to create a small and secure container for your Python applications.
+
 ## Introduction
 
-Hi,
-
-Today we are gonna talk about containers. Whether you are using Docker, Podman, Kubernetes or something else, if you want to put a Python application in a container, you will have to create an image and most of the time, people don't really know how to get a small and secure image. Let's fix it.
+Whether you are using Docker, Podman, Kubernetes or something else, if you want to put a Python application in a container, you will have to create an image and most of the time, people don't really know how to get a small and secure image. Let's fix it.
 
 TL;DR: For reference, here is the Dockerfile we will be using:
 
