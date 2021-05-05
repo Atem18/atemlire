@@ -6,7 +6,7 @@ executors:
       NODE_ENV: production
       NOKOGIRI_USE_SYSTEM_LIBRARIES: "true"
     docker:
-      - image: ruby:2.7.3-buster
+      - image: cimg/ruby:2.7.3-node
   aws-cli:
     docker:
       - image: cibuilds/aws:1.19.55
@@ -15,6 +15,9 @@ jobs:
     executor: jekyll-builder
     steps:
       - checkout
+      - run:
+          name: Install PostCSS
+          command: npm i
       - run:
           name: Install bundler
           command: gem install bundler
