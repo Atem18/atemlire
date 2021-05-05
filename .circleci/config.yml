@@ -16,14 +16,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install PostCSS
-          command: npm i
-      - run:
           name: Install bundler
           command: gem install bundler
       - run:
           name: Install dependencies
-          command: cd app && bundle install
+          command: cd app && npm i && bundle install
       - run:
           name: Build the Jekyll site
           command: cd app && bundle exec jekyll build --config _config.yml
