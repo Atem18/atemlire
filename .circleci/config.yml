@@ -26,7 +26,7 @@ jobs:
           command: cd app && bundle exec jekyll build --config _config.yml
       - run:
           name: Test the Jekyll site
-          command: cd app && bundle exec htmlproofer --url-ignore "/#.*/,/.*offline/,/.*404/,/www.atemlire.io/,/twitter.com/, /linkedin.com/, /facebook.com/" _site
+          command: cd app && bundle exec htmlproofer --http-status-ignore "999" --url-ignore "/atemlire.io/" _site
       - persist_to_workspace:
           root: ./
           paths:
