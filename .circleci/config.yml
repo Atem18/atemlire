@@ -20,14 +20,14 @@ jobs:
           command: gem install bundler
       - restore_cache:
           keys:
-            - gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "app/Gemfile.lock" }}
             - gem-cache-v1-{{ arch }}-{{ .Branch }}
             - gem-cache-v1
       - run:
           name: Install dependencies
           command: cd app && npm i && bundle install --path vendor/bundle
       - save_cache:
-          key: gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          key: gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "app/Gemfile.lock" }}
           paths:
             - vendor/bundle
       - run:
