@@ -2,7 +2,7 @@
 title: "Offline website"
 excerpt: "We are currently offline"
 sitemap: false
-layout: single
+layout: page
 permalink: /offline/
 ---
 

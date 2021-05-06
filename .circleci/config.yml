@@ -3,9 +3,10 @@ executors:
   jekyll-builder:
     environment:
       JEKYLL_ENV: production
+      NODE_ENV: production
       NOKOGIRI_USE_SYSTEM_LIBRARIES: "true"
     docker:
-      - image: ruby:2.7.3-buster
+      - image: cimg/ruby:2.7.3-node
   aws-cli:
     docker:
       - image: cibuilds/aws:1.19.60
@@ -19,13 +20,13 @@ jobs:
           command: gem install bundler
       - run:
           name: Install dependencies
-          command: cd app && bundle install
+          command: cd app && npm i && bundle install
       - run:
           name: Build the Jekyll site
           command: cd app && bundle exec jekyll build --config _config.yml
       - run:
           name: Test the Jekyll site
-          command: cd app && bundle exec htmlproofer --url-ignore "/#.*/,/.*offline/,/.*404/,/www.atemlire.io/,/twitter.com/" _site
+          command: cd app && bundle exec htmlproofer --http-status-ignore "999" --url-ignore "/atemlire.io/" _site
       - persist_to_workspace:
           root: ./
           paths:

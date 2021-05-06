@@ -1,0 +1,13 @@
+---
+---
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../webfonts/Inter-Regular.woff2?v=3.18") format("woff2"),
+    url("../webfonts/Inter-Regular.woff?v=3.18") format("woff");
+}

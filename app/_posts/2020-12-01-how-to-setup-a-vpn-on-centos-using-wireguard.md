@@ -2,9 +2,9 @@
 title: How to setup a VPN on CentOS using Wireguard
 toc: true
 toc_sticky: true
-
 ---
-Today, we will learn how to setup Wireguard as VPN on CentOS.
+
+Hi folks, today, we will learn how to setup Wireguard as VPN on CentOS.
 
 This tutorial has been tested on CentOS 8.
 

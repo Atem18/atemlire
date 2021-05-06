@@ -1,8 +1,0 @@
-:80 {
-  respond /live "OK" 200
-  respond /ready "This is working" 200
-}
-
-https://www.atemlire.io {
-  reverse_proxy http://www.atemlire.io.s3-website-eu-west-1.amazonaws.com
-}
