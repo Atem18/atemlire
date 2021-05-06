@@ -5,7 +5,7 @@
   {%- seo -%}
   {%- feed_meta -%}
   {% assign cacheBust = site.time | date:'?v=%s' %}
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url | append: cacheBust }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url | append: cacheBust }}" media="print" onload="this.media='all'; this.onload=null;">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ 'apple-touch-icon.png' | absolute_url }}">
