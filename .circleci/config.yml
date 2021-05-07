@@ -6,7 +6,7 @@ executors:
       NODE_ENV: production
       NOKOGIRI_USE_SYSTEM_LIBRARIES: "true"
     docker:
-      - image: cimg/ruby:2.7.3-node
+      - image: cimg/ruby:3.0.1-node
   aws-cli:
     docker:
       - image: cibuilds/aws:1.19.68
