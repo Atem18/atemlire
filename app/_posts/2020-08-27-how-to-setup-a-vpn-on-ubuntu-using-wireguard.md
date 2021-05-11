@@ -3,9 +3,10 @@ title: How to setup a VPN on Ubuntu using Wireguard
 toc: true
 toc_sticky: true
 ---
-Today, we will learn how to setup Wireguard as VPN.
 
-We will be using Ubuntu 20.04 as I am using it for my Raspberry Pi 4 but except for the install part, you should be able to follow that tutorial on any other recent Linux distribution.
+Hi folks, today, we will learn how to setup Wireguard as VPN on Ubuntu.
+
+This tutorial has been tested on Ubuntu 20.04.
 
 Keep also in mind that Wireguard is different than OpenVPN for example because there is no concept of client/server, but only peers. So in my example, I will be using the Ubuntu as a « server » and the iOS as a « client » but in reality it’s just a point to point VPN between two machines.
 
