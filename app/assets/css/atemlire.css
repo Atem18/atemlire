@@ -8,6 +8,6 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../webfonts/Inter-Regular.woff2?v=3.18") format("woff2"),
-    url("../webfonts/Inter-Regular.woff?v=3.18") format("woff");
+  src: url("../webfonts/Inter-Regular.woff2") format("woff2"),
+    url("../webfonts/Inter-Regular.woff") format("woff");
 }
