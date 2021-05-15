@@ -1,7 +1,7 @@
 ---
 title: Projects
 layout: projects
-permalink: /projects/
----
+permalink: "/projects/"
 
-* Kraky : https://github.com/Atem18/kraky
+---
+* Kraky : [https://github.com/Atem18/kraky](https://github.com/Atem18/kraky "https://github.com/Atem18/kraky")
