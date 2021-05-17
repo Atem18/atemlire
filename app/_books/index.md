@@ -3,7 +3,8 @@ title: Books
 permalink: "/books/"
 
 ---
-## Welcome to my library
+
+Welcome to my library
 
 My novels will be published here but in the meantime you can find them on:
 

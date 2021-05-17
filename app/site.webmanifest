@@ -1,13 +1,6 @@
----
-layout: none
----
-
-
 {
-    "name" : "{{ site.title }}",
-    "short_name" : "{{ site.title }}",
-    "description" : "{{ site.description }}",
-    "start_url" : "{{ site.url }}",
+    "name": "Atemlire",
+    "short_name": "Atemlire",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -22,10 +15,5 @@ layout: none
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "display": "standalone",
-	"lang" : "{{ site.locale }}",
-	"screenshots" : [],
-    "orientation" : "undefined",
-    "url" : "{{ site.url }}",
-	"generated" : "undefined"
+    "display": "standalone"
 }
