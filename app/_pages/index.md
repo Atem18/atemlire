@@ -1,7 +1,6 @@
 ---
 title: Hello
 layout: home
-permalink: /
----
+permalink: "/"
 
-Hello
+---
