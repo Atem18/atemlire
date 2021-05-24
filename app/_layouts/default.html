@@ -20,14 +20,6 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <script async src="/assets/js/alpine.min.js?v=2.8.2"></script>
-  <script>
-    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  </script>
 </head>
 
 <body class="flex flex-col h-screen font-sans font-sm md:font-base font-normal leading-normal md:leading-relaxed text-gray-800 dark:text-gray-100">
