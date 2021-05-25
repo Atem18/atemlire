@@ -2,8 +2,8 @@ const plugins = [require('postcss-import'), require('tailwindcss'), require('aut
 
 if (process.env.JEKYLL_ENV === 'production') {
   plugins.push(
-    require('cssnano')({
-      preset: 'default',
+    require('postcss-csso')({
+      restructure: false
     }),
   );
 }
