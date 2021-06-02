@@ -1,6 +1,6 @@
 ---
 title: Django
-permalink: django
+permalink: "/wiki/python/django"
 
 ---
 ## Set Django IntegerField by choices=… name
