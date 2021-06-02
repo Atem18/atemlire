@@ -9,4 +9,3 @@ fields:
     required: true
 pages:
 - app/_posts/how-to-develop-and-build-a-wordpress-theme-inside-a-container.md
-- app/_posts/how-to-resolve-dns-issue-in-microk8s.md
