@@ -1,7 +1,6 @@
 ---
 title: Django
 permalink: django
-published: false
 
 ---
 ## Set Django IntegerField by choices=… name
