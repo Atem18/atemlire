@@ -3,6 +3,10 @@ title: Python
 permalink: "/wiki/python/"
 
 ---
+## Dedicated subjects
+
+* [Django](/wiki/python/django/)
+
 ## Flake8 config file for Black
 
 ```ini
