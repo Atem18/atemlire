@@ -1,9 +1,9 @@
 ---
 title: Privacy policy
 layout: page
-permalink: "/privacy/"
-
+permalink: /privacy/
 ---
+
 At Atemlire, accessible from [https://www.atemlire.io](https://www.atemlire.io "https://www.atemlire.io"), one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Atemlire and how we use it.
 
 If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.
