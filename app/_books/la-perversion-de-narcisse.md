@@ -3,8 +3,8 @@ title: La perversion de Narcisse
 toc: true
 toc_label: Chapters
 toc_sticky: true
+permalink: "/books/la-perversion-de-narcisse/"
 published: false
-permalink: /books/la-perversion-de-narcisse/
 
 ---
 _Par Kevin Messer_
@@ -681,7 +681,7 @@ Le patron semblait être ravi de ma transformation, ce dernier me tournant autou
 
 _Aucune réponse..._
 
-Dans cette noirceur, nulle présence n'existait, hormis la mienne. Célestine avait disparu et je me trouvais à présent seul dans un lieu m'étant inconnu.
+Dans cette noirceur, nulle présence n'existait, hormis la mienne. Célestine avait disparu et je me trouvais à présent seul, perdu dans l’inconnu.
 
 Après avoir erré dans l'obscurité, je finis par trouver un rayon de lumière. En m'approchant, je constatai que ce dernier émanait d'un miroir brisé, reflétant les lueurs de l'étoile du soir. Ce dernier n'était pas assez grand pour éclairer toute la pièce où je me trouvais. Néanmoins, c'était suffisant pour me permettre d'avancer dans ma quête.
 
@@ -691,18 +691,10 @@ Je continuais pendant si longtemps dans l'obscurité que les instants me paraiss
 
 Enfin arrivé au bout du tunnel, une autre porte. Sur quoi pouvait-elle donner ? Un décor de vieux western pour riches des temps modernes espérant assoiffer leurs envies de meurtre et de viol ?
 
-_Impossible, on ne voit ça que dans les séries à la narcivision._
+_Impossible, on ne voit ça que dans les séries projetées sur la narcivision._
 
 Soudain, la porte s'ouvrit...
 
-La pénombre s'offrait à moi. Rien, on n'y voyait et on n'entendait rien à des kilomètres.
+Je n’en croyais pas mes yeux.
 
-Je m'avançais prudemment, tout en gardant mes sens en éveil, à l'affut du moindre danger.
-
-D'étranges bruits se faisaient entendre ici et là.
-
-_Moi qui croyais que tout le monde était censé être mort..._
-
-Du moins, c'est ce que je croyais.
-
-Soudain, une ombre se jeta sur moi ! Je me débattais sans rêlache pour ôter ses mains de mon visage. C'est alors qu'elle
+Un nouveau monde se présentait a moi.
