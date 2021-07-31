@@ -695,6 +695,6 @@ _Impossible, on ne voit ça que dans les séries projetées sur la narcivision._
 
 Soudain, la porte s'ouvrit...
 
-Je n’en croyais pas mes yeux.
+Je n’en croyais pas mes yeux. Ainsi
 
 Un nouveau monde se présentait a moi.
