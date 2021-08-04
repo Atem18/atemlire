@@ -615,7 +615,7 @@ _Ce regard me dit quelque chose..._
 
 — J'ai toujours raison. Ceci étant dit, je vais à présent t'expliquer le pourquoi de ta présence ici.
 
-« Il y a des années, un brillant chercheur inventa un appareil capable de transporter des entités d'un point à un autre en quelques instants, et ce, malgré la distance. Il donna le nom "S.E.R.S.E.M." à son invention, ce qui signifiait " Super Energy Radiant Speed Entry Modern " dans la langue de ce monde. Tout corps, pénétrant cette matière aqueuse, était décomposé en entrant et recomposé à l'arrivée. Ce processus était indolore et n'avait à ce jour entrainé aucun effet secondaire. Officiellement, aucun incident d'aucune nature n'avait été à déplorer. Officieusement, un groupuscule dont le but est de pouvoir s'échapper de Narcisse était parvenu à voler l'un des portails expérimentaux. »
+« Il y a des années, un brillant chercheur inventa un appareil capable de transporter des entités d'un point à un autre en quelques instants, et ce, malgré la distance. Il donna le nom "S.E.R.S.E.M." à son invention, ce qui signifiait "Super Energy Radiant Speed Entry Modern". Tout corps, pénétrant cette matière aqueuse, était décomposé en entrant et recomposé à l'arrivée. Ce processus était indolore et n'avait à ce jour entrainé aucun effet secondaire. Officiellement, aucun incident d'aucune nature n'avait été à déplorer. Officieusement, un groupuscule dont le but est de pouvoir s'échapper de Narcisse était parvenu à voler l'un des portails expérimentaux. »
 
 — S'échapper de Narcisse ?!
 
