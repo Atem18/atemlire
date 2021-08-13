@@ -7,9 +7,9 @@ gem "jekyll", "= 4.2.0"
 gem "liquid-c"
 
 # Jekyll Plugins
-gem "html-proofer", "= 3.19.1"
+gem "html-proofer", "= 3.19.2"
 gem 'jekyll-feed', "= 0.15.1"
 gem "jekyll-paginate", "= 1.1.0"
-gem "jekyll-postcss", "= 0.4.0"
+gem "jekyll-postcss", "= 0.4.1"
 gem "jekyll-seo-tag", "= 2.7.1"
 gem "jekyll-sitemap", "= 1.4.0"

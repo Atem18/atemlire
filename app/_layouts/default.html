@@ -8,7 +8,8 @@
   {%- seo -%}
   {%- feed_meta -%}
   {% assign cacheBust = site.time | date:'?v=%s' %}
-  <link rel="preload" href="/assets/webfonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/images/home.jpg">
+  <link rel="preload" href="/assets/webfonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/assets/css/atemlire.css' | relative_url | append: cacheBust }}">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
@@ -19,7 +20,7 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <script async src="/assets/js/alpine.min.js?v=2.8.2"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.1.0/dist/cdn.min.js"></script>
 </head>
 
 <body class="flex flex-col h-screen font-sans font-sm md:font-base font-normal leading-normal md:leading-relaxed text-gray-800 dark:text-gray-100">
