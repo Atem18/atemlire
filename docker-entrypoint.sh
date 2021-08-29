@@ -40,8 +40,8 @@ fi
 # This will most likely end up as 1
 #
 if [ "$JEKYLL_ROOTLESS" ]; then
-  usermod  -o -u $JEKYLL_UID jekyll
-  groupmod -o -g $JEKYLL_GID jekyll
+  usermod  -o -u "$JEKYLL_UID" jekyll
+  groupmod -o -g "$JEKYLL_GID" jekyll
 fi
 
 npm install
