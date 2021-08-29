@@ -1,6 +1,7 @@
 {
     "name": "Atemlire",
     "short_name": "Atemlire",
+    "description": "My personnal website mostly about IT, books and games.",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -11,6 +12,12 @@
             "src": "/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
+        },
+        {
+            "src": "/maskable_icon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ],
     "start_url": "/",
