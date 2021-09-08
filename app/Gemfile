@@ -6,10 +6,20 @@ gem "jekyll", "= 4.2.0"
 # Liquid-C
 gem "liquid-c"
 
-# Jekyll Plugins
+# To be added since Ruby 3.0
+gem "webrick", "~> 1.7"
+
+# Markdown parser
+gem "kramdown-parser-gfm"
+
+# For testing
 gem "html-proofer", "= 3.19.2"
-gem 'jekyll-feed', "= 0.15.1"
-gem "jekyll-paginate", "= 1.1.0"
-gem "jekyll-postcss", "= 0.4.1"
-gem "jekyll-seo-tag", "= 2.7.1"
-gem "jekyll-sitemap", "= 1.4.0"
+
+group :jekyll_plugins do
+  gem 'jekyll-feed', "= 0.15.1"
+  gem "jekyll-paginate", "= 1.1.0"
+  gem 'jekyll_picture_tag', '~> 2.0'
+  gem "jekyll-postcss", "= 0.4.1"
+  gem "jekyll-seo-tag", "= 2.7.1"
+  gem "jekyll-sitemap", "= 1.4.0"
+end

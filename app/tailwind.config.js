@@ -8,9 +8,6 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
-      spacing: {
-        128: "32rem",
-      },
       colors: {
         gray: colors.blueGray,
       },
