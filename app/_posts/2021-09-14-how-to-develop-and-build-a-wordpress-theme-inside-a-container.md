@@ -27,7 +27,7 @@ services:
     ports:
       - "3306:3306"
     networks:
-      - gog
+      - mytheme
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: wordpress
@@ -43,9 +43,9 @@ services:
     volumes:
       - ./wordpress/mytheme.ini:/usr/local/etc/php/conf.d/mytheme.ini
       - ./dev/wordpress:/var/www/html
-      - ./gog:/var/www/html/wp-content/themes/mytheme
+      - ./mytheme:/var/www/html/wp-content/themes/mytheme
     networks:
-      - gog
+      - mytheme
     environment:
       WORDPRESS_DB_HOST: wordpress-db
       WORDPRESS_DB_NAME: wordpress
@@ -149,18 +149,15 @@ Nothing complex as well here, we want to build a Dockerfile with a custom Caddyf
 Feel free to change it or use another webserver like Nginx or something else.
 
 ```dockerfile
-  
 FROM caddy:2.4.5-alpine
 ADD ./Caddyfile /etc/caddy/Caddyfile
 ```
 
-```
-{$DOMAIN} {
-    root * /var/www/html
-    php_fastcgi wordpress:9000
-    file_server
-    encode gzip zstd
-}
-```
+    {$DOMAIN} {
+        root * /var/www/html
+        php_fastcgi wordpress:9000
+        file_server
+        encode gzip zstd
+    }
 
 That's all folks. Feel free to experiment with this setup and enjoy Wordpress in container !
