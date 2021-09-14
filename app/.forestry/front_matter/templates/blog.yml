@@ -8,5 +8,4 @@ fields:
   config:
     required: true
 pages:
-- app/_posts/how-to-create-and-host-your-website-for-free-using-jekyll-and-cloudflare-pages.md
-- app/_posts/how-to-develop-and-build-a-wordpress-theme-inside-a-container.md
+- app/_posts/2021-09-14-how-to-develop-and-build-a-wordpress-theme-inside-a-container.md

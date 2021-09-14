@@ -1,7 +1,7 @@
 ---
-title: How to develop and build a WordPress theme inside a container
----
+title: How to develop a WordPress theme inside a container
 
+---
 Hi folks, today we will learn about developing and building a WordPress theme inside a container.
 
 We will use Docker compose because infrastructure as code is the way to go nowadays.
@@ -13,6 +13,7 @@ If you know already everything, here is the GitHub repo : [https://github.com/At
 For reference, here is the Docker Compose we will use:
 
 docker-compose.yml
+
 ```yaml
 version: '3'
 services:
@@ -26,7 +27,7 @@ services:
     ports:
       - "3306:3306"
     networks:
-      - gog
+      - mytheme
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: wordpress
@@ -42,9 +43,9 @@ services:
     volumes:
       - ./wordpress/mytheme.ini:/usr/local/etc/php/conf.d/mytheme.ini
       - ./dev/wordpress:/var/www/html
-      - ./gog:/var/www/html/wp-content/themes/mytheme
+      - ./mytheme:/var/www/html/wp-content/themes/mytheme
     networks:
-      - gog
+      - mytheme
     environment:
       WORDPRESS_DB_HOST: wordpress-db
       WORDPRESS_DB_NAME: wordpress
@@ -62,6 +63,8 @@ services:
     build:
       context: ./caddy
     restart: unless-stopped
+    environment:
+      DOMAIN: www.mydomain.com
     volumes:
       - ./caddy/certs:/etc/caddy/certs
       - ./dev/wordpress:/var/www/html
@@ -75,11 +78,10 @@ networks:
   mytheme:
 ```
 
-## Develop
+As you can see upper in the compose file, we are using MariaDB, WordPress, Node.js and Caddy.
+It's just as exemple, feel free to swap any component.
 
-As you can see upper in the compose file, we start MariaDB, WordPress, Node.js and Caddy.
-
-### MariaDB
+## MariaDB
 
 Nothing fancy here, we just use the official MariaDB image.
 
@@ -87,11 +89,12 @@ What only changes is that we mount data into a local folder so it's not lost whe
 
 And we also mount a local folder so we can easily restore a dump from production.
 
-### WordPress
+## WordPress
 
 Here comes the first interesting part.
 
 Dockerfile
+
 ```dockerfile
 FROM wordpress:php7.4-fpm
 COPY mytheme.ini /usr/local/etc/php/conf.d/mytheme.ini
@@ -101,6 +104,7 @@ EXPOSE 9000
 We declare a custom Dockerfile for Wordpress because we want to be able to declare our own PHP configuration file.
 
 mytheme.ini
+
 ```ini
 file_uploads = On
 memory_limit = 64M
@@ -112,11 +116,12 @@ expose_php = off
 
 As you can see, we are tuning some variables. Please refer to the documentation to adjust the values or add values according to your needs.
 
-### Node.js
+## Node.js
 
 This part is only used in development and because I develop my own Wordpress themes, so feel free to skip it if you don't need it.
 
 Dockerfile
+
 ```dockerfile
 FROM node:lts-alpine as develop-stage
 WORKDIR /app
@@ -126,17 +131,40 @@ ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 ```
 
 docker-entrypoint.sh
+
 ```sh
 #!/bin/sh
 set -e
 
-[[ -d "/app/node_modules" ]] || npm install
+npm install
 
 npm run watch
 ```
 
-The whole point here is to be able to only install the nodes modules if they do not exists on the system. Of course, don't forget to mount the folder /app on your system.
+The whole point here is to install the node dependencies and watch using the tool of your choice (webpack, vite, etc.). Of course, don't forget to mount the folder /app on your system.
 
-### Caddy
+## Caddy
 
-## Build
+Nothing complex as well here, we want to build a Dockerfile with a custom Caddyfile which you can find below. We are also generating a custom SSL certificate for a local domain using mkcert. Install it for your OS and generate a certificate in the certs folder of caddy: [https://github.com/FiloSottile/mkcert](https://github.com/FiloSottile/mkcert "https://github.com/FiloSottile/mkcert")
+
+```bash
+mkcert "*.local.mydomain.com"
+```
+
+```dockerfile
+FROM caddy:2.4.5-alpine
+ADD ./certs /etc/caddy/certs
+ADD ./Caddyfile /etc/caddy/Caddyfile
+```
+
+```caddyfile
+{$DOMAIN} {
+  root * /var/www/html
+  php_fastcgi wordpress:9000
+  file_server
+  encode gzip zstd
+  tls /etc/caddy/certs/_wildcard.local.mydomain.com.pem /etc/caddy/certs/_wildcard.local.mydomain.com-key.pem
+}
+```
+
+That's all folks. Feel free to experiment with this setup and enjoy Wordpress in container !
