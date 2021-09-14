@@ -168,4 +168,8 @@ ADD ./Caddyfile /etc/caddy/Caddyfile
 }
 ```
 
+**Also don't forget to add the following in your DNS**
+
+127\.0.0.1		www.local.mydomain.com
+
 That's all folks. Feel free to experiment with this setup and enjoy Wordpress in container !
