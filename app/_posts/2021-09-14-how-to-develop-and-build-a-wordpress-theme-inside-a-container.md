@@ -8,7 +8,7 @@ We will use Docker compose because infrastructure as code is the way to go nowad
 
 If you don't know yet Docker compose, please go to [https://docs.docker.com/compose/](https://docs.docker.com/compose/ "https://docs.docker.com/compose/") and come back to this tutorial.
 
-If you know already everything, here is the GitHub repo : [https://github.com/Atem18/docker-wordpress](https://github.com/Atem18/docker-wordpress "https://github.com/Atem18/docker-wordpress")
+If you know already everything and just want to clone a working template, here is the GitHub repo : [https://github.com/Atem18/docker-wordpress](https://github.com/Atem18/docker-wordpress "https://github.com/Atem18/docker-wordpress")
 
 For reference, here is the Docker Compose we will use:
 
@@ -145,7 +145,8 @@ The whole point here is to install the node dependencies and watch using the too
 
 ## Caddy
 
-Nothing complex as well here, we want to build a Dockerfile with a custom Caddyfile which you can find below. We are also generating a custom SSL certificate for a local domain using mkcert. Install it for your OS and generate a certificate in the certs folder of caddy: [https://github.com/FiloSottile/mkcert](https://github.com/FiloSottile/mkcert "https://github.com/FiloSottile/mkcert")
+Nothing complex as well here, we want to build a Dockerfile with a custom Caddyfile which you can find below.
+The only thing we are doing is to generate a fake SSL certificate using mkcert. If you don't have it, install it for your OS : [https://github.com/FiloSottile/mkcert]()
 
 ```bash
 mkcert "*.local.mydomain.com"
