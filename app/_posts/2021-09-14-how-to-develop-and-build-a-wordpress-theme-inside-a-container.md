@@ -145,19 +145,26 @@ The whole point here is to install the node dependencies and watch using the too
 
 ## Caddy
 
-Nothing complex as well here, we want to build a Dockerfile with a custom Caddyfile which you can find below.
-Feel free to change it or use another webserver like Nginx or something else.
+Nothing complex as well here, we want to build a Dockerfile with a custom Caddyfile which you can find below. We are also generating a custom SSL certificate for a local domain using mkcert. Install it for your OS and generate a certificate in the certs folder of caddy: [https://github.com/FiloSottile/mkcert](https://github.com/FiloSottile/mkcert "https://github.com/FiloSottile/mkcert")
+
+```bash
+mkcert "*.local.mydomain.com"
+```
 
 ```dockerfile
 FROM caddy:2.4.5-alpine
+ADD ./certs /etc/caddy/certs
 ADD ./Caddyfile /etc/caddy/Caddyfile
 ```
 
-    {$DOMAIN} {
-        root * /var/www/html
-        php_fastcgi wordpress:9000
-        file_server
-        encode gzip zstd
-    }
+```caddyfile
+{$DOMAIN} {
+  root * /var/www/html
+  php_fastcgi wordpress:9000
+  file_server
+  encode gzip zstd
+  tls /etc/caddy/certs/_wildcard.local.mydomain.com.pem /etc/caddy/certs/_wildcard.local.mydomain.com-key.pem
+}
+```
 
 That's all folks. Feel free to experiment with this setup and enjoy Wordpress in container !
