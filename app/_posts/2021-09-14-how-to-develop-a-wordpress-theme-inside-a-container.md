@@ -2,7 +2,7 @@
 title: How to develop a WordPress theme inside a container
 
 ---
-Hi folks, today we will learn about developing and building a WordPress theme inside a container.
+Hi folks, today we will learn about developing a WordPress theme inside a container.
 
 We will use Docker compose because infrastructure as code is the way to go nowadays.
 
