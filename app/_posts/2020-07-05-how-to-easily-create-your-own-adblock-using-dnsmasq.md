@@ -41,10 +41,11 @@ user=dnsmasq
 group=dnsmasq
 addn-hosts=/etc/dnsmasq-hosts.conf
 expand-hosts
-domain=kevin-messer.lan
+domain=mydomain.lan
 ```
 
-Replace kevin-messer.lan by your personnal domain.
+Replace mydomain.lan by a custom domain you would like to be served via your DNS.  
+Omit the line if you don't want to serve one.
 
 ### DNS
 
@@ -57,14 +58,14 @@ nameserver 1.1.1.1
 nameserver 1.0.0.1
 ```
 
-If you don't like Cloudflare's DNS, feel free to use others.
-
-Create a file named **/etc/dnsmasq-custom.conf** where you will put custom domain resolution like :
+If you don't like Cloudflare's DNS, feel free to use others.  
+  
+If you've put the line "domain" in /etc/dnsmasq.conf, then create a file named **/etc/dnsmasq-custom.conf** where you will put custom domain resolution like :
 
     127.0.0.1 alpha
     127.0.0.1 beta
 
-They will resolve as alpha.kevin-messer.lan and beta.kevin-messer.lan
+They will resolve as alpha.mydomain.lan and beta.mydomain.lan
 
 ### CRON
 
@@ -99,4 +100,5 @@ Setting up and maintaining your own adblock is really easy.
 
 Also if you wish to use it as you go like on your mobile phone, feel free to use my tutorial about [Wireguard](/how-to-setup-a-vpn-on-ubuntu-using-wireguard/).
 
-In the meantime, happy DevOps  and stay safe!
+  
+That's all folks!
