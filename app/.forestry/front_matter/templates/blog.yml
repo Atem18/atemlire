@@ -8,4 +8,4 @@ fields:
   config:
     required: true
 pages:
-- app/_posts/2021-09-14-how-to-develop-and-build-a-wordpress-theme-inside-a-container.md
+- app/_posts/2021-09-14-how-to-develop-a-wordpress-theme-inside-a-container.md
