@@ -1,6 +1,6 @@
 ---
 title: Podman
-permalink: "/wiki/containers/podman/"
+permalink: "/wiki/devops/containers/podman/"
 
 ---
 ## Create a pod and expose ports
