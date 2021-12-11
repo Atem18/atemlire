@@ -1,15 +1,14 @@
 const colors = require('tailwindcss/colors');
 const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
-  purge: ["./_layouts/*.html"],
-  darkMode: "media",
+  content: ["./_layouts/*.html"],
   theme: {
     extend: {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        gray: colors.blueGray,
+        gray: colors.slate,
       },
       typography: (theme) => ({
         light: {
