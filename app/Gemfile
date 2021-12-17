@@ -13,7 +13,7 @@ gem "webrick", "~> 1.7"
 gem "kramdown-parser-gfm"
 
 # For testing
-gem "html-proofer", "= 3.19.2"
+gem "html-proofer", "= 3.19.3"
 
 group :jekyll_plugins do
   gem 'jekyll-feed', "= 0.15.1"
