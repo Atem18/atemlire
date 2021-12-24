@@ -11,9 +11,11 @@ layout: default
       <section>
         <p>
           <ul>
+            {% for project in site.data.projects %}
             <li>
-              <a href="https://github.com/Atem18/kraky">Kraky</a> : Python asyncio client for Kraken API REST and Kraken Websockets API using httpx and websockets
+              <a href="{{ project.url }}">{{ project.title }}</a>: {{ project.description }}
             </li>
+            {% endfor %}
           </ul>
         </p>
       </section>
