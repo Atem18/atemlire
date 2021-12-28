@@ -17,13 +17,15 @@ url                      : "https://www.atemlire.io"
 include:
   - _pages
 exclude:
-  - .circleci
   - _site
   - _config.yml
   - .forestry
   - .gitignore
   - Gemfile
   - Gemfile.lock
+  - postcss.config.js
+  - pwabuilder-sw.js
+  - tailwind.config.js
   - README.md
   - renovate.json
   - develop.sh
