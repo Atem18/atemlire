@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="/webfonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="Ezuul">
+    <meta name="application-name" content="Ezuul">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+    <title>
+      {% if title %}
+        {{ title }} - {{ site.title }}
+      {% elseif renderData.title %}
+        {{ renderData.title }} - {{ site.title }}
+      {% else %}
+        {{ site.title }}
+        {{ site.strapline }}
+      {% endif %}
+    </title>
+    <meta name="description" content="{% block description %}{{ site.description }}{% endblock %}">
+    <meta name="robots" content="index,follow">
+    <meta name="generator" content="Eleventy">
+    <meta name="subject" content="Your site subject">
+    {% block seo %}
+      <!--Twitter Card-->
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@{{ site.twitter }}">
+      <meta name="twitter:creator" content="@{{ site.twitter }}">
+      <meta name="twitter:url" content="{{ site.baseURL }}{{ page.url }}">
+      <meta name="twitter:title" content="{{ title }}">
+      <meta
+      name="twitter:description" content="{{ site.description }}"> <!--Schema-->
+      <link rel="author" href="{{ site.url }}">
+      <link rel="publisher" href="{{ site.url }}">
+      <meta itemprop="name" content="{{ title }}">
+      <meta
+      itemprop="description" content="{{ site.description }}"> <!-- Facebook OpenGraph -->
+      <meta property="fb:app_id" content="{{ site.FB_APP_ID }}">
+      <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="{{ title }}">
+      <meta property="og:description" content="{{ site.description }}">
+      <meta property="og:site_name" content="{{ site.title }}">
+      <meta property="og:locale" content="{{ lang }}">
+      <meta property="article:author" content="{{ site.url }}">
+    {% endblock %}
+    <link rel="stylesheet" href="/style.css?v={% version %}"/>
+    <script type="module">
+      import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+      const el = document.createElement('pwa-update');
+      document.body.appendChild(el);
+    </script>
+  </head>
+  <body class="flex flex-col h-screen font-sans font-sm md:font-base font-normal leading-normal md:leading-relaxed text-gray-800
+      dark:text-gray-100">
+    <header class="w-full bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-200">
+      <div
+        x-data="{ open: false }"
+        class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+        <div class="p-4 flex flex-row items-center justify-between">
+          <a
+            href="/"
+            class="text-lg font-semibold tracking-widest text-gray-900 dark:text-gray-50 uppercase rounded-lg focus:outline-none
+              focus:shadow-outline">{{ site.title }}</a>
+          <button
+            class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
+            aria-label="Menu mobile"
+            @click="open = !open">
+            <svg fill="currentColor" viewbox="0 0 20 20" class="w-6 h-6">
+              <path
+                x-show="!open"
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1
+                  0 110 2h-6a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+              <path
+                x-show="open"
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10
+                  11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <nav
+          :class="{'flex': open, 'hidden': !open}"
+          class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+          {% for nav in navigation %}
+            <a href="{{ nav.url }}" {% if nav.url==page.url %} class="px-4 py-2 mt-2 md:mt-0 ml-4 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" {% else %} class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" {% endif %}>
+              {{ nav.title }}
+            </a>
+          {% endfor %}
+        </nav>
+      </div>
+    </header>
+    <main class="flex-grow bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-300">
+      {{ content | safe }}
+    </main>
+    <footer class="bg-gray-50 dark:bg-gray-900 w-full py-8">
+      <div class="max-w-screen-xl mx-auto px-4">
+        <ul class="max-w-screen-md mx-auto text-lg font-light flex flex-wrap justify-between">
+          <li class="my-2">
+            <a
+              class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-50 transition-colors duration-200"
+              href="/privacy">
+              Privacy Policy
+            </a>
+          </li>
+          <li class="my-2">
+            <a
+              class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-50 transition-colors duration-200"
+              href="/sitemap.xml">
+              Sitemap
+            </a>
+          </li>
+        </ul>
+        <div class="pt-8 flex max-w-xs mx-auto items-center justify-between">
+          <a
+            href="https://www.facebook.com/profile.php?id=100010210200919"
+            class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-50 transition-colors duration-200"
+            alt="facebook"
+            aria-label="Facebook profile">
+            <svg
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="text-xl hover:text-gray-900 dark:hover:text-gray-50 transition-colors duration-200"
+              viewbox="0 0 1792 1792"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186
+                104-288.5t277-102.5q147 0 228 12z"></path>
+            </svg>
+          </a>
+          <a
+            href="https://twitter.com/AtemSerem"
+            class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-50 transition-colors duration-200"
+            alt="twitter"
+            aria-label="Twitter profile">
+            <svg
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="text-xl hover:text-gray-900 dark:hover:text-gray-50 transition-colors duration-200"
+              viewbox="0 0 1792 1792"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4
+                225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146
+                41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102
+                109-21 205-78-37 115-142 178 93-10 186-50z"></path>
+            </svg>
+          </a>
+          <a
+            href="https://github.com/Atem18"
+            class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-50 transition-colors duration-200"
+            alt="github"
+            aria-label="Github profile">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="text-xl hover:text-gray-900 dark:hover:text-gray-50 transition-colors duration-200"
+              viewbox="0 0 1792 1792">
+              <path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3
+                .5-76.5t.5-134.5q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38
+                24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94
+                39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14
+                13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40
+                7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6
+                13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8
+                4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0
+                16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z"></path>
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kevin-messer-9b549453/"
+            class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-50 transition-colors duration-200"
+            alt="linked"
+            aria-label="LinkedIn profile">
+            <svg
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="text-xl hover:text-gray-900 dark:hover:text-gray-50 transition-colors duration-200"
+              viewbox="0 0 1792 1792"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5
+                51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399
+                2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"></path>
+            </svg>
+          </a>
+        </div>
+        <div class="text-center text-gray-600 dark:text-gray-300 pt-10 sm:pt-12 font-light flex items-center justify-center">
+          © 2022 Kevin Messer
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.min.js"
+      integrity="sha512-B/OEIDaWXc61XNJlO0TQILX/mFbhx77bwQKzok6I8suB6WP9yvN8zgaiyLmekPr5eRNmjfpR40zos29ktaSHEg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+  </body>
+</html>

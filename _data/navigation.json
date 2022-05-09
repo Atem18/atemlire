@@ -1,0 +1,29 @@
+[{
+    "title": "Blog",
+    "url": "/blog/"
+  },
+  {
+    "title": "Wiki",
+    "url": "/wiki/"
+  },
+  {
+    "title": "Projects",
+    "url": "/projects/"
+  },
+  {
+    "title": "Games",
+    "url": "/games/"
+  },
+  {
+    "title": "Books",
+    "url": "/books/"
+  },
+  {
+    "title": "About",
+    "url": "/about/"
+  },
+  {
+    "title": "Contact",
+    "url": "/contact/"
+  }
+]
