@@ -9,7 +9,7 @@
     "@tailwindcss/typography": "0.5.2",
     "autoprefixer": "10.4.7",
     "html-minifier": "^4.0.0",
-    "luxon": "^2.3.2",
+    "luxon": "2.4.0",
     "postcss": "8.4.13",
     "postcss-csso": "6.0.0",
     "postcss-import": "14.1.0",
