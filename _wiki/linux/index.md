@@ -10,6 +10,14 @@ permalink: "/wiki/linux/"
 * [RPM](/wiki/linux/rpm)
 * [Swap](/wiki/linux/swap)
 
+## Add a user account
+
+### Add a system user
+
+```bash
+useradd -r username
+```
+
 ## Restore root password
 
 ### RHEL/CentOS
