@@ -105,7 +105,28 @@ module.exports = function (eleventyConfig) {
     return Image.generateHTML(metadata, imageAttributes);
   }
 
+  async function imageHomeShortcode(src, title, alt, cls, sizes = '100vw', widths = [null, 100, 300, 500, 750, 1000, 1500, 2500]) {
+    let metadata = await Image(src, {
+      widths,
+      formats: ["webp", "jpeg"],
+      outputDir: "./_site/img/"
+    });
+
+    let imageAttributes = {
+      title,
+      alt,
+      class: cls,
+      sizes,
+      decoding: "async",
+    };
+
+    // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+    return Image.generateHTML(metadata, imageAttributes);
+  }
+
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+
+  eleventyConfig.addNunjucksAsyncShortcode("imageHome", imageHomeShortcode);
 
   return {
     markdownTemplateEngine: "njk",
