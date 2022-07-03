@@ -17,6 +17,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./assets/webfonts": "webfonts"
   });
+  eleventyConfig.addPassthroughCopy({
+    './node_modules/alpinejs/dist/cdn.min.js': './alpine.js',
+  })
 
   eleventyConfig.addWatchTarget("./tailwind.config.js");
   eleventyConfig.addWatchTarget("./assets/css/style.css");
