@@ -7,6 +7,7 @@ const now = String(Date.now());
 const site = require("./_data/site.json")
 const util = require('util');
 
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./assets/favicons": "./"
