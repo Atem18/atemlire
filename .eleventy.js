@@ -121,6 +121,7 @@ module.exports = function (eleventyConfig) {
       alt,
       class: cls,
       sizes,
+      fetchpriority: "high",
       decoding: "async",
     };
 
