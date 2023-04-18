@@ -55,6 +55,7 @@
       <meta property="article:author" content="{{ site.url }}">
     {% endblock %}
     <link rel="stylesheet" href="/style.css?v={% version %}"/>
+    <script src="/alpine.js?v={% version %}" defer></script>
     <script type="module">
       import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
       const el = document.createElement('pwa-update');
@@ -205,6 +206,5 @@
         </div>
       </div>
     </footer>
-    <script src="/alpine.js?v={% version %}"></script>
   </body>
 </html>
