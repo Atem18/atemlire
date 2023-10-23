@@ -7,7 +7,7 @@
     "@11ty/eleventy": "2.0.1",
     "@11ty/eleventy-img": "3.1.1",
     "@tailwindcss/typography": "0.5.10",
-    "alpinejs": "3.13.1",
+    "alpinejs": "3.13.2",
     "autoprefixer": "10.4.16",
     "html-minifier": "4.0.0",
     "luxon": "3.4.3",
