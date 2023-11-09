@@ -5,7 +5,8 @@ permalink: "/wiki/"
 ---
 Welcome to my personnal wiki
 
-* [Linux](/wiki/linux/)
 * [DevOps](/wiki/devops/)
-* [Python](/wiki/python/)
+* [Git](/wiki/git/)
 * [Javascript](/wiki/javascript/)
+* [Linux](/wiki/linux/)
+* [Python](/wiki/python/)
