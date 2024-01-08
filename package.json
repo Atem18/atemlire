@@ -11,7 +11,7 @@
     "autoprefixer": "10.4.16",
     "html-minifier": "4.0.0",
     "luxon": "3.4.4",
-    "postcss": "8.4.32",
+    "postcss": "8.4.33",
     "postcss-csso": "6.0.1",
     "postcss-import": "15.1.0",
     "tailwindcss": "3.4.0"
