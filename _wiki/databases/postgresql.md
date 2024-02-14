@@ -3,11 +3,38 @@ title: PostgreSQL
 permalink: "/wiki/databases/postgresql/"
 
 ---
-## DBA
 
-Once in a while, you may need to do stuff in your database
-    
-### Top 10 tables
+## List of databases
+
+```sql
+\l
+```
+
+## List of roles
+
+```sql
+\du
+```
+
+## List of schemas
+
+```sql
+\dn
+```
+
+## Check current/default schema
+
+```sql
+show search_path;
+```
+
+## Change default schema for session
+
+```sql
+set search_path='public';
+```
+
+## Top 10 tables
 ```sql
 SELECT
   nspname AS schema_name,
