@@ -6,7 +6,7 @@
   "dependencies": {
     "@11ty/eleventy": "2.0.1",
     "@11ty/eleventy-img": "4.0.2",
-    "@tailwindcss/typography": "0.5.10",
+    "@tailwindcss/typography": "0.5.12",
     "alpinejs": "3.13.7",
     "autoprefixer": "10.4.19",
     "html-minifier": "4.0.0",
